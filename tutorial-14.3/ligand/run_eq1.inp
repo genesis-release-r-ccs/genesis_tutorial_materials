@@ -1,0 +1,76 @@
+[INPUT]
+topfile = ../toppar/top_all36_prot.rtf, ../toppar/top_all36_cgenff.rtf, ../toppar/sbx.rtf 
+parfile = ../toppar/par_all36m_prot.prm, ../toppar/par_all36_cgenff.prm, ../toppar/morph.prm  
+strfile = ../toppar/toppar_water_ions.str
+psffile = ligand.psf
+pdbfile = ligand.pdb                 # PDB file
+reffile = ligand.pdb
+rstfile = output/run_min.rst
+                 
+[OUTPUT]         
+dcdfile = output/run_eq1.dcd
+rstfile = output/run_eq1.rst
+fepfile = output/run_eq1.fepout
+
+[ALCHEMY]
+fep_direction = Forward
+fep_topology  = Hybrid
+singleA       = 1
+singleB       = 2
+dualA         = 3
+dualB         = 4
+fepout_period = 0
+equilsteps    = 0
+sc_alpha      = 5.0
+sc_beta       = 0.5
+lambljA       = 1.0 1.0
+lambljB       = 1.0 1.0
+lambelA       = 1.0 1.0
+lambelB       = 1.0 1.0
+lambbondA     = 1.0 1.0
+lambbondB     = 1.0 1.0
+lambrest      = 1.0 1.0
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = PME           # [CUTOFF,PME]
+switchdist       = 10.0          # switch distance
+cutoffdist       = 12.0          # cutoff distance
+pairlistdist     = 13.5          # pair-list distance
+pme_alpha        = auto
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator     = VVER
+nsteps         = 50000
+timestep       = 0.002
+eneout_period  = 5000
+crdout_period  = 5000
+rstout_period  = 5000
+annealing      = YES
+anneal_period  = 500
+dtemperature   = 3.0
+
+[CONSTRAINTS]
+rigid_bond     = YES
+
+[ENSEMBLE]
+ensemble       = NVT
+tpcontrol      = BUSSI
+temperature    = 0.1
+
+[BOUNDARY]
+type           = PBC
+
+[SELECTION]
+group1 = ai:1-60 and segid:L0 
+group2 = ai:69-128 and segid:L1 
+group3 = ai:61-68 and segid:L0 
+group4 = ai:129-142 and segid:L1 
+#group5 = heavy and (segid:L0 or segid:L1) 
+
+[RESTRAINTS]
+#nfunctions    = 1     # number of functions
+#function1     = POSI  # restraint function type
+#constant1     = 10.0  # force constant
+#select_index1 = 5     # restrained group

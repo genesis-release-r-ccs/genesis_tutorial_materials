@@ -1,0 +1,19 @@
+# Control file of emmap_generator
+ 
+[INPUT]
+pdbfile        = closed.pdb
+
+[OUTPUT]
+mapfile        = CG_closed.sit      
+
+[OPTION]
+check_only     = NO              # (YES/NO)
+allow_backup   = NO              # (YES/NO)
+map_format     = SITUS           # (SITUS)
+auto_margin    = YES             # (YES/NO)
+margin_size_x  = 20.0            # margin size
+margin_size_y  = 20.0            # margin size
+margin_size_z  = 20.0            # margin size
+voxel_size     =  2.0            # voxel size
+sigma          =  2.5            # resolution
+tolerance      = 0.001           # tolerance

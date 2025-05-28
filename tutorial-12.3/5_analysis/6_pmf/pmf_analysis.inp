@@ -1,0 +1,14 @@
+[INPUT]
+cvfile       = ../4_calc_dist/param{}.dis
+weightfile   = ../5_mbar/weight{}.dat
+
+[OUTPUT]
+pmffile      = dist.pmf
+
+[OPTION]
+nreplica     = 4             # number of replicas
+dimension    = 1             # dimension of cv space
+temperature  = 300.0
+grids1       = 0 15 101      # (min max num_of_bins)
+band_width1  = 0.1
+is_periodic1 = NO            # periodicity of cv1

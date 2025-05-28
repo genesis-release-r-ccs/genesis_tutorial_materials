@@ -1,0 +1,89 @@
+[INPUT]
+topfile = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_cgenff.rtf
+parfile = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_cgenff.prm
+strfile = ../../toppar/toppar_water_ions.str
+
+
+psffile = ligand.psf
+pdbfile = ligand.pdb
+
+rstfile = output/run1_rep{}.rst
+
+[OUTPUT]
+dcdfile = output/run2_rep{}.dcd
+rstfile = output/run2_rep{}.rst
+fepfile = output/run2_rep{}.fepout
+logfile = output/run2_rep{}.log
+remfile = output/run2_rep{}.rem
+
+[REMD]
+dimension       = 1
+exchange_period = 800
+type1           = alchemy
+nreplica1       = 12
+
+[ALCHEMY]
+fep_direction = BothSides
+fep_topology  = hybrid
+singleA       = 1
+singleB       = 2
+dualA         = 3
+dualB         = 4
+fepout_period = 400
+equilsteps    = 0
+sc_alpha      = 5.0
+sc_beta       = 5.0
+lambljA       = 1.0  0.909 0.818 0.727 0.636 0.545 0.455 0.364 0.273 0.182 0.091 0.0 
+lambljB       = 0.0  0.091 0.182 0.273 0.364 0.455 0.545 0.636 0.727 0.818 0.909 1.0 
+lambelA       = 1.0  0.909 0.818 0.727 0.636 0.545 0.455 0.364 0.273 0.182 0.091 0.0 
+lambelB       = 0.0  0.091 0.182 0.273 0.364 0.455 0.545 0.636 0.727 0.818 0.909 1.0 
+lambbondA     = 1.0  0.909 0.818 0.727 0.636 0.545 0.455 0.364 0.273 0.182 0.091 0.0 
+lambbondB     = 0.0  0.091 0.182 0.273 0.364 0.455 0.545 0.636 0.727 0.818 0.909 1.0 
+lambrest      = 1.0  1.0   1.0   1.0   1.0   1.0   1.0   1.0   1.0   1.0   1.0   1.0
+
+
+[ENERGY]
+forcefield       = CHARMM
+electrostatic    = PME 
+switchdist       = 10.0 
+cutoffdist       = 12.0 
+pairlistdist     = 13.5 
+pme_alpha        = auto
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator        = VRES 
+
+nsteps            = 400000
+
+timestep          = 0.0025 
+
+eneout_period     = 400
+crdout_period     = 4000
+rstout_period     = 4000
+
+nbupdate_period   = 10
+elec_long_period  = 2
+thermostat_period = 10
+barostat_period   = 10
+
+[CONSTRAINTS]
+rigid_bond = YES
+
+[ENSEMBLE]
+ensemble    = NPT 
+
+temperature = 300
+
+tpcontrol   = BUSSI
+pressure    = 1.0
+
+[BOUNDARY]
+type = PBC
+
+
+[SELECTION]
+group1 = ai:1-4 and segid:L0
+group2 = ai:6-9 and segid:L1
+group3 = ai:5-5 and segid:L0
+group4 = ai:10-11 and segid:L1

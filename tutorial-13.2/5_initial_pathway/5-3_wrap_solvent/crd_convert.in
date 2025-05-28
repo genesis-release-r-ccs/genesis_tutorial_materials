@@ -1,0 +1,34 @@
+[INPUT]
+psffile        = ../../1_setup/rbp_closed.psf
+reffile        = ../../1_setup/rbp_closed.pdb
+ 
+[OUTPUT]
+trjfile        = tmd_wrap.1.dcd
+ 
+[TRAJECTORY]
+trjfile1        = ../5-2_target_MD/tmd.1.dcd
+md_step1       = 400000
+mdout_period1  = 800  
+ana_period1    = 800
+repeat1        = 1
+trj_format     = DCD     
+trj_type       = COOR+BOX
+trj_natom      = 0       
+ 
+[SELECTION]
+group1         = all
+ 
+[FITTING]
+fitting_method = NO
+ 
+[OPTION]
+check_only     = NO
+allow_backup   = NO
+centering      = NO
+centering_atom = 1 
+center_coord   = 0.0 0.0 0.0
+pbc_correct    = MOLECULE
+trjout_format  = DCD
+trjout_type    = COOR+BOX
+trjout_atom    = 1 
+split_trjpdb   = NO

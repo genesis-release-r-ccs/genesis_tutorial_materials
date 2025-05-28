@@ -1,0 +1,21 @@
+[INPUT] 
+grotopfile = ../../02_REMD/1PGB_cg.top
+grocrdfile = ../../02_REMD/1PGB_cg.gro
+
+[OUTPUT]
+qntfile       = parameter_RUNID.qval # nativeness (Q-value) output
+
+[TRAJECTORY]
+trjfile1      = ../3_sort_dcd/remd_paramRUNID.dcd
+md_step1      = 100000000
+mdout_period1 = 1000
+trj_format    = DCD          # (PDB/DCD)
+trj_type      = COOR+BOX     # (COOR/COOR+BOX)
+
+[SELECTION]
+group1        = all
+
+[OPTION]
+analysis_atom = 1            # group number
+lambda        = 1.2          # contact forming distance
+

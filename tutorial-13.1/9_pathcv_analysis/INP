@@ -1,0 +1,9 @@
+[INPUT]
+pathfile       = ../6_rpath_prod/last.path
+cvfile         = ../7_umbrella/umb_{}.cv
+ 
+[OUTPUT]
+pathcvfile     = {}.pathcv
+ 
+[OPTION]
+nreplica       = 16

@@ -1,0 +1,57 @@
+# control parameters in hbond_analysis
+ 
+[INPUT]
+psffile        = step3_input.psf       # protein structure file
+pdbfile        = step3_input.pdb       # PDB file
+
+[OUTPUT]
+txtfile        = step6.0_hbondAnalysis/hbond_analysis.txt      # text file
+hb_listfile  = step6.0_hbondAnalysis/hbond_analysis_().hb_list    # parallel-IO H-bond list file
+ 
+[TRAJECTORY]
+trjfile1       = step5.0_productionNVT.dcd      # trajectory file
+md_step1       = 400000               # number of MD steps
+mdout_period1  = 5000              # MD output period
+# ana_period1    = 1               # analysis period
+# repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+
+[ENSEMBLE]
+ensemble     = NVT             # (NVT/NPT/NVE)
+ 
+[BOUNDARY]
+type          = PBC       # [PBC]
+box_size_x    = 0.0       # box size (x) in [PBC]
+box_size_y    = 0.0       # box size (y) in [PBC]
+box_size_z    = 0.0       # box size (z) in [PBC]
+domain_x      = 2         # domain size (x)
+domain_y      = 2         # domain size (y)
+domain_z      = 2         # domain size (z)
+num_cells_x   = 8         # number of cells (x)
+num_cells_y   = 8         # number of cells (x)
+num_cells_z   = 8         # number of cells (x)
+
+ 
+[SELECTION]
+ group1         = atomno:1-246             # selection group 1
+ group2         = atomno:1-246 # selection group 2
+# mole_name1     = protein  P1:1:TYR P1:5:MET
+# mole_name2     = lipid    OLEO:PCGL:OLEO
+ 
+[SPANA_OPTION]
+# wrap        = no         # wrap trajectories
+buffer        = 10
+box_size      = TRAJECTORY # (TRAJECTORY / MAX / MANUAL)
+
+[HBOND_OPTION]
+recenter      = 1                # recenter
+output_type   = Count_Atom       # (Count_snap / Count_Atom)
+analysis_atom = 1                # atom group for searching H-bond partners
+target_atom   = 2                # serach the HB partners from this atom group
+solvent_list  = TIP3 POPC        # molecule names treated as solvent (only for count_atom)
+HB_distance = 3.4              # the upper limit of (D .. A) distance (default: 3.4 A)
+DHA_angle   = 120.0            # the lower limit of (D-H .. A) angle (default: 120.0 deg)
+HDA_angle   =  20.0            # the upper limit of (H-D .. A) angle (default:  20.0 deg)
+

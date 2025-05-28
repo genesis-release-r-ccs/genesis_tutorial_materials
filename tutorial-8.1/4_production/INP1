@@ -1,0 +1,36 @@
+[INPUT]
+prmtopfile = ../1_setup/proa.prmtop   # AMBER parameter topology file
+ambcrdfile = ../1_setup/proa.crd      # AMBER coordinates file
+rstfile    = ../3_equilibrate/eq.rst
+ 
+[OUTPUT]
+dcdfile = md_gbsa.dcd       # DCD trajectory file
+rstfile = md_gbsa.rst       # restart file
+pdbfile = md_gbsa.pdb       # final snapshot
+ 
+[ENERGY]
+forcefield       = AMBER    # [AMBER]
+electrostatic    = CUTOFF   # [CUTOFF]
+switchdist       = 23.0     # switch distance
+cutoffdist       = 25.0     # cutoff distance
+pairlistdist     = 28.0     # pair-list distance
+implicit_solvent = GBSA     # [GBSA]
+ 
+[DYNAMICS]
+integrator       = VVER     # [VVER]
+nsteps           = 50000    # number of MD steps
+timestep         = 0.002    # timestep (ps)
+eneout_period    =   100    # energy output period
+crdout_period    =   100    # coordinates output period
+rstout_period    = 50000    # restart output period
+ 
+[CONSTRAINTS]
+rigid_bond       = YES      # constraints all bonds involving hydrogen
+ 
+[ENSEMBLE]
+ensemble         = NVT      # [NVE,NVT]
+tpcontrol        = LANGEVIN # [NO,BERENDSEN,BUSSI,LANGEVIN]
+temperature      = 298.15   # initial and target temperature (K)
+ 
+[BOUNDARY]
+type             = NOBC     # [NOBC]

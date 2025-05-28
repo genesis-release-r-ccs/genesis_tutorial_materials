@@ -1,0 +1,24 @@
+# control parameters in pmf_analysis
+ 
+[INPUT]
+cvfile         = ../../7_pathcv_analysis/7-3-2_pathcv/um1.{}.pathcv
+weightfile     = ../../7-2_mbar_analysis/7-2-2_mbar/{}.weight
+ 
+[OUTPUT]
+pmffile        = output.pmf      # potential of mean force file
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+
+nreplica       = 16
+dimension      = 1
+temperature    = 300
+cutoff         = 10             # cutoff distance measured by pathcv_analysis
+
+grids1         = 1.0 16 160    # (min max num_of_bins)
+band_width1    = 0.1             # sigma of Gaussian kernel
+is_periodic1   = NO
+
+output_type    = GNUPLOT  # GNUPLOT MATLAB
+

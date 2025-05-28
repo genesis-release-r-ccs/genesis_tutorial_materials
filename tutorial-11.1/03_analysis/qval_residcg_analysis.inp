@@ -1,0 +1,21 @@
+[INPUT]
+grotopfile    = ../02_simulation/1PGB_cg.top
+grocrdfile    = ../02_simulation/1PGB_cg.gro
+ 
+[OUTPUT]
+qntfile       = pro_md1.qval # nativeness (Q-value) output
+ 
+[TRAJECTORY]
+trjfile1      = ../02_simulation/pro_md1.dcd
+md_step1      = 50000000
+mdout_period1 = 10000
+trj_format    = DCD          # (PDB/DCD)
+trj_type      = COOR+BOX     # (COOR/COOR+BOX)
+ 
+[SELECTION]
+group1        = all
+
+[OPTION]
+analysis_atom = 1            # group number
+lambda        = 1.2          # contact forming distance
+ 

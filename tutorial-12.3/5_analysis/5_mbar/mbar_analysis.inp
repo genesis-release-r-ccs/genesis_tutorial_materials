@@ -1,0 +1,14 @@
+[INPUT]
+cvfile             = ../3_sort/param{}.ene # input cv file
+
+[OUTPUT]
+fenefile           = fene.dat  
+weightfile         = weight{}.dat     
+                               
+[MBAR]
+nreplica           = 4
+input_type         = REST 
+dimension          = 1
+nblocks            = 1
+temperature        = 300.00
+target_temperature = 300.00

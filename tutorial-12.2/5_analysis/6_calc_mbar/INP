@@ -1,0 +1,20 @@
+[INPUT]
+cvfile     = ../5_calc_dist/parameter/parameter{}.dis  # collective variable file
+ 
+[OUTPUT]
+fenefile   = output.fene      # free energy file
+weightfile = output{}.weight  # weight file
+ 
+[MBAR]
+nreplica           = 14
+input_type         = CV
+dimension          = 1
+nblocks            = 1
+temperature        = 300
+target_temperature = 300
+rest_function1     = 1
+
+[RESTRAINTS]
+constant1          =  1.2  1.2  1.2  1.2  1.2  1.2  1.2  1.2  1.2   1.2   1.2   1.2   1.2   1.2
+reference1         = 1.80 2.72 3.64 4.56 5.48 6.40 7.32 8.24 9.16 10.08 11.00 11.92 12.84 13.76
+is_periodic1       = NO

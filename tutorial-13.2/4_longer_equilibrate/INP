@@ -1,0 +1,47 @@
+[INPUT]
+topfile             = ../toppar/top_all36_prot.rtf, ../toppar/top_all36_carb.rtf
+parfile             = ../toppar/par_all36m_prot.prm, ../toppar/par_all36_carb.prm
+strfile             = ../toppar/toppar_water_ions.str
+
+psffile             = ../1_setup/rbp_closed.psf
+pdbfile             = ../1_setup/rbp_closed.pdb
+rstfile             = ../3_equilibrate/1_md/eq3.rst
+
+[OUTPUT]
+dcdfile             = eq4.1.dcd
+rstfile             = eq4.1.rst
+
+[ENERGY]
+forcefield          = CHARMM
+electrostatic       = PME
+switchdist          = 10.0
+cutoffdist          = 12.0
+pairlistdist        = 13.5
+vdw_force_switch    = YES
+pme_nspline         = 4
+pme_max_spacing     = 1.2
+
+[DYNAMICS]
+integrator        =   VRES  # [LEAP,VVER,VRES]
+nsteps            = 4000000  # number of MD steps (10 ns)
+timestep          = 0.0025  # timestep (2.5fs)
+eneout_period     =   8000  # energy output period (20ps)
+crdout_period     =   8000  # coordinates output period (20ps)
+rstout_period     = 4000000  # restart output period
+nbupdate_period   =     10  # nonbond update period
+elec_long_period  =      2  # period of reciprocal space calculation
+thermostat_period =     10  # period of thermostat update
+barostat_period   =     10  # period of barostat update
+
+[CONSTRAINTS]
+rigid_bond          = YES
+
+[ENSEMBLE]
+ensemble            = NVT
+tpcontrol           = BUSSI
+temperature         = 300.00
+group_tp            = YES
+
+[BOUNDARY]
+type                = PBC
+

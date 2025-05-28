@@ -1,0 +1,12 @@
+set terminal jpeg size 800,400
+set output 'thickness.jpg'
+
+set xlabel 'Time (ps)'
+set ylabel 'P-P distance ({\305})'
+
+set xrange [0:1000]
+set yrange [38.2:41.0]
+
+plot "thickness.log" u ($1*2):2 w l t "POPC"
+
+

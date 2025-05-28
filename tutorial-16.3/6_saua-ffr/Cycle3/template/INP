@@ -1,0 +1,58 @@
+[INPUT]
+topfile  = ../../Parameters/eef1/toph19_eef1.1.inp    # topology file
+parfile  = ../../Parameters/eef1/param19_eef1.1.inp   # parameter file
+eef1file = ../../Parameters/eef1/solvpar.inp          # solvation energy parameters
+psffile  = ../../5_build_c19/model.psf                # protein structure file
+pdbfile  = ../../5_build_c19/modelMODELID.pdb         # PDB file
+rstfile  = ../Cycle2/modelMODELID.rst
+
+[OUTPUT]
+rstfile  = modelMODELID.rst
+pdbfile  = modelMODELID.pdb
+
+[ENERGY]
+forcefield       = CHARMM19 # [CHARMM,AAGO,CAGO,KBGO,AMBER,GROAMBER,GROMARTINI]
+electrostatic    = CUTOFF   # [CUTOFF,PME]
+switchdist       = 16.0     # switch distance
+cutoffdist       = 18.0     # cutoff distance
+pairlistdist     = 20.0     # pair-list distance
+implicit_solvent = EEF1
+
+[DYNAMICS]
+integrator       = LEAP     # [LEAP,VVER]
+nsteps           =  50000   # number of MD steps
+timestep         =  0.002   # timestep (ps)
+eneout_period    =    500   # energy output period
+rstout_period    =  50000
+annealing        =    YES
+dtemperature     =     -3
+anneal_period    =    500
+iseed            = MODELID
+
+[CONSTRAINTS]
+rigid_bond       = YES      # constraints all bonds involving hydrogen
+
+[ENSEMBLE]
+ensemble      = NVT         # [NVE,NVT,NPT,NPAT,NPgT]
+tpcontrol     = LANGEVIN    # [NO,BERENDSEN,BUSSI,LANGEVIN]
+temperature   = 600         # initial and target temperature (K)
+gamma_t       = 5.0         # thermostat friction (ps-1) in [LANGEVIN]
+
+[BOUNDARY]
+type          = NOBC       # [NOBC,PBC]
+
+[SELECTION]
+group1          = all and not hydrogen
+
+[RESTRAINTS]
+nfunctions      = 1
+function1       = EM                  # apply restraints from EM density map
+constant1       = 10000               # force constant in Ebias = k*(1 - c.c.)
+select_index1   = 1                   # apply restraint force on protein heavy atoms
+
+[EXPERIMENTS]
+emfit           = YES                            # perform EM flexible fitting
+emfit_target    = ../../0_data/input.sit         # target EM density map
+emfit_sigma     = 1.82                           # half of the map resolution (5 A)
+emfit_tolerance = 0.001                          # Tolerance for error (0.1%)
+emfit_period    = 1                              # emfit force update period

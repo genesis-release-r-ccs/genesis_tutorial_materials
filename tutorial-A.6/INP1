@@ -1,0 +1,31 @@
+[INPUT]
+topfile = ./toppar/top_all36_prot.rtf
+parfile = ./toppar/par_all36m_prot.prm
+strfile = ./toppar/toppar_water_ions.str
+psffile = ./setup/ionized.psf
+pdbfile = ./setup/ionized.pdb
+
+[OUTPUT]
+dcdfile = min1.dcd
+rstfile = min1.rst
+ 
+[ENERGY]
+forcefield       = CHARMM  # [CHARMM,AMBER,GROAMBER,GROMARTINI]
+electrostatic    = PME     # [CUTOFF,PME]
+switchdist       = 10.0    # switch distance
+cutoffdist       = 12.0    # cutoff distance
+pairlistdist     = 13.5    # pair-list distance
+vdw_force_switch = YES     # force switch option for van der Waals
+contact_check    = YES     # check atomic clash
+ 
+[MINIMIZE]
+method           = SD      # [SD]
+nsteps           = 5000    # number of minimization steps
+crdout_period    = 1000
+rstout_period    = 5000
+ 
+[BOUNDARY]
+type             = PBC     # [PBC]
+box_size_x       = 64
+box_size_y       = 64
+box_size_z       = 64 

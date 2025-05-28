@@ -1,0 +1,27 @@
+[INPUT]
+psffile        = ../../1_setup/rbp_closed.psf
+reffile        = eq4_last.pdb 
+ 
+[OUTPUT]
+rmsfile        = output.rms      # RMSD file
+ 
+[TRAJECTORY]
+trjfile1       = rbp_open_ref.pdb
+md_step1       = 1       
+mdout_period1  = 1      
+ana_period1    = 1     
+repeat1        = 1
+trj_format     = PDB    
+trj_type       = COOR+BOX
+trj_natom      = 0    
+ 
+[SELECTION]
+group1         =  segid:PROA & heavy
+ 
+[FITTING]
+fitting_method = NO
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+analysis_atom  = 1               # atom group

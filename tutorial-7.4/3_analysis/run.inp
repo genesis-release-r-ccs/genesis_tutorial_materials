@@ -1,0 +1,28 @@
+# control parameters in rmsd_analysis
+ 
+[INPUT]
+grotopfile     = ../1_setup/smog.top         # topology/parameter file
+grocrdfile     = ../1_setup/smog.gro         # coordinate file
+ 
+[OUTPUT]
+rgfile         = run.rg                      # Rg file
+ 
+[TRAJECTORY]
+trjfile1       = ../2_production/run.dcd     # trajectory file
+md_step1       = 10000000                    # number of MD steps
+mdout_period1  = 5000                        # MD output period
+ana_period1    = 5000                        # analysis period
+repeat1        = 1                           # repeat times
+
+trj_format     = DCD                         # (PDB/DCD)
+trj_type       = COOR+BOX                    # (COOR/COOR+BOX)
+trj_natom      = 0                           # (0:uses atom count in PDB)
+ 
+[SELECTION]
+group1         = all                         # selection group 1
+  
+[OPTION]
+check_only     = NO                          # (YES/NO)
+allow_backup   = NO                          # (YES/NO)
+analysis_atom  = 1                           # atom group
+mass_weighted  = YES 

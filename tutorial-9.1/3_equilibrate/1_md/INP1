@@ -1,0 +1,53 @@
+[INPUT]
+topfile             = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_carb.rtf
+parfile             = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_carb.prm
+strfile             = ../../toppar/toppar_water_ions.str
+
+psffile             = ../../1_setup/rbp_closed.psf                  # protein structure file
+pdbfile             = ../../1_setup/rbp_closed.pdb                  # PDB file
+reffile             = ../../1_setup/rbp_closed.pdb                  # Reference for restraints
+rstfile             = ../../2_minimize/min.rst                     # restart file
+
+[OUTPUT]
+dcdfile             = eq1.dcd   # DCD trajectory file
+rstfile             = eq1.rst   # restart file
+
+[ENERGY]
+forcefield          = CHARMM    # CHARMM force field
+electrostatic       = PME       # [CUTOFF,PME]
+switchdist          = 10.0      # switch distance
+cutoffdist          = 12.0      # cutoff distance
+pairlistdist        = 13.5      # pairlist distance
+vdw_force_switch    = YES       # force switch option for van der Waals
+pme_nspline         = 4         # order of B-spline in [PME]
+pme_max_spacing     = 1.2       # max grid spacing
+
+[DYNAMICS]
+integrator          = VVER      # [LEAP,VVER]
+nsteps              = 50000     # number of MD steps
+timestep            = 0.002     # timestep (ps)
+eneout_period       = 500      # energy output period
+crdout_period       = 500      # coordinates output period
+rstout_period       = 50000     # restart output period
+
+[CONSTRAINTS]
+rigid_bond          = YES       # constraints all bonds
+
+[ENSEMBLE]
+ensemble            = NVT       # [NVE,NVT,NPT]
+tpcontrol           = BUSSI     # thermostat
+temperature         = 300.0     # initial temperature (K)
+group_tp        = yes
+
+[BOUNDARY]
+type                = PBC       # [PBC,NOBC]
+
+[SELECTION]
+group1              = (segid:PROA | segid:CARA) & heavy
+
+[RESTRAINTS]
+nfunctions          = 1         # number of restraints
+function1           = POSI      # [DIST,POSI,RMSD,ANGLE,DIHED] [MASS] kind of function 1
+direction1          = ALL       # direction
+constant1           = 1.0      # force constant(tot, [x,y,z]) for function 1
+select_index1       = 1         # restrained groups

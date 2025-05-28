@@ -1,0 +1,51 @@
+[INPUT]
+topfile = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_cgenff.rtf
+parfile = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_cgenff.prm
+strfile = ../../toppar/toppar_water_ions.str
+
+psffile = vacuum.psf
+pdbfile = vacuum.pdb                 # PDB file
+reffile = vacuum.pdb
+ 
+[OUTPUT]
+dcdfile = output/run_min.dcd
+rstfile = output/run_min.rst
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = CUTOFF           # [CUTOFF,PME]
+switchdist       = 298.0           # switch distance
+cutoffdist       = 300.0           # cutoff distance
+pairlistdist     = 305.0           # pair-list distance
+vdw_force_switch = YES
+vacuum           = YES
+contact_check    = YES          # avoid atomic crash
+
+[MINIMIZE]
+method           = SD
+nsteps           = 5000
+eneout_period    = 50
+crdout_period    = 500
+rstout_period    = 500
+force_scale_init = 0.00005
+force_scale_max  = 0.0001
+
+[CONSTRAINTS]
+rigid_bond      = NO
+fast_water      = NO
+
+[BOUNDARY]
+type            = PBC           # [PBC]
+box_size_x      = 921 
+box_size_y      = 921 
+box_size_z      = 921 
+
+[SELECTION]
+group1 = heavy and (segid:LIG)
+
+[RESTRAINTS]
+nfunctions    = 1     # number of functions
+function1     = POSI  # restraint function type
+constant1     = 10.0  # force constant
+select_index1 = 1     # restrained group
+

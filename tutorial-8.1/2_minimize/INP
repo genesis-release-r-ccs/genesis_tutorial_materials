@@ -1,0 +1,25 @@
+[INPUT]
+prmtopfile = ../1_setup/proa.prmtop   # AMBER parameter topology file
+ambcrdfile = ../1_setup/proa.crd      # AMBER coordinates file
+ 
+[OUTPUT]
+dcdfile = min.dcd          # DCD trajectory file
+rstfile = min.rst          # restart file
+ 
+[ENERGY]
+forcefield       = AMBER   # [AMBER]
+electrostatic    = CUTOFF  # [CUTOFF]
+switchdist       = 23.0    # switch distance
+cutoffdist       = 25.0    # cutoff distance
+pairlistdist     = 28.0    # pair-list distance
+implicit_solvent = GBSA    # [GBSA]
+ 
+[MINIMIZE]
+method           = SD      # [SD] or [LBFGS]
+nsteps           = 1000    # number of minimization steps
+eneout_period    =  100    # energy output period
+crdout_period    =  100    # coordinates output period
+rstout_period    = 1000    # restart output period
+ 
+[BOUNDARY]
+type             = NOBC    # [NOBC]

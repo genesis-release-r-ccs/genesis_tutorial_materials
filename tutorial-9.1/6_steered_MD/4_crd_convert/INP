@@ -1,0 +1,44 @@
+# control parameters in crd_convert
+ 
+[INPUT]
+psffile        = ../../1_setup/rbp_closed.psf
+reffile        = ../../1_setup/rbp_open.pdb
+ 
+[OUTPUT]
+trjfile        = output.dcd      # trajectory file
+ 
+[TRAJECTORY]
+trjfile1       = ../1_md/smd.1.dcd      # trajectory file
+md_step1       = 40000               # number of MD steps
+mdout_period1  = 400               # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1              = segid:PROA & heavy
+ 
+[FITTING]
+fitting_method = TR+ROT
+fitting_atom   = 1
+mass_weight     = yes
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+centering      = NO              # shift center of mass (YES requres psf/prmtop/grotop)
+centering_atom = 1               # atom group
+center_coord   = 0.0 0.0 0.0     # target center coordinates
+pbc_correct    = NO              # (NO/MOLECULE) (MOLECULE requres psf/prmtop/grotop)
+trjout_format  = DCD             # (PDB/DCD)
+trjout_type    = COOR+BOX        # (COOR/COOR+BOX)
+trjout_atom    = 1               # atom group
+split_trjpdb   = NO              # output split PDB trajectory
+# rename_res1  = HSE HIS         # rename residue name
+# rename_res2  = HSD HIS         # rename residue name
+
+# Note: Coordinates are converted in the following order:
+#       read traj -> centering -> pbc_correct -> fitting -> write traj
+

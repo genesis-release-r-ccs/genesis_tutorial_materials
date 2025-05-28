@@ -1,0 +1,32 @@
+# control parameters in rmsd_analysis
+ 
+[INPUT]
+psffile        = ../../1_setup/rbp_closed.psf
+reffile        = ../../1_setup/rbp_open.pdb
+ 
+[OUTPUT]
+rmsfile        = output.rms      # RMSD file
+ 
+[TRAJECTORY]
+trjfile1       = ../1_md/smd.1.dcd      # trajectory file
+md_step1       = 40000               # number of MD steps
+mdout_period1  = 400               # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1              = segid:PROA & heavy
+ 
+[FITTING]
+fitting_method = TR+ROT
+fitting_atom   = 1
+mass_weight     = yes
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+analysis_atom  = 1               # atom group
+mass_weight    = yes 

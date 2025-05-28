@@ -1,0 +1,48 @@
+[INPUT]
+topfile             	= ../toppar/top_all36_prot.rtf, ../toppar/top_all36_carb.rtf
+parfile             	= ../toppar/par_all36m_prot.prm, ../toppar/par_all36_carb.prm
+strfile             	= ../toppar/toppar_water_ions.str
+
+psffile                 = ../1_setup/rbp_closed.psf
+pdbfile                 = ../1_setup/rbp_closed.pdb
+reffile                 = ../1_setup/rbp_closed.pdb
+
+[OUTPUT]
+dcdfile                 = min.dcd
+rstfile                 = min.rst
+
+[ENERGY]
+forcefield              = CHARMM
+electrostatic           = PME
+switchdist              = 10.0
+cutoffdist              = 12.0
+pairlistdist            = 13.5
+vdw_force_switch        = YES
+pme_nspline             = 4
+pme_max_spacing         = 1.2
+nonb_limiter            = YES
+structure_check         = domain
+ 
+[MINIMIZE]
+method                  = SD
+nsteps                  = 2000
+eneout_period           = 50
+crdout_period           = 50
+rstout_period           = 2000
+nbupdate_period         = 10
+ 
+[BOUNDARY]
+type                    = PBC
+box_size_x              = 84.00
+box_size_y              = 84.00
+box_size_z              = 84.00
+
+[SELECTION]
+group1                  = (segid:PROA | segid:CARA) & heavy
+ 
+[RESTRAINTS]
+nfunctions              = 1
+function1               = POSI
+direction1              = ALL
+constant1               = 1.0
+select_index1           = 1

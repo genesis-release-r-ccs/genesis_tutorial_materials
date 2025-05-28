@@ -1,0 +1,29 @@
+[INPUT]
+reffile        = ../Data/proa.pdb   # PDB file
+ 
+[OUTPUT]
+pdbfile        = md0.pdb            # PDB file
+trjfile        = md{}.pdb           # split PDB trajectory file
+ 
+[TRAJECTORY]
+trjfile1       = ../Data/md.dcd     # trajectory file
+md_step1       = 100                # number of MD steps
+mdout_period1  = 1                  # MD output period
+ana_period1    = 1                  # analysis period
+repeat1        = 1
+trj_format     = DCD                # (PDB/DCD)
+trj_type       = COOR+BOX           # (COOR/COOR+BOX)
+trj_natom      = 0                  # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = an:CA              # selection group 1
+group2         = all
+ 
+[FITTING]
+fitting_method = TR+ROT             # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+ 
+[OPTION]
+trjout_format  = PDB                # (PDB/DCD)
+trjout_type    = COOR+BOX           # (COOR/COOR+BOX)
+trjout_atom    = 2                  # atom group
+split_trjpdb   = YES                # output split PDB trajectory

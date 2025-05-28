@@ -1,0 +1,34 @@
+[INPUT]
+psffile         = ../../1_setup/wbox.psf
+reffile         = ../../1_setup/wbox.pdb
+dcdfile         = ../../4_prod_remd/run_rep{}.dcd
+remfile         = ../../4_prod_remd/run_rep{}.rem
+logfile         = ../../4_prod_remd/run_rep{}.log
+
+[OUTPUT]
+pdbfile         = select.pdb
+trjfile         = parmID{}.dcd
+logfile         = parmID{}.log
+
+[SELECTION]
+group1          = segid:PROA
+group2          = resno:2 and (an:N or an:CA or an:C or an:O)
+
+[FITTING]
+fitting_method  = TR+ROT
+fitting_atom    = 2
+mass_weight     = YES
+
+[OPTION]
+check_only      = NO
+convert_type    = PARAMETER
+convert_ids     =                 # (empty = all)
+num_replicas    = 20
+nsteps          = 4000000
+exchange_period = 2000
+eneout_period   = 2000
+crdout_period   = 2000
+trjout_format   = DCD
+trjout_type     = COOR+BOX
+trjout_atom     = 1
+pbc_correct     = NO

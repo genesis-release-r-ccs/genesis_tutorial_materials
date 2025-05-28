@@ -1,0 +1,27 @@
+[INPUT]
+topfile  = ../Parameters/toppar/top_all36_prot.rtf
+parfile  = ../Parameters/toppar/par_all36m_prot.prm
+psffile  = ../2_psfgen/model.psf
+pdbfile  = ../2_psfgen/modelMODELID.pdb
+
+[OUTPUT]
+rstfile  = modelMODELID.rst
+pdbfile  = modelMODELID.pdb
+
+[ENERGY]
+forcefield       = CHARMM   # [CHARMM,AAGO,CAGO,KBGO,AMBER,GROAMBER,GROMARTINI]
+electrostatic    = CUTOFF   # [CUTOFF,PME]
+switchdist       = 16.0     # switch distance
+cutoffdist       = 18.0     # cutoff distance
+pairlistdist     = 20.0     # pair-list distance
+implicit_solvent = NONE     # [NONE,GBSA]
+
+[MINIMIZE]
+method           =  SD
+nsteps           =  2000
+eneout_period    =   100
+rstout_period    =  2000
+check_structure  =  YES
+
+[BOUNDARY]
+type             = NOBC       # [NOBC,PBC]

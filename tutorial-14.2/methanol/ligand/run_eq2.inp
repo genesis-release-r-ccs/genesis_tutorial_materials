@@ -1,0 +1,52 @@
+[INPUT]
+topfile = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_cgenff.rtf
+parfile = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_cgenff.prm
+strfile = ../../toppar/toppar_water_ions.str
+
+psffile = ligand.psf
+pdbfile = ligand.pdb                 # PDB file
+reffile = ligand.pdb
+rstfile = output/run_eq1.rst
+                 
+[OUTPUT]         
+dcdfile = output/run_eq2.dcd
+rstfile = output/run_eq2.rst
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = PME           # [CUTOFF,PME]
+switchdist       = 10.0          # switch distance
+cutoffdist       = 12.0          # cutoff distance
+pairlistdist     = 13.5          # pair-list distance
+pme_alpha        = auto
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator     = VVER
+nsteps         = 50000
+timestep       = 0.002
+eneout_period  = 5000
+crdout_period  = 5000
+rstout_period  = 50000
+
+[CONSTRAINTS]
+rigid_bond     = YES
+
+[ENSEMBLE]
+ensemble       = NPT 
+temperature    = 300
+tpcontrol      = BUSSI
+pressure       = 1.0
+
+[BOUNDARY]
+type           = PBC
+
+[SELECTION]
+group1 = heavy and (segid:LIG)
+
+[RESTRAINTS]
+nfunctions    = 1     # number of functions
+function1     = POSI  # restraint function type
+constant1     = 10.0  # force constant
+select_index1 = 1     # restrained group
+

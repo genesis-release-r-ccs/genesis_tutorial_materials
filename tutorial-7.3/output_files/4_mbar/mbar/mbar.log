@@ -1,0 +1,85 @@
+****************************************************
+*                                                  *
+*                   MBAR_ANALYSIS                  *
+*                                                  *
+*        Utility to analyze trajectory files       *
+*                                                  *
+*              Developed by RIKEN AICS             *
+*                                                  *
+****************************************************
+ 
+[STEP1] Read Control Parameters for Analysis
+ 
+Read_Ctrl_Input> Input Files
+  cvfile          = run_permute_{}.out
+  targetfile      = run_target_{}.out
+ 
+Read_Ctrl_Output> Output Files
+  fenefile        = run_fene.fene
+  weightfile      = run_weight_{}.weight
+ 
+Read_Ctrl_Selection> Parameters of Selection
+  # of groups     =          0
+  # of mole names =          0
+ 
+Read_Ctrl_Option> Parameters of MBAR
+
+  check only      = no
+  # of replicas : 4
+  # of dimension : 1
+  self_iteration  = 5
+  newton_iteration= 100
+  # of blocks     = 1
+  temperature     = 260
+  target_temperature =    260.000
+  tolerance       =      0.000
+   dimension :               1
+  rest func no    = 
+  grids           = 
+  output_unit     = NONE
+
+Read_Ctrl_Option> Parameters of Restraints
+
+  # of functions : 0
+
+[STEP2] Set Relevant Variables and Structures
+ 
+Setup_Option> Unit for fene and pmf is set to dimension less
+
+[STEP3] Analysis trajectory files
+ 
+Build_Data_K_From_Ene> 
+  number of time steps       :         2500
+
+  read cv file: run_permute_1.out
+  read cv file: run_permute_2.out
+  read cv file: run_permute_3.out
+  read cv file: run_permute_4.out
+  ..done
+
+Add_Data_K_From_Target> 
+  number of time steps       :         2500
+
+  read target energy file: run_target_1.out
+  read target energy file: run_target_2.out
+  read target energy file: run_target_3.out
+  read target energy file: run_target_4.out
+  ..done
+
+Build_U_Kl_From_Ene> 
+  ..done
+
+Solve_Mbar> 
+
+[block     1]     1th iteration  delta =   0.159801709E+01  tolerance =   0.100000000E-06
+[block     1]     2th iteration  delta =   0.129801353E-02  tolerance =   0.100000000E-06
+[block     1]     3th iteration  delta =   0.106818471E-05  tolerance =   0.100000000E-06
+[block     1]     4th iteration  delta =   0.878516436E-09  tolerance =   0.100000000E-06
+[block     1]     5th iteration  delta =   0.428544603E-11  tolerance =   0.100000000E-06
+[block     1]     6th iteration  delta =   0.140348357E-11  tolerance =   0.100000000E-06
+
+Compute_Weight>
+
+
+[STEP4] Deallocate memory
+ 

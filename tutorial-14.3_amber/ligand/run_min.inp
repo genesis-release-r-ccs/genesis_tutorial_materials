@@ -1,0 +1,58 @@
+[INPUT]
+prmtopfile  = ligand.prmtop
+ambcrdfile  = ligand.inpcrd
+ambreffile  = ligand.inpcrd
+
+[OUTPUT]
+dcdfile = output/run_min.dcd
+rstfile = output/run_min.rst
+
+[ALCHEMY]
+fep_topology  = hybrid
+singleA       = 1
+singleB       = 2
+dualA         = 3
+dualB         = 4
+sc_alpha      = 5.0
+sc_beta       = 0.5
+lambljA       = 1.0
+lambljB       = 1.0
+lambelA       = 1.0
+lambelB       = 1.0
+lambbondA     = 1.0
+lambbondB     = 1.0
+
+[ENERGY]
+forcefield       = AMBER     # AMBER force field
+electrostatic    = PME       # [CUTOFF,PME]
+switchdist       = 8.0       # switch distance
+cutoffdist       = 8.0       # cutoff distance
+pairlistdist     = 9.5       # pair-list distance
+pme_alpha        = auto
+dispersion_corr  = EPRESS
+contact_check    = YES
+
+[MINIMIZE]
+nsteps        = 5000     # number of steps
+eneout_period = 500      # energy output period
+crdout_period = 500      # coordinates output period
+rstout_period = 5000     # restart output period
+
+[BOUNDARY]
+type          = PBC      # [PBC,NOBC]
+box_size_x    = 40.0     # box size (x) in [PBC]
+box_size_y    = 40.0     # box size (y) in [PBC]
+box_size_z    = 40.0     # box size (z) in [PBC]
+
+[SELECTION]
+group1        = ai:1-57  and rno:1
+group2        = ai:69-125 and rno:2
+group3        = ai:58-68 and rno:1
+group4        = ai:126-142 and rno:2
+group5        = rno:1-2 and heavy
+
+[RESTRAINTS]
+nfunctions    = 1     # number of functions
+function1     = POSI  # restraint function type
+constant1     = 10.0  # force constant
+select_index1 = 5     # restrained group

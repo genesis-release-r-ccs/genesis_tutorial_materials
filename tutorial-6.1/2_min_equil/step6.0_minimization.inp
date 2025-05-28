@@ -1,0 +1,50 @@
+[INPUT]
+topfile = ../toppar/top_all36_lipid.rtf               # topology file
+parfile = ../toppar/par_all36_lipid.prm               # parameter file
+strfile = ../toppar/toppar_water_ions.str             # stream file
+psffile = ../1_charmm-gui/step5_assembly.psf          # protein structure file
+pdbfile = ../1_charmm-gui/step5_assembly.pdb          # PDB file
+reffile = ../1_charmm-gui/step5_assembly.pdb          # reference PDB file for restraint
+localresfile = restraints/step6.0_minimization.dihe   # local restraint file
+
+[OUTPUT]
+dcdfile = step6.0_minimization.dcd
+rstfile = step6.0_minimization.rst
+
+[ENERGY]
+forcefield       = CHARMM  # [CHARMM]
+electrostatic    = PME     # [CUTOFF,PME]
+switchdist       = 10.0    # switch distance
+cutoffdist       = 12.0    # cutoff distance
+pairlistdist     = 13.5    # pair-list distance
+vdw_force_switch = YES     # force switch option for van der Waals
+pme_nspline      = 4       # order of B-spline in [PME]
+pme_max_spacing  = 1.2     # Max grid spacing allowed
+contact_check    = YES     # avoid atomic crash
+nonb_limiter     = YES     # avoid failure due to atomic clash
+minimum_contact  = 0.5     # definition of atomic clash distance
+
+[MINIMIZE]
+method           = SD      # [SD]
+nsteps           = 2000    # number of minimization steps
+eneout_period    =  100    # energy output period
+crdout_period    =  100    # coordinates output period
+rstout_period    = 2000    # restart output period
+nbupdate_period  =   10    # nonbond update period
+ 
+[BOUNDARY]
+type             = PBC           # [PBC]
+box_size_x       = 52.2685374    # box size (x) in [PBC]
+box_size_y       = 52.2685374    # box size (x) in [PBC]
+box_size_z       = 85            # box size (x) in [PBC]
+
+[SELECTION]
+group1           = sid:MEMB and ((rnam:POPC and (an:P)))  # restriant group 1
+
+[RESTRAINTS]
+nfunctions       = 1       # number of functions
+function1        = POSI    # restraint function type
+direction1       = Z       # direction [ALL,X,Y,Z]
+constant1        = 2.5     # force constant
+select_index1    = 1       # restrained groups
+

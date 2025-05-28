@@ -1,0 +1,74 @@
+[INPUT]
+topfile             = ../toppar/top_all36_prot.rtf
+parfile             = ../toppar/par_all36m_prot.prm
+strfile             = ../toppar/toppar_water_ions.str
+psffile             = ../1_setup/wbox.psf
+pdbfile             = ../1_setup/start.pdb
+reffile             = ../4_rpath_generator/{}.pdb
+rstfile             = ../4_rpath_generator/{}.rst
+
+[OUTPUT]
+dcdfile             = eq1_{}.dcd
+rstfile             = eq1_{}.rst
+rpathfile           = eq1_{}.rpath
+logfile             = eq1_{}.log
+
+[ENERGY]
+forcefield          = CHARMM
+electrostatic       = PME
+switchdist          = 10.0
+cutoffdist          = 12.0
+pairlistdist        = 13.5
+vdw_force_switch    = YES
+
+[DYNAMICS]
+integrator          = VVER
+timestep            = 0.002
+nsteps              = 50000
+eneout_period       = 5000
+crdout_period       = 5000
+rstout_period       = 50000
+nbupdate_period     = 10
+
+[CONSTRAINTS]
+rigid_bond          = YES
+
+[ENSEMBLE]
+ensemble            = NPT
+tpcontrol           = BUSSI
+temperature         = 300.00
+pressure            = 1.0
+
+[BOUNDARY]
+type                = PBC
+
+[RPATH]
+nreplica            = 16
+rpath_period        = 0
+delta               = 0
+rest_function       = 1 2
+fix_terminal        = YES
+
+[SELECTION]
+group1              = ai:15
+group2              = ai:17
+group3              = ai:19
+group4              = ai:25
+group5              = ai:27
+
+[RESTRAINTS]
+nfunctions          = 2
+
+function1           = DIHED
+constant1           = 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 \
+                      1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+reference1          = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 \
+                      0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+select_index1       = 1 2 3 4
+
+function2           = DIHED
+constant2           = 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 \
+                      1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+reference2          = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 \
+                      0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+select_index2       = 2 3 4 5

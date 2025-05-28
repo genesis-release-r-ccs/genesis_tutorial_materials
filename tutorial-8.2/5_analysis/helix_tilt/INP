@@ -1,0 +1,24 @@
+[INPUT]
+psffile        = ../../1_setup/proa.psf
+reffile        = ../../1_setup/proa.pdb
+ 
+[OUTPUT]
+outfile        = output.out      # output file
+ 
+[TRAJECTORY]
+trjfile1       = ../../4_production/md.dcd  # trajectory file
+md_step1       = 500             # number of MD steps
+mdout_period1  = 1               # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = segid:PROA & an:CA & resno:5-24
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+TM_helix_atom  = 1               # transmembrane helix atoms

@@ -1,0 +1,38 @@
+[INPUT]
+psffile        = ../../1_setup/rbp_closed.psf 
+reffile        = eq4_last.pdb 
+ 
+[OUTPUT]
+trjfile        = rbp_open_ref.pdb
+rmsfile        = rbp_open_ref.rms
+ 
+[TRAJECTORY]
+trjfile1       = ../../1_setup/rbp_open.pdb
+md_step1       = 1       
+mdout_period1  = 1      
+ana_period1    = 1     
+repeat1        = 1
+trj_format     = PDB    
+trj_type       = COOR+BOX
+trj_natom      = 0    
+ 
+[SELECTION]
+group1         = all 
+group2         = an:CA and (resno:108-231 or resno:269-271)
+ 
+[FITTING]
+fitting_method = TR+ROT
+fitting_atom   = 2     
+mass_weight    = NO    
+ 
+[OPTION]
+check_only     = NO 
+allow_backup   = NO 
+centering      = NO
+centering_atom = 1 
+center_coord   = 0.0 0.0 0.0 
+pbc_correct    = NO
+trjout_format  = PDB 
+trjout_type    = COOR+BOX 
+trjout_atom    = 1               # atom group
+split_trjpdb   = NO              # output split PDB trajectory

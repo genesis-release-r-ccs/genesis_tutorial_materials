@@ -1,0 +1,71 @@
+[INPUT]
+topfile = ../toppar/top_all36_prot.rtf, ../toppar/top_all36_cgenff.rtf, ../toppar/sbx.rtf 
+parfile = ../toppar/par_all36m_prot.prm, ../toppar/par_all36_cgenff.prm, ../toppar/morph.prm  
+strfile = ../toppar/toppar_water_ions.str
+psffile = complex.psf
+pdbfile = complex.pdb                 # PDB file
+reffile = complex.pdb
+rstfile = output/run_eq2.rst
+                 
+[OUTPUT]         
+dcdfile = output/run_eq3.dcd
+rstfile = output/run_eq3.rst
+fepfile = output/run_eq3.fepout
+
+[ALCHEMY]
+fep_direction = Forward
+fep_topology  = Hybrid
+singleA       = 1
+singleB       = 2
+dualA         = 3
+dualB         = 4
+fepout_period = 0
+equilsteps    = 0
+sc_alpha      = 5.0
+sc_beta       = 0.5
+lambljA       = 1.0 1.0
+lambljB       = 1.0 1.0
+lambelA       = 1.0 1.0
+lambelB       = 1.0 1.0
+lambbondA     = 1.0 1.0
+lambbondB     = 1.0 1.0
+lambrest      = 1.0 1.0
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = PME           # [CUTOFF,PME]
+switchdist       = 10.0          # switch distance
+cutoffdist       = 12.0          # cutoff distance
+pairlistdist     = 13.5          # pair-list distance
+pme_alpha        = auto
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator        = VRES
+nsteps            = 400000
+timestep          = 0.0025
+eneout_period     = 4000
+crdout_period     = 4000
+rstout_period     = 4000
+nbupdate_period   = 10
+elec_long_period  = 2
+thermostat_period = 10
+barostat_period   = 10
+
+[CONSTRAINTS]
+rigid_bond       = YES
+
+[ENSEMBLE]
+ensemble         = NPT
+temperature    = 300
+tpcontrol        = BUSSI
+pressure         = 1.0
+
+[BOUNDARY]
+type             = PBC
+
+[SELECTION]
+group1 = ai:1-60 and segid:L0 
+group2 = ai:69-128 and segid:L1 
+group3 = ai:61-68 and segid:L0 
+group4 = ai:129-142 and segid:L1 

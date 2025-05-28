@@ -1,0 +1,25 @@
+[INPUT]
+psffile = ../1_construction/go.psf # protein structure file
+reffile = ../1_construction/go.pdb # PDB file
+
+[OUTPUT]
+rmsfile        = run.rms       # RMSD file
+
+[TRAJECTORY]
+trjfile1       = ../2_production/run.dcd # trajectory file
+md_step1       = 100000000       # number of MD steps
+mdout_period1  = 10000           # MD output period
+ana_period1    = 1               # analysis period
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR            # (COOR/COOR+BOX)
+
+[SELECTION]
+group1         = all             # selection group 1
+
+[FITTING]
+fitting_method = TR+ROT          # method
+fitting_atom   = 1               # atom group
+
+[OPTION]
+check_only     = NO              # (YES/NO)
+

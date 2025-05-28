@@ -1,0 +1,16 @@
+[INPUT]
+cvfile          = ../3_steered_md/smd.tor
+dcdfile         = ../3_steered_md/smd.dcd   # DCD trajectory file
+dcdvelfile      = ../3_steered_md/smd.dvl   # DCD velocity file
+psffile         = ../1_setup/wbox.psf       # protein structure file
+pdbfile         = ../1_setup/start.pdb      # PDB file
+fitfile         = ../1_setup/end.pdb        # PDB file
+
+[OUTPUT]
+pdbfile         = {}.pdb    # PDB file
+rstfile         = {}.rst    # restart file
+
+[RPATH]
+nreplica        = 16
+iseed           = 31415
+iter_reparam    = 10

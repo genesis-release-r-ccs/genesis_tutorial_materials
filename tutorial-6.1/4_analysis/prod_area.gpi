@@ -1,0 +1,11 @@
+set terminal jpeg size 800,400
+set output 'prod_area.jpg'
+
+set xlabel 'Time (ps)'
+set ylabel 'Area per lipid ({\305}^2)'
+
+set xrange [0:1000]
+set yrange [60:70]
+
+plot 'energy7.log' using 3:($17*$18/40) w l t 'energy7'
+

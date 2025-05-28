@@ -1,0 +1,79 @@
+[INPUT]
+topfile             = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_carb.rtf
+parfile             = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_carb.prm
+strfile             = ../../toppar/toppar_water_ions.str
+
+psffile             = ../../1_setup/rbp_closed.psf
+fitfile             = ../../5_initial_pathway/5-1_fitting/rbp_open_ref.pdb
+pdbfile             = ../../5_initial_pathway/5-1_fitting/rbp_open_ref.pdb
+reffile             = ../../5_initial_pathway/5-4_rpath_generator/{}.pdb
+rstfile             = ../6-3_rpath_production/pr1.{}.rst
+
+[OUTPUT]
+logfile       = pr2.{}.log
+rstfile       = pr2.{}.rst
+dcdfile       = pr2.{}.dcd
+rpathfile     = pr2.{}.rpath
+rpathlogfile  = pr2.rpathlog
+
+[ENERGY]
+forcefield          = CHARMM
+electrostatic       = PME
+switchdist          = 10.0
+cutoffdist          = 12.0
+pairlistdist        = 13.5
+vdw_force_switch    = YES
+pme_nspline         = 4
+pme_max_spacing     = 1.2
+
+[DYNAMICS]
+integrator        =   VRES 
+nsteps            = 400000 
+timestep          = 0.0025 
+eneout_period     =   1000 
+crdout_period     =   1000 
+rstout_period     =  400000
+nbupdate_period   =   10
+elec_long_period  = 2  
+thermostat_period = 10
+barostat_period   = 10
+
+[CONSTRAINTS]
+rigid_bond          = YES
+
+[ENSEMBLE]
+ensemble            = NVT
+tpcontrol           = BUSSI
+temperature         = 300.00
+group_tp            = YES
+
+
+[BOUNDARY]
+type                = PBC
+
+[SELECTION]
+group1 = an:CA and segid:PROA
+group2 = an:CA and (resno:108-231 or resno:269-271)
+
+[RPATH]
+nreplica=16
+rpath_period = 1000
+rest_function = 1
+delta = 0.3
+fix_terminal = no
+avoid_shrinkage = YES
+
+[FITTING]
+fitting_method = TR+ROT
+fitting_atom   = 2
+mass_weight    = NO
+ 
+[RESTRAINTS]
+nfunctions 		= 1
+function1  		= POSI
+constant1  		= 1.0 1.0 1.0 1.0 1.0 \
+                          1.0 1.0 1.0 1.0 1.0 \
+                          1.0 1.0 1.0 1.0 1.0 \
+                          1.0 
+select_index1 		= 1
+pressure_position = yes

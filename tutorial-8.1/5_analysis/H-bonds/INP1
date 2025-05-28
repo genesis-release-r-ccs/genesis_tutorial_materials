@@ -1,0 +1,33 @@
+[INPUT]
+prmtopfile     = ../../1_setup/proa.prmtop      # AMBER parameter topology file
+ambcrdfile     = ../../1_setup/proa.crd         # AMBER coordinates file
+ 
+[OUTPUT]
+outfile        = output_gbsa.out                # output file
+hb_listfile    = output.hb_gbsa_list            # H-bond list file
+ 
+[TRAJECTORY]
+trjfile1       = ../../4_production/md_gbsa.dcd # trajectory file
+md_step1       = 50000                          # number of MD steps
+mdout_period1  = 100                            # MD output period
+ana_period1    = 100                            # analysis period
+repeat1        = 1
+trj_format     = DCD          # (PDB/DCD)
+trj_type       = COOR+BOX     # (COOR/COOR+BOX)
+trj_natom      = 0            # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = all          # selection group 1
+ 
+[OPTION]
+check_only     = NO           # only checking input files (YES/NO)
+allow_backup   = NO           # backup existing output files (YES/NO)
+analysis_atom  = 1            # atom group for searching HB partners
+target_atom    = 1            # search the HB partners from this group
+hb_distance    =   3.4        # the upper limit of (D .. A) distance (default: 3.4 A)
+DHA_angle      = 120.0        # the lower limit of (D-H .. A) angle (default: 120 deg.)
+HDA_angle      =  30.0        # the upper limit of (H-D .. A) angle (default:  30 deg.)
+boundary_type  = NOBC         # (PBC / NOBC)
+output_type    = count_snap   # (count_atom / count_snap)
+                              #   count_atom: number of H-bonds is output for each pair
+                              #   count_snap: number of H-bonds is output every snapshot

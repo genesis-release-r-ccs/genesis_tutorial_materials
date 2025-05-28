@@ -1,0 +1,41 @@
+[INPUT]
+topfile      = ../1_setup/1-2_MMTSB/GO_1urp_A.top
+parfile      = ../1_setup/1-5_DoME_ligand/GO_apo_scaled_e1.7.param
+psffile      = ../1_setup/1-2_MMTSB/go_1urp.psf
+pdbfile      = ../1_setup/1-2_MMTSB/go_1urp.pdb
+
+[OUTPUT]
+dcdfile         = w_ligand.dcd					# .dcd trajectory file
+rstfile         = w_ligand.rst					# restart file
+
+[ENERGY]
+forcefield      = KBGO						# name of force field	
+electrostatic   = CUTOFF					# [CUTOFF/PME]
+switchdist      = 19.9                       			# switch distance
+cutoffdist      = 20.0                       			# cutoff distance
+pairlistdist    = 50.0                       			# pair-list cutoff distance
+water_model     = NONE						# no waters in KBGo
+
+[DYNAMICS]
+integrator      = VVER                        			# [LEAP,VVER]
+nsteps          = 100000		   			# number of MD steps 
+timestep        = 0.020                       			# timestep (ps)
+eneout_period   = 10000						# energy output period
+rstout_period   = 10000						# restart output period
+crdout_period   = 10000						# .dcd output period
+nbupdate_period = 10						# nonbonded output period 
+stoptr_period	= 1						# frequency of removing translations and rotations
+
+[CONSTRAINTS]
+rigid_bond      = YES                         			# constraints all bonds
+fast_water      = NO                          			# no water
+shake_tolerance = 1.0e-6                     	 		# tolerance (Angstrom)
+
+[ENSEMBLE]
+ensemble        = NVT                         			# [NVE,NVT,NPT]
+tpcontrol       = LANGEVIN		      			# thermostat
+temperature     = 260                         			# temperature of the simulation (K)
+gamma_t         = 0.001     					# thermostat friction (ps-1) in [LANGEVIN]
+
+[BOUNDARY]
+type            = NOBC                        			# [PBC, NOBC], no boundary conditions

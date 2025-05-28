@@ -1,0 +1,37 @@
+[INPUT]
+grotopfile          = 1PGB_cg.top # topology file
+grocrdfile          = 1PGB_cg.gro # coordinate file
+
+[OUTPUT]
+pdbfile             = pro_md1.pdb # PDB output
+dcdfile             = pro_md1.dcd # DCD trajectory
+rstfile             = pro_md1.rst # restart file
+
+[ENERGY]
+forcefield          = RESIDCG     # CG model: AICG2+
+electrostatic       = CUTOFF      # Debye-Huckel model
+cg_pairlistdist_exv = 15.0        # Neighbor-list distance
+
+[DYNAMICS]
+integrator          = VVER_CG     # velocity-verlet propagation
+nsteps              = 50000000    # number of MD steps
+timestep            = 0.010       # timestep size (ps)
+eneout_period       = 10000       # energy output interval
+crdout_period       = 10000       # trajectory output interval
+rstout_period       = 100000      # restart output interval
+nbupdate_period     = 20          # pairlist update interval
+
+[CONSTRAINTS]
+rigid_bond          = NO          # don't apply constraints
+
+[ENSEMBLE]
+ensemble            = NVT         # Canonical ensemble
+tpcontrol           = LANGEVIN    # Langevin thermostat
+temperature         = 400         # simulation temperature
+gamma_t             = 0.01        # thermostat friction parameter
+
+[BOUNDARY]
+type                = PBC         # periodic boundary condition
+box_size_x          = 180.0       # box size in x direction
+box_size_y          = 180.0       # box size in y direction
+box_size_z          = 180.0       # box size in z direction

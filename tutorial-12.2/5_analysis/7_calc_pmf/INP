@@ -1,0 +1,16 @@
+[INPUT]
+cvfile       = ../5_calc_dist/parameter/parameter{}.dis  # collective variable file
+weightfile   = ../6_calc_mbar/output{}.weight            # weight file
+ 
+[OUTPUT]
+pmffile      = dist.pmf       # potential of mean force file
+ 
+[OPTION]
+nreplica     = 14             # number of replicas
+dimension    = 1              # dimension of cv space
+temperature  = 300
+grids1       = 0.0 15.0 601   # (min max num_of_bins)
+band_width1  = 0.25           # sigma of gaussian kernel
+                              # should be comparable or smaller than the grid size
+                              # (pmf_analysis creates histogram by accumulating gaussians)
+is_periodic1 = NO             # periodicity of cv1

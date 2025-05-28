@@ -1,0 +1,45 @@
+[INPUT]
+prmtopfile = ../1_setup/proa.prmtop   # AMBER parameter topology file
+ambcrdfile = ../1_setup/proa.crd      # AMBER coordinates file
+ambreffile = ../1_setup/proa.crd      # reference AMBER coordinate file
+
+[OUTPUT]
+dcdfile = eq.dcd            # DCD trajectory file
+rstfile = eq.rst            # restart file
+ 
+[ENERGY]
+forcefield       = AMBER   # [AMBER]
+electrostatic    = CUTOFF  # [CUTOFF]
+switchdist       = 23.0    # switch distance
+cutoffdist       = 25.0    # cutoff distance
+pairlistdist     = 28.0    # pair-list distance
+implicit_solvent = GBSA    # [GBSA]
+ 
+[DYNAMICS]
+integrator       = VVER     # [LEAP,VVER]
+nsteps           = 5000     # number of MD steps
+timestep         = 0.002    # timestep (ps)
+eneout_period    =  100     # energy output period
+crdout_period    =  100     # coordinates output period
+rstout_period    = 5000     # restart output period
+ 
+[CONSTRAINTS]
+rigid_bond       = YES      # constraints all bonds involving hydrogen
+ 
+[ENSEMBLE]
+ensemble         = NVT      # [NVE,NVT]
+tpcontrol        = LANGEVIN # [NO,BERENDSEN,BUSSI,LANGEVIN]
+temperature      = 298.15   # initial and target temperature (K)
+ 
+[BOUNDARY]
+type             = NOBC     # [NOBC]
+ 
+[SELECTION]
+group1           = an:CA    # restraint group 1
+ 
+[RESTRAINTS]
+nfunctions       = 1        # number of functions
+function1        = POSI     # restraint function type
+direction1       = ALL      # direction [ALL,X,Y,Z]
+constant1        = 1.0      # force constant
+select_index1    = 1        # restrained groups

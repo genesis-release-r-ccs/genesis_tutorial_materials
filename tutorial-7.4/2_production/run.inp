@@ -1,0 +1,35 @@
+[INPUT]
+grotopfile             = ../1_setup/smog.top     # topology/parameter file
+grocrdfile             = ../1_setup/smog.gro     # coordinate file (equivalent to PDB file)
+
+[output]
+dcdfile                = run.dcd                 # DCD trajectory file
+rstfile                = run.rst                 # restart file
+
+[ENERGY]
+forcefield             = AAGO
+electrostatic          = CUTOFF
+switchdist             = 45.0                    # this will be ignored
+cutoffdist             = 50.0                    # cutoff distance
+pairlistdist           = 55.0                    # pair-list cutoff distance
+
+[DYNAMICS]
+integrator             = VVER                    # [LEAP, VVER]
+nsteps                 = 10000000                # number of MD steps
+timestep               = 0.002                   # time step (ps)
+eneout_period          = 5000                    # energy output period
+crdout_period          = 5000                    # coordinate output period
+rstout_period          = 10000000                # restart output period
+
+[CONSTRAINTS]
+rigid_bond             = NO
+
+[ENSEMBLE]
+ensemble               = NVT                     # [NVE, NVT, NPT]
+tpcontrol              = LANGEVIN                # thermostat
+temperature            = 112.5                   # target temperature (K)
+gamma_t                = 0.1                     # friction (ps-1)
+                                                 # in [LANGEVIN]
+
+[BOUNDARY]
+type                   = NOBC                    # [PBC, NOBC]

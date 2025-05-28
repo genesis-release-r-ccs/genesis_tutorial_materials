@@ -1,0 +1,16 @@
+source leaprc.ff14SB
+
+
+loadamberparams parm10.dat
+loadamberparams frcmod.ff14SB
+loadamberparams frcmod.ionsjc_tip3p
+loadOff nucleic12.lib
+
+a = loadpdb 2mxs_RNA-only.pdb
+solvateBox a TIP3PBOX 20
+addions a Cl- 22
+addions a Na+ 48
+savepdb a md.pdb 
+saveamberparm a md.prm md.crd
+
+quit

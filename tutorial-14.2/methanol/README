@@ -1,0 +1,26 @@
+# Make input files for FEP
+#
+# By default, input files for FEP/lambda-REMD are generated.
+# If you want to perform distributed computation instead of REMD,
+# change md_type to "distributed" in make_inp.sh. In that case
+# input files for each lambda window are generated.
+./make_input.sh
+
+# Equilibration & FEP Simulation
+#
+# If you use distributed parallel jobs, make job files using
+# make_job.sh and run job_bakapara.sh after job_eq.sh.
+./job_eq.sh
+./job_fepremd.sh
+
+# Postprocessing
+#
+# If you perform distributed computation instead of REMD,
+# change md_type to "distributed" in post_run.sh.
+./post_run.sh
+
+# Calculation of dG
+#
+# Execute following script to get the absolute solvation free energy.
+./calc_dG.py
+

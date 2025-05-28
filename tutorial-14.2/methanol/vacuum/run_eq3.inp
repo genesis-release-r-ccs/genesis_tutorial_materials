@@ -1,0 +1,43 @@
+[INPUT]
+topfile = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_cgenff.rtf
+parfile = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_cgenff.prm
+strfile = ../../toppar/toppar_water_ions.str
+
+psffile = vacuum.psf
+pdbfile = vacuum.pdb                 # PDB file
+reffile = vacuum.pdb
+rstfile = output/run_eq2.rst
+                 
+[OUTPUT]         
+dcdfile = output/run_eq3.dcd
+rstfile = output/run_eq3.rst
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = CUTOFF           # [CUTOFF,PME]
+switchdist       = 298.0          # switch distance
+cutoffdist       = 300.0          # cutoff distance
+pairlistdist     = 305.0          # pair-list distance
+vdw_force_switch = YES
+vacuum           = YES
+
+[DYNAMICS]
+integrator        = VVER 
+nsteps            = 50000
+timestep          = 0.002 
+eneout_period     = 5000 
+crdout_period     = 5000 
+rstout_period     = 5000 
+
+[CONSTRAINTS]
+rigid_bond       = YES
+
+[ENSEMBLE]
+ensemble         = NVT 
+temperature      = 300
+tpcontrol        = BUSSI
+pressure         = 1.0
+
+[BOUNDARY]
+type             = PBC
+

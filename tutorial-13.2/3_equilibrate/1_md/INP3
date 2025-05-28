@@ -1,0 +1,57 @@
+[INPUT]
+topfile             = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_carb.rtf
+parfile             = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_carb.prm
+strfile             = ../../toppar/toppar_water_ions.str
+
+psffile             = ../../1_setup/rbp_closed.psf                  # protein structure file
+pdbfile             = ../../1_setup/rbp_closed.pdb                  # PDB file
+reffile             = ../../1_setup/rbp_closed.pdb                  # Reference for restraints
+rstfile             = ./eq2.rst
+
+[OUTPUT]
+dcdfile             = eq3.dcd
+rstfile             = eq3.rst
+
+[ENERGY]
+forcefield          = CHARMM
+electrostatic       = PME
+switchdist          = 10.0
+cutoffdist          = 12.0
+pairlistdist        = 13.5
+vdw_force_switch    = YES
+pme_nspline         = 4
+pme_max_spacing     = 1.2
+
+[DYNAMICS]
+integrator        =   VRES  # [LEAP,VVER,VRES]
+nsteps            =  40000  # number of MD steps (50ps)
+timestep          = 0.0025  # timestep (2.5fs)
+eneout_period     =    400  # energy output period (1ps)
+crdout_period     =    400  # coordinates output period (1ps)
+rstout_period     =  40000  # restart output period
+nbupdate_period   =     10  # nonbond update period
+elec_long_period  =      2  # period of reciprocal space calculation
+thermostat_period =     10  # period of thermostat update
+barostat_period   =     10  # period of barostat update
+
+[CONSTRAINTS]
+rigid_bond          = YES
+
+[ENSEMBLE]
+ensemble            = NVT
+tpcontrol           = BUSSI
+temperature         = 300.00
+group_tp        = yes
+
+[BOUNDARY]
+type                = PBC
+
+[SELECTION]
+group1              = (segid:PROA | segid:CARA) & heavy
+ 
+[RESTRAINTS]
+nfunctions          = 1
+function1           = POSI
+direction1          = ALL
+constant1           = 1.0
+select_index1       = 1

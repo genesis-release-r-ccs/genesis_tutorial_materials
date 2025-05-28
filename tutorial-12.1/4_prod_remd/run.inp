@@ -1,0 +1,59 @@
+[INPUT]
+topfile           = ../toppar/top_all36_prot.rtf     # topology file
+parfile           = ../toppar/par_all36m_prot.prm    # parameter file
+strfile           = ../toppar/toppar_water_ions.str  # stream file
+psffile           = ../1_setup/wbox.psf              # protein structure file
+pdbfile           = ../1_setup/wbox.pdb              # PDB file
+reffile           = ../1_setup/wbox.pdb              # PDB file
+rstfile           = ../3_equil_remd/run_rep{}.rst    # restart file
+
+[OUTPUT]
+dcdfile           = run_rep{}.dcd  # DCD trajectory file
+rstfile           = run_rep{}.rst  # restart file
+remfile           = run_rep{}.rem  # replica exchange ID file
+logfile           = run_rep{}.log  # log file of each replica
+
+[ENERGY]
+forcefield        = CHARMM   # CHARMM force field
+electrostatic     = PME      # use Particle mesh Ewald method
+switchdist        = 10.0     # switch distance
+cutoffdist        = 12.0     # cutoff distance
+pairlistdist      = 13.5     # pair-list distance
+pme_nspline       = 4        # order of the spline interpolation
+vdw_force_switch  = YES      # turn on vdw force switch
+pme_max_spacing   = 1.2      # Max grid spacing allowed
+
+[DYNAMICS]
+integrator        = VRES     # [LEAP,VVER,VRES]
+nsteps            = 4000000  # number of MD steps
+timestep          = 0.0025   # timestep (ps)
+eneout_period     = 2000     # energy output period
+crdout_period     = 2000     # coordinates output period
+rstout_period     = 20000    # restart output period
+nbupdate_period   = 10       # pairlist update period
+elec_long_period  = 2        # period of reciprocal space calculation
+thermostat_period = 10       # period of thermostat update
+barostat_period   = 10       # period of barostat update
+
+[CONSTRAINTS]
+rigid_bond        = YES      # use SHAKE/RATTLE
+fast_water        = YES      # use SETTLE
+
+[ENSEMBLE]
+ensemble          = NVT      # [NVE,NVT,NPT]
+tpcontrol         = BUSSI    # thermostat and barostat
+temperature       = 300      # K
+group_tp          = YES      # group temperature/pressure evaluation
+
+[BOUNDARY]
+type              = PBC      # periodic boundary condition
+
+[REMD]
+dimension         = 1        # number of parameter types
+exchange_period   = 2000     # NO exchange for equilibration
+type1             = temperature  # T-REMD
+nreplica1         = 20           # number of replicas
+parameters1       = 300.00 302.53 305.09 307.65 310.24 \
+                    312.85 315.47 318.12 320.78 323.46 \
+                    326.16 328.87 331.61 334.37 337.14 \
+                    339.94 342.75 345.59 348.44 351.30

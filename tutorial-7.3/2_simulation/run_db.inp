@@ -1,0 +1,44 @@
+[INPUT]
+grotopfile      = ../input_files/GO_DB.grotop	                # topology file
+psffile         = ../input_files/GO_open.psf			# structure file
+pdbfile         = ../input_files/GO_open.pdb			# .pdb coordinate file
+
+[OUTPUT]
+dcdfile         = run_db.dcd					# .dcd trajectory file
+rstfile         = run_db.rst					# restart file
+
+[ENERGY]
+forcefield      = KBGO						# name of force field	
+electrostatic   = CUTOFF					# [CUTOFF/PME]
+switchdist      = 19.9                       			# switch distance
+cutoffdist      = 20.0                       			# cutoff distance
+pairlistdist    = 50.0                       			# pair-list cutoff distance
+water_model     = NONE						# no waters in KBGo
+num_basins	= 2						# number of basins
+mix_temperature	= 4500						# Tf
+basinenergy1	= -1.12						# C
+basinenergy2	= 0						# should be set to zero
+
+[DYNAMICS]
+integrator      = VVER                        			# [LEAP,VVER]
+nsteps          = 100000		   			# number of MD steps 
+timestep        = 0.020                       			# timestep (ps)
+eneout_period   = 10000						# energy output period
+rstout_period   = 10000						# restart output period
+crdout_period   = 10000						# .dcd output period
+nbupdate_period = 10						# nonbonded output period 
+stoptr_period	= 1						# frequency of removing translations and rotations
+
+[CONSTRAINTS]
+rigid_bond      = YES                         			# constraints all bonds
+fast_water      = NO                          			# no water
+shake_tolerance = 1.0e-6                     	 		# tolerance (Angstrom)
+
+[ENSEMBLE]
+ensemble        = NVT                         			# [NVE,NVT,NPT]
+tpcontrol       = LANGEVIN		      			# thermostat
+temperature     = 260                         			# temperature of the simulation (K)
+gamma_t         = 0.001     					# thermostat friction (ps-1) in [LANGEVIN]
+
+[BOUNDARY]
+type            = NOBC                        			# [PBC, NOBC], no boundary conditions

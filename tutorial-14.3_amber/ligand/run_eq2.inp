@@ -1,0 +1,71 @@
+[INPUT]
+prmtopfile  = ligand.prmtop
+ambcrdfile  = ligand.inpcrd
+ambreffile  = ligand.inpcrd
+rstfile     = ./output/run_eq1.rst
+
+[OUTPUT]
+dcdfile = output/run_eq2.dcd
+rstfile = output/run_eq2.rst
+fepfile = output/run_eq2.fepout
+
+[ALCHEMY]
+fep_direction = Forward
+fep_topology  = Hybrid
+singleA       = 1
+singleB       = 2
+dualA         = 3
+dualB         = 4
+fepout_period = 0
+sc_alpha      = 5.0
+sc_beta       = 0.5
+lambljA       = 1.0 1.0
+lambljB       = 1.0 1.0
+lambelA       = 1.0 1.0
+lambelB       = 1.0 1.0
+lambbondA     = 1.0 1.0
+lambbondB     = 1.0 1.0
+
+[ENERGY]
+forcefield       = AMBER     # AMBER force field
+electrostatic    = PME       # [CUTOFF,PME]
+switchdist       = 8.0       # switch distance
+cutoffdist       = 8.0       # cutoff distance
+pairlistdist     = 9.5       # pair-list distance
+pme_alpha        = auto
+dispersion_corr  = EPRESS
+ 
+[DYNAMICS]
+integrator    = VVER
+nsteps        = 50000     # number of MD steps
+timestep      = 0.002     # timestep (ps)
+eneout_period = 5000      # energy output period
+crdout_period = 5000      # coordinates output period
+rstout_period = 50000     # restart output period
+stoptr_period = 10
+ 
+[CONSTRAINTS]
+rigid_bond    = YES       # constraints all bonds
+water_model   = WAT
+ 
+[ENSEMBLE]
+ensemble      = NPT       # [NVE,NVT,NPT]
+tpcontrol     = BUSSI  # thermostat and barostat
+temperature   = 300.0     # initial temperature (K)
+pressure      = 1.0       # target pressure (atm)
+ 
+[BOUNDARY]
+type          = PBC      # [PBC,NOBC]
+
+[SELECTION]
+group1        = ai:1-57  and rno:1
+group2        = ai:69-125 and rno:2
+group3        = ai:58-68 and rno:1
+group4        = ai:126-142 and rno:2
+group5        = rno:1-2 and heavy
+
+[RESTRAINTS]
+nfunctions    = 1     # number of functions
+function1     = POSI  # restraint function type
+constant1     = 10.0  # force constant
+select_index1 = 5     # restrained group

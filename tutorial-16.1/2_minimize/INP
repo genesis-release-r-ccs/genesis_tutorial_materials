@@ -1,0 +1,28 @@
+[INPUT]
+topfile = ../toppar/top_all36_prot.rtf
+parfile = ../toppar/par_all36m_prot.prm
+pdbfile = ../1_build/initial.pdb
+psffile = ../1_build/initial.psf
+
+[OUTPUT]
+dcdfile = min.dcd          # DCD trajectory file
+rstfile = min.rst          # restart file
+
+[ENERGY]
+forcefield       = CHARMM  # CHARMM force field
+electrostatic    = CUTOFF  # use cutoff scheme for non-bonded terms
+switchdist       = 18.0    # switch distance
+cutoffdist       = 20.0    # cutoff distance
+pairlistdist     = 22.0    # pair-list distance
+implicit_solvent = GBSA    # use GBSA implicit solvent model
+
+[MINIMIZE]
+method           = SD      # Steepest descent
+nsteps           =  500    # number of MD steps
+eneout_period    =  100    # energy output period
+crdout_period    =  100    # coordinates output period
+rstout_period    =  500    # restart output period
+nbupdate_period  =   10    # nonbond update period
+
+[BOUNDARY]
+type             = NOBC    # No periodic boundary condition

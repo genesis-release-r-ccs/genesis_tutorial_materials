@@ -1,0 +1,35 @@
+[INPUT]
+psffile = ../../1_setup/wbox.psf
+reffile = ../../1_setup/wbox.pdb
+dcdfile = ../../4_production/step4_rep{}.dcd    # see remd_conv.sh
+remfile = ../../4_production/step4_rep{}.rem    # see remd_conv.sh
+enefile = ../../4_production/step4_rep{}.ene  # enefile of gREST
+ 
+[OUTPUT]
+pdbfile         = param.pdb    # pdbfile
+trjfile         = param{}.dcd  # sorted dcdfile
+enefile         = param{}.ene  # sorted enefile
+
+[SELECTION]
+group1          = ai:1-42   # only tri-alanine
+group2          = resno:2 and (an:N or an:CA or an:C or an:O) # backbone of 2nd ALA
+
+[FITTING]
+fitting_method  = TR+ROT    # center-of-mass translation + rotation fitting
+fitting_atom    = 2         # fitting to backbone of central alanine
+mass_weight     = YES       # mass-weighted fitting
+
+[OPTION]
+check_only      = NO
+convert_type    = PARAMETER
+convert_ids     =           # only lowest T replicas
+num_replicas    = 4 
+nsteps          = 3000000
+exchange_period = 3000
+crdout_period   = 300       # trjectory output frequency in REMD
+eneout_period   = 300       # energy output frequency in REMD
+trjout_format   = DCD
+trjout_type     = COOR+BOX
+trjout_atom     = 1         # output only tri-alanine moiety
+pbc_correct     = NO        # nothing will happen when water mols excluded
+

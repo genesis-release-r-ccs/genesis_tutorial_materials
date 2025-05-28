@@ -1,0 +1,21 @@
+[INPUT]
+cvfile         = {}.pathcv
+weightfile     = {}.weight
+distfile       = {}.pathdist
+ 
+[OUTPUT]
+pmffile        = pathcv.pmf
+ 
+[OPTION]
+check_only     = NO
+allow_backup   = NO
+
+nreplica       = 16
+dimension      = 1
+temperature    = 300
+cutoff         = 200
+
+grids1         = 0.0 17.0 30
+band_width1    = 0.1
+is_periodic1   = NO
+box_size1      = 360.0

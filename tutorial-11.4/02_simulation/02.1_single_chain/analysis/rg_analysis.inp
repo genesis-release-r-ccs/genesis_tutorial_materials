@@ -1,0 +1,22 @@
+[INPUT]
+grotopfile    = ../fus_cg.top
+grocrdfile    = ../fus_cg.gro
+ 
+[OUTPUT]
+rgfile        = output.rg
+ 
+[TRAJECTORY]
+trjfile1      = ../fus_single_md1.dcd
+trj_format    = DCD
+trj_type      = COOR
+trj_natom     = 163
+ 
+[SELECTION]
+group1        = all # selection group 1
+ 
+[OPTION]
+check_only    = NO  # only checking input files (YES/NO)
+allow_backup  = NO  # backup existing output files (YES/NO)
+analysis_atom = 1   # atom group
+mass_weighted = NO  # (YES/NO)
+ 

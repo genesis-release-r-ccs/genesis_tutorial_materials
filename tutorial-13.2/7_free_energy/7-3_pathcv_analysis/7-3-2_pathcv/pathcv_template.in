@@ -1,0 +1,23 @@
+# control parameters in pathcv_analysis
+ 
+[INPUT]
+pathfile       = ../../../6_rpath_sampling/6-4_rpath_production_2/pr2.last.rpath
+pdbfile        = ../../../1_setup/rbp_closed_CA.pdb
+reffile        = ../../../1_setup/rbp_closed_CA.pdb
+
+[TRAJECTORY]
+trjfile1       = ../7-3-1_crd_convert_fit/um1.<num>.dcd
+md_step1       = <mdstep>             # number of MD steps
+mdout_period1  = <mdout>            # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/MARBLE/AMBER/TINKER/DCD/GROMACS)
+trj_type       = COOR+BOX       # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[OUTPUT]
+pathcvfile     = um1.<num>.pathcv # PATH CV file
+ 
+[OPTION]
+nreplica       = 1
+trajectory     = yes

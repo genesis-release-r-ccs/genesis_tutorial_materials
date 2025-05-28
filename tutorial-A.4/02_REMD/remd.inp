@@ -1,0 +1,61 @@
+[INPUT]
+grotopfile             = 1PGB_cg.top
+grocrdfile             = 1PGB_cg.gro
+
+[OUTPUT]
+pdbfile                = gb1_remd_run_rep{}.pdb
+dcdfile                = gb1_remd_run_rep{}.dcd
+rstfile                = gb1_remd_run_rep{}.rst
+remfile                = gb1_remd_run_rep{}.rem
+logfile                = gb1_remd_run_rep{}.log
+
+[ENERGY]
+forcefield             = RESIDCG
+electrostatic          = CUTOFF
+
+[DYNAMICS]
+integrator             = VVER_CG
+nsteps                 = 100000000
+timestep               = 0.010
+rstout_period          = 100000
+crdout_period          = 1000
+eneout_period          = 1000
+nbupdate_period        = 20
+
+[CONSTRAINTS]
+rigid_bond             = NO
+
+[ENSEMBLE]
+ensemble               = NVT
+tpcontrol              = LANGEVIN
+temperature            = 320
+gamma_t                = 0.01
+
+[BOUNDARY]
+type                   = PBC
+box_size_x             = 300.0
+box_size_y             = 300.0
+box_size_z             = 300.0
+
+[REMD]
+dimension              = 1
+exchange_period        = 5000
+type1                  = temperature
+nreplica1              = 16
+parameters1            = 320.00   \
+                         330.00   \
+                         340.00   \
+                         350.00   \
+                         360.00   \
+                         370.00   \
+                         380.00   \
+                         390.00   \
+                         400.00   \
+                         410.00   \
+                         420.00   \
+                         430.00   \
+                         440.00   \
+                         450.00   \
+                         460.00   \
+                         470.00 
+

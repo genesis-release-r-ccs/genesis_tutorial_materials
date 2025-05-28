@@ -1,0 +1,84 @@
+[INPUT]
+topfile = ../toppar/top_all36_prot.rtf     # topology file
+parfile = ../toppar/par_all36m_prot.prm    # parameter file
+strfile = ../toppar/toppar_water_ions.str  # stream file
+psffile = ../1_setup/wbox.psf              # protein structure file
+pdbfile = ../1_setup/wbox.pdb              # PDB file
+rstfile = ../5_equilibrate/rep{}.rst       # restart file
+
+[OUTPUT]
+dcdfile = rep{}.dcd                     # DCD trajectory file
+rstfile = rep{}.rst                     # restart file
+logfile = rep{}.log                     # log file of each replica
+remfile = rep{}.rem                     # parameter index file
+
+[GAMD]
+gamd          = yes
+boost         = yes
+boost_type    = DUAL
+thresh_type   = LOWER
+sigma0_pot    = 6.0
+sigma0_dih    = 1.0
+update_period = 0
+pot_max       = -37468.2812
+pot_min       = -38756.9062
+pot_ave       = -37715.0977
+pot_dev       = 80.5305
+dih_max       = 23.1753
+dih_min       = -3.0486
+dih_ave       = 11.8922
+dih_dev       = 2.3506
+
+[REMD]
+dimension         = 1
+exchange_period   = 1250                   # 5ps
+type1             = RESTRAINT
+nreplica1         = 14
+cyclic_params1    = NO
+rest_function1    = 1
+
+[ENERGY]
+forcefield        = CHARMM   # [CHARMM,AAGO,CAGO,KBGO,AMBER,GROAMBER,GROMARTINI]
+electrostatic     = PME      # [CUTOFF,PME]
+switchdist        = 10.0     # switch distance
+cutoffdist        = 12.0     # cutoff distance
+pairlistdist      = 13.5     # pair-list distance
+vdw_force_switch  = YES      # force switch option for van der Waals
+
+[DYNAMICS]
+integrator        =    VVER  # Velocity Verlet integrator
+nsteps            = 2500000  # number of MD steps (10 ns)
+timestep          =   0.004  # timestep (4 fs)
+eneout_period     =      50  # energy output period (200 fs)
+crdout_period     =      50  # coordinates output period (200 fs)
+rstout_period     =   25000  # restart output period
+nbupdate_period   =       5  # nonbond update period
+thermostat_period =       5  # period of thermostat update 
+barostat_period   =       5  # period of barostat update
+hydrogen_mr       =     yes
+hmr_target        =  Solute
+hmr_ratio         =     2.5
+hmr_ratio_xh1     =     2.0
+
+[CONSTRAINTS]
+rigid_bond        = YES      # constraints all bonds involving hydrogen
+
+[ENSEMBLE]
+ensemble          = NVT      # [NVE,NVT,NPT,NPAT,NPgT]
+tpcontrol         = BUSSI    # [NO,BERENDSEN,BUSSI,LANGEVIN]
+temperature       = 300      # initial and target temperature (K)
+group_tp          = YES      # usage of group tempeature and pressure
+
+[BOUNDARY]
+type              = PBC      # [PBC, NOBC]
+
+[SELECTION]   
+group1            = an:OY  and resno:1     # restraint group 1
+group2            = an:HNT and resno:3     # restraint group 2
+ 
+[RESTRAINTS]  
+nfunctions        = 1
+function1         = DIST
+constant1         =  1.2  1.2  1.2  1.2  1.2  1.2  1.2  1.2  1.2   1.2   1.2   1.2   1.2   1.2
+reference1        = 1.80 2.72 3.64 4.56 5.48 6.40 7.32 8.24 9.16 10.08 11.00 11.92 12.84 13.76
+select_index1     = 1 2

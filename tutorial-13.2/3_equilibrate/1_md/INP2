@@ -1,0 +1,55 @@
+[INPUT]
+topfile             = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_carb.rtf
+parfile             = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_carb.prm
+strfile             = ../../toppar/toppar_water_ions.str
+
+psffile             = ../../1_setup/rbp_closed.psf                  # protein structure file
+pdbfile             = ../../1_setup/rbp_closed.pdb                  # PDB file
+reffile             = ../../1_setup/rbp_closed.pdb                  # Reference for restraints
+rstfile             = ./eq1.rst
+
+[OUTPUT]
+dcdfile             = eq2.dcd
+rstfile             = eq2.rst
+
+[ENERGY]
+forcefield          = CHARMM
+electrostatic       = PME
+switchdist          = 10.0
+cutoffdist          = 12.0
+pairlistdist        = 13.5
+vdw_force_switch    = YES
+pme_nspline         = 4
+pme_max_spacing     = 1.2
+
+[DYNAMICS]
+integrator          = VVER
+nsteps              = 50000
+timestep            = 0.002
+eneout_period       = 500
+crdout_period       = 500
+rstout_period       = 50000
+nbupdate_period     = 10
+
+[CONSTRAINTS]
+rigid_bond          = YES
+
+[ENSEMBLE]
+ensemble            = NPT
+tpcontrol           = BUSSI
+temperature         = 300.00
+pressure            = 1.0
+group_tp        = yes
+
+[BOUNDARY]
+type                = PBC
+
+[SELECTION]
+group1              = (segid:PROA | segid:CARA) & heavy
+ 
+[RESTRAINTS]
+nfunctions          = 1
+function1           = POSI
+direction1          = ALL
+constant1           = 1.0
+select_index1       = 1

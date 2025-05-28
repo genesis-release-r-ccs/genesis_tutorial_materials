@@ -1,0 +1,68 @@
+[INPUT]
+topfile = ../1_setup/toppar/top_all36_prot.rtf, ../1_setup/toppar/top_all36_na.rtf, ../1_setup/toppar/top_all36_carb.rtf, ../1_setup/toppar/top_all36_lipid.rtf, ../1_setup/toppar/top_all36_cgenff.rtf, ../1_setup/toppar/top_interface.rtf, ../1_setup/zma/zma.rtf 
+parfile = ../1_setup/toppar/par_all36m_prot.prm, ../1_setup/toppar/par_all36_na.prm, ../1_setup/toppar/par_all36_carb.prm, ../1_setup/toppar/par_all36_lipid.prm, ../1_setup/toppar/par_all36_cgenff.prm, ../1_setup/toppar/par_interface.prm, ../1_setup/zma/zma.prm 
+strfile = ../1_setup/toppar/toppar_all36_moreions.str, ../1_setup/toppar/toppar_all36_nano_lig.str, ../1_setup/toppar/toppar_all36_nano_lig_patch.str, ../1_setup/toppar/toppar_all36_synthetic_polymer.str, ../1_setup/toppar/toppar_all36_synthetic_polymer_patch.str, ../1_setup/toppar/toppar_all36_polymer_solvent.str, ../1_setup/toppar/toppar_water_ions.str, ../1_setup/toppar/toppar_dum_noble_gases.str, ../1_setup/toppar/toppar_ions_won.str, ../1_setup/toppar/toppar_all36_prot_arg0.str, ../1_setup/toppar/toppar_all36_prot_c36m_d_aminoacids.str, ../1_setup/toppar/toppar_all36_prot_fluoro_alkanes.str, ../1_setup/toppar/toppar_all36_prot_heme.str, ../1_setup/toppar/toppar_all36_prot_na_combined.str, ../1_setup/toppar/toppar_all36_prot_retinol.str, ../1_setup/toppar/toppar_all36_prot_model.str, ../1_setup/toppar/toppar_all36_prot_modify_res.str, ../1_setup/toppar/toppar_all36_na_nad_ppi.str, ../1_setup/toppar/toppar_all36_na_rna_modified.str, ../1_setup/toppar/toppar_all36_lipid_sphingo.str, ../1_setup/toppar/toppar_all36_lipid_archaeal.str, ../1_setup/toppar/toppar_all36_lipid_bacterial.str, ../1_setup/toppar/toppar_all36_lipid_cardiolipin.str, ../1_setup/toppar/toppar_all36_lipid_cholesterol.str, ../1_setup/toppar/toppar_all36_lipid_dag.str, ../1_setup/toppar/toppar_all36_lipid_inositol.str, ../1_setup/toppar/toppar_all36_lipid_lnp.str, ../1_setup/toppar/toppar_all36_lipid_lps.str, ../1_setup/toppar/toppar_all36_lipid_mycobacterial.str, ../1_setup/toppar/toppar_all36_lipid_miscellaneous.str, ../1_setup/toppar/toppar_all36_lipid_model.str, ../1_setup/toppar/toppar_all36_lipid_prot.str, ../1_setup/toppar/toppar_all36_lipid_tag.str, ../1_setup/toppar/toppar_all36_lipid_yeast.str, ../1_setup/toppar/toppar_all36_lipid_hmmm.str, ../1_setup/toppar/toppar_all36_lipid_detergent.str, ../1_setup/toppar/toppar_all36_lipid_ether.str, ../1_setup/toppar/toppar_all36_carb_glycolipid.str, ../1_setup/toppar/toppar_all36_carb_glycopeptide.str, ../1_setup/toppar/toppar_all36_carb_imlab.str, ../1_setup/toppar/toppar_all36_label_spin.str, ../1_setup/toppar/toppar_all36_label_fluorophore.str
+
+psffile = ../1_setup/complex.psf                  # protein structure file
+pdbfile = ../1_setup/complex.pdb                  # PDB file
+reffile = ../1_setup/complex.pdb                  # Reference PDB file
+localresfile = ../1_setup/restraints/run_min.dihe # local restraint file
+ 
+[OUTPUT]
+rstfile = run_min.rst
+dcdfile = run_min.dcd
+
+[ENERGY]
+forcefield       = CHARMM       # [CHARMM]
+electrostatic    = PME          # [CUTOFF,PME]
+switchdist       = 10.0         # switch distance
+cutoffdist       = 12.0         # cutoff distance
+pairlistdist     = 13.5         # pair-list distance
+pme_alpha        = auto
+vdw_force_switch = YES
+contact_check    = YES          # avoid atomic crash
+
+[MINIMIZE]
+method           = SD
+nsteps           = 5000
+eneout_period    = 50
+crdout_period    = 500
+rstout_period    = 500
+force_scale_init = 0.00005
+force_scale_max  = 0.0001
+ 
+[CONSTRAINTS]
+rigid_bond      = NO
+fast_water      = NO
+
+[BOUNDARY]
+type            = PBC           # [PBC]
+box_size_x      = 70.3886435
+box_size_y      = 70.3886435
+box_size_z      = 129.826423
+
+[SELECTION]
+group1          = (sid:PROA) and backbone
+group2          = (sid:PROA) and not backbone and not hydrogen
+group3          = (sid:HETA) and not hydrogen
+group4          = sid:MEMB and ((rnam:POPC and (an:P)))
+
+[RESTRAINTS]
+nfunctions      = 4
+
+function1       = POSI
+constant1       = 10.0
+select_index1   = 1
+
+function2       = POSI
+constant2       = 5.0
+select_index2   = 2
+
+function3       = POSI
+constant3       = 10.0
+select_index3   = 3
+
+function4       = POSI
+direction4      = Z
+constant4       = 2.5
+select_index4   = 4

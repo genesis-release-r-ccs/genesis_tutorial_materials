@@ -1,0 +1,33 @@
+[INPUT]
+topfile             = ../toppar/top_all36_prot.rtf      # topology file
+parfile             = ../toppar/par_all36m_prot.prm     # parameter file
+strfile             = ../toppar/toppar_water_ions.str   # stream file
+psffile             = ../1_setup/wbox.psf               # protein structure file
+pdbfile             = ../1_setup/start.pdb              # PDB file
+
+[OUTPUT]
+dcdfile             = min.dcd          # DCD trajectory file
+rstfile             = min.rst          # restart file
+
+[ENERGY]
+forcefield          = CHARMM  # [CHARMM]
+electrostatic       = PME     # [PME]
+switchdist          = 10.0    # switch distance
+cutoffdist          = 12.0    # cutoff distance
+pairlistdist        = 13.5    # pair-list distance
+vdw_force_switch    = YES     # force switch option for van der Waals
+contact_check       = YES     # check atomic clash
+
+[MINIMIZE]
+method              = SD      # [SD]
+nsteps              = 5000    # number of minimization steps
+eneout_period       = 100     # energy output period
+crdout_period       = 100     # coordinates output period
+rstout_period       = 5000    # restart output period
+nbupdate_period     = 10      # nonbond update period
+
+[BOUNDARY]
+type                = PBC     # [PBC]
+box_size_x          = 50.2    # box size (x) in [PBC]
+box_size_y          = 50.2    # box size (y) in [PBC]
+box_size_z          = 50.2    # box size (z) in [PBC]

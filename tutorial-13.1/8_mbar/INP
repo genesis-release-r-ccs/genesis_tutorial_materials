@@ -1,0 +1,44 @@
+[INPUT] 
+psffile             = ../1_setup/wbox.psf
+pdbfile             = ../1_setup/start.pdb
+pathfile            = ../6_rpath_prod/last.path
+cvfile              = ../7_umbrella/umb_{}.cv
+
+[OUTPUT] 
+fenefile            = output.fene
+weightfile          = {}.weight
+
+[MBAR] 
+dimension           = 1
+num_replicas        = 16
+input_type          = CV
+nblocks             = 1
+newton_iteration    = 100
+temperature         = 300.0
+target_temperature  = 300.0
+tolerance           = 10E-08
+rest_function1      = 1 2
+read_ref_path       = 0
+
+[RESTRAINTS] 
+constant1           = 0.006092 0.006092 0.006092 0.006092 \
+                      0.006092 0.006092 0.006092 0.006092 \
+                      0.006092 0.006092 0.006092 0.006092 \
+                      0.006092 0.006092 0.006092 0.006092
+reference1          = -58.08 -64.89 -76.07 -84.94 \
+                      -96.24 -94.15 -89.72 -86.64 \
+                      -84.33 -78.93 -83.10 -85.77 \
+                      -80.74 -68.85 -62.55 -61.05
+is_periodic1        = YES
+box_size1           = 360.0
+
+constant2           = 0.006092 0.006092 0.006092 0.006092 \
+                      0.006092 0.006092 0.006092 0.006092 \
+                      0.006092 0.006092 0.006092 0.006092 \
+                      0.006092 0.006092 0.006092 0.006092
+reference2          = -48.95  -35.02  -24.24  -11.48 \
+                       -0.95   14.45   29.34   44.57 \
+                       59.94   74.49   89.46  104.77 \
+                      119.45  129.44  143.63  159.10
+is_periodic2        = YES
+box_size2           = 360.0

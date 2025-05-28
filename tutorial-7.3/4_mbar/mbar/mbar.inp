@@ -1,0 +1,14 @@
+[INPUT]
+cvfile = run_permute_{}.out
+targetfile = run_target_{}.out
+
+[OUTPUT]
+weightfile = run_weight_{}.weight
+fenefile = run_fene.fene
+
+[MBAR]
+num_replicas = 4
+input_type = MBGO
+temperature = 260
+target_temperature = 260
+dimension = 1

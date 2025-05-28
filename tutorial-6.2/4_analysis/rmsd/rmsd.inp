@@ -1,0 +1,31 @@
+[INPUT]
+psffile       = ../../1_setup/complex.psf
+reffile       = ../../1_setup/complex.pdb
+ 
+[OUTPUT]
+rmsfile        = rmsd.dat      # RMSD file
+ 
+[TRAJECTORY]
+trjfile1       = ../../3_production/run_prod.dcd # trajectory file
+md_step1       = 4000000         # number of MD steps
+mdout_period1  = 4000            # MD output period
+ana_period1    = 4000            # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = heavy and segid:PROA
+ 
+[FITTING]
+fitting_method = TR+ROT          # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+fitting_atom   = 1               # atom group
+zrot_ngrid     = 10              # number of z-rot grids
+zrot_grid_size = 1.0             # z-rot grid size
+mass_weight    = NO              # mass-weight is not applied
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+analysis_atom  = 1               # atom group

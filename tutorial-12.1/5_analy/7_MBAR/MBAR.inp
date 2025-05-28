@@ -1,0 +1,19 @@
+[INPUT]
+cvfile             = ../4_plot_potential/potential_parmID{}.log
+
+[OUTPUT]
+weightfile         = weight{}.dat
+fenefile           = fene.dat
+
+[MBAR]
+num_replicas       = 20
+input_type         = REMD
+dimension          = 1
+temperature        = 300.00 302.53 305.09 307.65 310.24 \
+                     312.85 315.47 318.12 320.78 323.46 \
+                     326.16 328.87 331.61 334.37 337.14 \
+                     339.94 342.75 345.59 348.44 351.30
+target_temperature = 300.00
+tolerance          = 10E-08
+newton_iteration   = 100
+self_iteration     = 40

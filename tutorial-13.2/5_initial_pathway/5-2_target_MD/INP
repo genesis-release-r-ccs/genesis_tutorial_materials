@@ -1,0 +1,66 @@
+[INPUT]
+topfile             = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_carb.rtf
+parfile             = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_carb.prm
+strfile             = ../../toppar/toppar_water_ions.str
+
+psffile             = ../../1_setup/rbp_closed.psf
+pdbfile             = ../../1_setup/rbp_closed.pdb
+reffile             = ../5-1_fitting/rbp_open_ref.pdb
+rstfile             = ../../4_longer_equilibrate/eq4.1.rst
+
+[OUTPUT]
+dcdfile             = tmd.1.dcd
+rstfile             = tmd.1.rst
+
+[ENERGY]
+forcefield          = CHARMM
+electrostatic       = PME
+switchdist          = 10.0
+cutoffdist          = 12.0
+pairlistdist        = 13.5
+vdw_force_switch    = YES
+pme_nspline         = 4
+pme_max_spacing     = 1.2
+
+[DYNAMICS]
+integrator        =   VRES  # [LEAP,VVER,VRES]
+nsteps            = 400000  # number of MD steps (1 ns)
+timestep          = 0.0025  # timestep (2.5fs)
+eneout_period     =    800  # energy output period (2ps)
+crdout_period     =    800  # coordinates output period (2ps)
+rstout_period     = 400000  # restart output period
+nbupdate_period   =     10  # nonbond update period
+elec_long_period  =      2  # period of reciprocal space calculation
+thermostat_period =     10  # period of thermostat update
+barostat_period   =     10  # period of barostat update
+target_md         =  YES    # targeted MD
+final_rmsd        = 0.5     # target RMSD value
+
+[CONSTRAINTS]
+rigid_bond          = YES
+
+[ENSEMBLE]
+ensemble            = NVT
+tpcontrol           = BUSSI
+temperature         = 300.00
+group_tp            = YES
+
+[BOUNDARY]
+type                = PBC
+
+[SELECTION]
+group1              = segid:PROA & heavy
+
+[FITTING]
+fitting_method = NO
+force_no_fitting=YES
+#fitting_atom   = 1
+mass_weight    = NO
+ 
+[RESTRAINTS]
+nfunctions 		= 1
+function1  		= RMSDMASS
+reference1 		= 6.53
+constant1  		= 1.0
+select_index1   = 1
+pressure_rmsd   = yes

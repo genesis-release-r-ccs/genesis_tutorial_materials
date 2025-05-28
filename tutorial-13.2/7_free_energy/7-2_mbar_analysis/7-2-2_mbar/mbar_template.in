@@ -1,0 +1,30 @@
+# control parameters in mbar_analysis
+ 
+[INPUT]
+dcdfile        = ../7-2-1_crd_convert/um1.{}.dcd
+pdbfile        = ../../../1_setup/rbp_closed_CA.pdb
+pathfile       = ../../../6_rpath_sampling/6-4_rpath_production_2/pr2.last.rpath
+
+[OUTPUT]
+fenefile       = fene     # free energy file
+weightfile     = {}.weight # weight file
+
+[MBAR]
+num_replicas     = 16
+dimension        = 1
+nblocks          = 1
+self_iteration   = 5
+Newton_iteration = 40
+target_temperature      = 300.0
+temperature      = 300.0
+tolerance        = 10E-08
+rest_function1   = 1
+read_ref_path    = yes
+
+[SELECTION]
+group1 = all
+
+[RESTRAINTS]
+function1  		= POSI
+constant1  		= <FC>
+select_index1 = 1

@@ -1,0 +1,27 @@
+# control parameters in trj_analysis
+ 
+[INPUT]
+psffile             = ../../1_setup/rbp_closed.psf
+reffile             = ../../1_setup/rbp_closed.pdb
+ 
+[OUTPUT]
+comdisfile     = output.comdis   # COM distance file
+ 
+[TRAJECTORY]
+trjfile1       = ../1_md/eq3.dcd  # trajectory file
+md_step1       = 40000            # number of MD steps
+mdout_period1  = 400              # MD output period
+ana_period1    = 1                # analysis period
+repeat1        = 1
+trj_format     = DCD              # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1              = segid:PROA & (resno:1-100 | resno:236-259) and an:CA
+group2              = segid:PROA & (resno:108-231 | resno:269-271) and an:CA
+
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+com_distance1  = 1 2

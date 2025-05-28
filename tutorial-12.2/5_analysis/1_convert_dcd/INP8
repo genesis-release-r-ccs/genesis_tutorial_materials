@@ -1,0 +1,33 @@
+[INPUT]
+reffile        = ../../1_setup/wbox.pdb
+psffile        = ../../1_setup/wbox.psf
+ 
+[OUTPUT]
+pdbfile        = replica8.pdb
+trjfile        = replica8.dcd
+ 
+[TRAJECTORY]
+trjfile1       = ../../4_production/prod_rep8.dcd
+md_step1       = 4000000         # number of MD steps
+mdout_period1  =     200         # MD output period
+ana_period1    =     200         # analysis period
+repeat1        =       1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = an:N or an:CA or an:C or an:O
+group2         = sid:PROA
+ 
+[FITTING]
+fitting_method = TR+ROT          # method
+fitting_atom   = 1               # atom group
+mass_weight    = YES             # mass-weight is applied
+ 
+[OPTION]
+check_only     = NO              # (YES/NO)
+trjout_format  = DCD             # (PDB/DCD)
+trjout_type    = COOR+BOX        # (COOR/COOR+BOX)
+trjout_atom    = 2               # atom group
+pbc_correct    = NO              # (NO/MOLECULE)

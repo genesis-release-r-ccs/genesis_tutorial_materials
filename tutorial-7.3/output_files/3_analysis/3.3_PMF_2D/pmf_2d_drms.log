@@ -1,0 +1,69 @@
+****************************************************
+*                                                  *
+*                   PMF_ANALYSIS                   *
+*                                                  *
+*        Utility to analyze trajectory files       *
+*                                                  *
+*              Developed by RIKEN AICS             *
+*                                                  *
+****************************************************
+ 
+[STEP1] Read Control Parameters for Analysis
+ 
+Read_Ctrl_Input> Input Files
+  cvfile          = drms_{}.out
+  weightfile      = pmf_weight_2500_{}.weight
+ 
+Read_Ctrl_Output> Output Files
+  pmffile         = pmf_2d_drms.out
+ 
+Read_Ctrl_Option> Parameters of OPTION
+
+  check only      = no
+  allow backup    = no
+     dimension    =          2
+     nreplica     =          1
+     temperature  =     260.00
+     cutoff       =       0.00
+   dimension :               1
+     grids        = 0 16 100
+     band_width   =       0.10
+     is_periodic  = no
+
+   dimension :               2
+     grids        = 0 16 100
+     band_width   =       0.10
+     is_periodic  = no
+
+
+[STEP2] Set Relevant Variables and Structures
+ 
+Setup_Option> centers of grids in dimension   1
+    0.0808    0.2424    0.4040    0.5657    0.7273    0.8889    1.0505    1.2121    1.3737    1.5354    1.6970    1.8586    2.0202    2.1818    2.3434    2.5051    2.6667    2.8283    2.9899    3.1515    3.3131    3.4747    3.6364    3.7980    3.9596    4.1212    4.2828    4.4444    4.6061    4.7677    4.9293    5.0909    5.2525    5.4141    5.5758    5.7374    5.8990    6.0606    6.2222    6.3838    6.5455    6.7071    6.8687    7.0303    7.1919    7.3535    7.5152    7.6768    7.8384    8.0000    8.1616    8.3232    8.4848    8.6465    8.8081    8.9697    9.1313    9.2929    9.4545    9.6162    9.7778    9.9394   10.1010   10.2626   10.4242   10.5859   10.7475   10.9091   11.0707   11.2323   11.3939   11.5556   11.7172   11.8788   12.0404   12.2020   12.3636   12.5253   12.6869   12.8485   13.0101   13.1717   13.3333   13.4949   13.6566   13.8182   13.9798   14.1414   14.3030   14.4646   14.6263   14.7879   14.9495   15.1111   15.2727   15.4343   15.5960   15.7576   15.9192 
+ 
+Setup_Option> centers of grids in dimension   2
+    0.0808    0.2424    0.4040    0.5657    0.7273    0.8889    1.0505    1.2121    1.3737    1.5354    1.6970    1.8586    2.0202    2.1818    2.3434    2.5051    2.6667    2.8283    2.9899    3.1515    3.3131    3.4747    3.6364    3.7980    3.9596    4.1212    4.2828    4.4444    4.6061    4.7677    4.9293    5.0909    5.2525    5.4141    5.5758    5.7374    5.8990    6.0606    6.2222    6.3838    6.5455    6.7071    6.8687    7.0303    7.1919    7.3535    7.5152    7.6768    7.8384    8.0000    8.1616    8.3232    8.4848    8.6465    8.8081    8.9697    9.1313    9.2929    9.4545    9.6162    9.7778    9.9394   10.1010   10.2626   10.4242   10.5859   10.7475   10.9091   11.0707   11.2323   11.3939   11.5556   11.7172   11.8788   12.0404   12.2020   12.3636   12.5253   12.6869   12.8485   13.0101   13.1717   13.3333   13.4949   13.6566   13.8182   13.9798   14.1414   14.3030   14.4646   14.6263   14.7879   14.9495   15.1111   15.2727   15.4343   15.5960   15.7576   15.9192 
+ 
+ 
+[STEP3] Analysis trajectory files
+ 
+Check_File_Lines>
+    file name   : pmf_weight_2500_1.weight
+    # of line   : 2500
+
+Check_File_Lines>
+    file name   : drms_1.out
+    # of line   : 2500
+
+Check_File_Column>
+    file name   : drms_1.out
+    # of column : 3
+
+
+Analyze> Detailed information in the output files
+
+  [pmffile] pmf_2d_drms.out
+    Row X and Column Y: free energy profile at bin center (X,Y)
+
+[STEP4] Deallocate memory
+ 

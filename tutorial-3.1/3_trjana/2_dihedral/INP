@@ -1,0 +1,20 @@
+[INPUT]
+psffile       = ../../1_setup/2_psfgen/proa.psf  # protein structure file
+reffile       = ../../1_setup/2_psfgen/proa.pdb  # PDB file
+ 
+[OUTPUT]
+torfile       = output.tor              # torsion file
+ 
+[TRAJECTORY]
+trjfile1      = ../../2_runmd/md.dcd    # trajectory file
+md_step1      = 500000                  # number of MD steps
+mdout_period1 = 500                     # MD output period
+ana_period1   = 500                     # analysis period
+repeat1       = 1
+trj_format    = DCD                     # (PDB/DCD)
+trj_type      = COOR+BOX                # (COOR/COOR+BOX)
+trj_natom     = 0                       # (0:uses reference PDB atom count)
+
+[OPTION]
+torsion1      = PROA:1:ALAD:CLP  PROA:1:ALAD:NL  PROA:1:ALAD:CA   PROA:1:ALAD:CRP
+torsion2      = PROA:1:ALAD:NL   PROA:1:ALAD:CA  PROA:1:ALAD:CRP  PROA:1:ALAD:NR

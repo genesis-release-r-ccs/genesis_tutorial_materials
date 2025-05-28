@@ -1,0 +1,31 @@
+[INPUT]
+prmtopfile = ../../input_files/GO_DB.grotop
+pdbfile = ../../input_files/GO_open.pdb
+reffile = ../../input_files/GO_closed.pdb
+
+[OUTPUT]
+rmsfile = drms.out
+
+[TRAJECTORY]
+trjfile1 = ../../output_files/2_simulation_long/run_db.dcd
+md_step1       = 25000000		   			# number of MD steps 
+mdout_period1  = 10000						# .dcd output period
+ana_period1    = 10000               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/MARBLE/AMBER/TINKER/DCD/GROMACS)
+trj_type       = COOR        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+
+[SELECTION]
+group1 = all
+
+[OPTION]
+check_only     = NO             # (YES/NO)
+contact_groups   = 1 
+avoid_bonding = NO
+minimum_distance = 6.0
+maximum_distance = 50.0
+minimum_difference=5
+exclude_residues = 4
+two_states = yes
+

@@ -1,0 +1,45 @@
+# control parameters in crd_convert
+ 
+[INPUT]
+psffile             = ../../../1_setup/rbp_closed.psf
+reffile             = ../../../1_setup/rbp_open.pdb
+ 
+[OUTPUT]
+trjfile        = um1.<num>.dcd      # trajectory file
+ 
+[TRAJECTORY]
+trjfile1       = ../../7-1_umbrella_sampling/um1.<num>.dcd
+md_step1       = <mdstep>        # number of MD steps
+mdout_period1  = <mdout>        # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1 = an:CA and segid:PROA
+group2 = an:CA and (resno:108-231 or resno:269-271)
+ 
+[FITTING]
+fitting_method = NO              # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+#fitting_atom   = 1               # atom group
+#zrot_ngrid     = 10              # number of z-rot grids
+#zrot_grid_size = 1.0             # z-rot grid size
+#mass_weight    = NO              # mass-weight is not applied
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+centering      = NO              # shift center of mass (YES requres psf/prmtop/grotop)
+centering_atom = 1               # atom group
+center_coord   = 0.0 0.0 0.0     # target center coordinates
+pbc_correct    = NO              # (NO/MOLECULE) (MOLECULE requres psf/prmtop/grotop)
+trjout_format  = DCD             # (PDB/DCD)
+trjout_type    = COOR+BOX        # (COOR/COOR+BOX)
+trjout_atom    = 1               # atom group
+split_trjpdb   = NO              # output split PDB trajectory
+
+# Note: Coordinates are converted in the following order:
+#       read traj -> centering -> pbc_correct -> fitting -> write traj
+

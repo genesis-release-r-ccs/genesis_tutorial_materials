@@ -1,0 +1,39 @@
+[INPUT]
+parfile  = ../eef1/param19_eef1.1.inp 
+topfile  = ../eef1/toph19_eef1.1.inp
+eef1file = ../eef1/solvpar.inp
+pdbfile  = ../1_setup/proa.pdb
+psffile  = ../1_setup/proa.psf
+rstfile  = ../3_equilibrate/eq.rst
+
+[OUTPUT]
+dcdfile  = md.dcd           # DCD trajectory file
+rstfile  = md.rst           # restart file
+ 
+[ENERGY]
+forcefield       = CHARMM19 # [CHARMM19]
+electrostatic    = CUTOFF   # [CUTOFF]
+switchdist       = 18.0     # switch distance
+cutoffdist       = 20.0     # cutoff distance
+pairlistdist     = 22.0     # pair-list distance
+implicit_solvent = IMM1     # [IMM1]
+imm1_memb_thick  = 31.4     # membrane thickness
+ 
+[DYNAMICS]
+integrator       = VVER     # [LEAP,VVER]
+nsteps           = 50000    # number of MD steps
+timestep         = 0.002    # timestep (ps)
+eneout_period    =   100    # energy output period
+crdout_period    =   100    # coordinates output period
+rstout_period    = 50000    # restart output period
+ 
+[CONSTRAINTS]
+rigid_bond       = YES      # constraints all bonds involving hydrogen
+ 
+[ENSEMBLE]
+ensemble         = NVT      # [NVE,NVT]
+tpcontrol        = LANGEVIN # [NO,BERENDSEN,BUSSI,LANGEVIN]
+temperature      = 298.15   # initial and target temperature (K)
+ 
+[BOUNDARY]
+type             = NOBC     # [NOBC]

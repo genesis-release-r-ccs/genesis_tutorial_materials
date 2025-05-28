@@ -1,0 +1,17 @@
+[INPUT]
+cvfile       = ../5_end_to_end_distance/parmID{}.dis
+weightfile   = ../7_MBAR/weight{}.dat
+
+[OUTPUT]
+pmffile      = dist.pmf
+
+
+[OPTION]
+nreplica           = 20        # number of replicas
+dimension          = 1              # dimension of cv space
+temperature        = 300
+grids1             = 0 15 61    # (min max num_of_bins)
+band_width1        = 0.25      # sigma of gaussian kernel
+                              # should be comparable or smaller than the grid size
+                              # (pmf_analysis creates histogram by accumulating gaussians)
+is_periodic1 = NO            # periodicity of cv1

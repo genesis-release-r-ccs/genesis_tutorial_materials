@@ -1,0 +1,42 @@
+[INPUT]
+prmtopfile       = ../1_setup/md.prm # AMBER parameter topology file
+pdbfile          = ../1_setup/md.pdb # AMBER coordinate file
+reffile          = ../1_setup/md.pdb # reference PDB file for positional restraints
+rstfile          = md1.rst           # output file from previous step
+
+[OUTPUT]
+dcdfile          = md2.dcd # DCD trajectory file
+rstfile          = md2.rst # restart file
+
+[ENERGY]
+forcefield       = AMBER  # name of force field
+electrostatic    = PME    # CUTOFF,PME
+switchdist       = 12.0   # switch distance 
+cutoffdist       = 12.0   # cutoff distance
+pairlistdist     = 13.5   # pair-list cutoff distance
+pme_ngrid_x      = 80     # grid size_x in PME
+pme_ngrid_y      = 80     # grid size_y in PME 
+pme_ngrid_z      = 72     # grid size_z in PME
+
+[BOUNDARY]
+type             = PBC      # 
+
+[DYNAMICS]
+integrator       = VVER     # type of integrator
+nsteps           = 100000   # number of MD steps
+timestep         = 0.002    # timestep of integration (ps)
+eneout_period    = 500      # energy output period
+crdout_period    = 500      # coordinates output period
+rstout_period    = 100000   # restart output period
+nbupdate_period  = 10       # update nonbond period
+
+[CONSTRAINTS]
+rigid_bond       = YES      # constraints all bonds involving hydrogen
+fast_water       = YES      # use SETTLE algorithm
+water_model      = WAT      #
+
+[ENSEMBLE]
+ensemble         = NPT      # NVE,NVT,NPT
+tpcontrol        = BUSSI    # thermostat and barostat
+temperature      = 310.15   # initial and target temperature (K)
+pressure         = 1.0      # target pressure (atm)

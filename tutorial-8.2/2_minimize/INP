@@ -1,0 +1,29 @@
+[INPUT]
+parfile  = ../eef1/param19_eef1.1.inp 
+topfile  = ../eef1/toph19_eef1.1.inp
+eef1file = ../eef1/solvpar.inp
+pdbfile  = ../1_setup/proa.pdb
+psffile  = ../1_setup/proa.psf
+ 
+[OUTPUT]
+dcdfile  = min.dcd          # DCD trajectory file
+rstfile  = min.rst          # restart file
+ 
+[ENERGY]
+forcefield       = CHARMM19 # [CHARMM19]
+electrostatic    = CUTOFF   # [CUTOFF]
+switchdist       = 18.0     # switch distance
+cutoffdist       = 20.0     # cutoff distance
+pairlistdist     = 22.0     # pair-list distance
+implicit_solvent = IMM1     # [IMM1]
+imm1_memb_thick  = 31.4     # membrane thickness
+ 
+[MINIMIZE]
+method           = SD       # [SD] or [LBFGS]
+nsteps           = 1000     # number of minimization steps
+eneout_period    =  100     # energy output period
+crdout_period    =  100     # coordinates output period
+rstout_period    = 1000     # restart output period
+ 
+[BOUNDARY]
+type             = NOBC     # [NOBC]

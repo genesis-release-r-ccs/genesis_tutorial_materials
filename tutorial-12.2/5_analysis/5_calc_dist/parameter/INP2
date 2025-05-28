@@ -1,0 +1,19 @@
+[INPUT]
+reffile        = ../../2_sort_dcd/param.pdb       # PDB file
+ 
+[OUTPUT]
+disfile        = parameter2.dis               # distance file
+ 
+[TRAJECTORY]
+trjfile1      = ../../2_sort_dcd/param2.dcd   # trajectory file
+md_step1      = 4000000         # number of MD steps
+mdout_period1 =     200         # MD output period
+ana_period1   =     200         # analysis period
+repeat1       =       1
+trj_format    = DCD             # (PDB/DCD)
+trj_type      = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom     = 0               # (0:uses reference PDB atom count)
+
+[OPTION]
+check_only    = NO
+distance1     = PROA:1:ALA:OY   PROA:3:ALA:HNT

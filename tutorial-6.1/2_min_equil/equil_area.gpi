@@ -1,0 +1,14 @@
+set terminal jpeg size 600,400
+set output 'equil_area.jpg'
+
+set xlabel 'Time (ps)'
+set ylabel 'Area per lipid ({\305}^2)'
+
+set xrange [50:375]
+set yrange [60:70]
+
+plot 'energy6.3.log' using ($3+50):($18*$19/40) w l t 'equil6.3', \
+     'energy6.4.log' using ($3+75):($18*$19/40) w l t 'equil6.4', \
+     'energy6.5.log' using ($3+175):($18*$19/40) w l t 'equil6.5', \
+     'energy6.6.log' using ($3+275):($18*$19/40) w l t 'equil6.6'
+

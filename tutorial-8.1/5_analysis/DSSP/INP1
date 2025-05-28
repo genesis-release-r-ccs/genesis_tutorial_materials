@@ -1,0 +1,24 @@
+[INPUT]
+prmtopfile     = ../../1_setup/proa.prmtop      # AMBER parameter topology file
+ambcrdfile     = ../../1_setup/proa.crd         # AMBER coordinates file
+ 
+[OUTPUT]
+outfile        = dssp_gbsa.out                  # output file
+ 
+[TRAJECTORY]
+trjfile1       = ../../4_production/md_gbsa.dcd # trajectory file
+md_step1       = 50000                          # number of MD steps
+mdout_period1  = 100                            # MD output period
+ana_period1    = 100                            # analysis period
+repeat1        = 1
+trj_format     = DCD                     # (PDB/DCD)
+trj_type       = COOR+BOX                # (COOR/COOR+BOX)
+trj_natom      = 0                       # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = all                     # selection group 1
+ 
+[OPTION]
+analysis_atom  = 1                       # protein atom group
+dssp_exec      = /home/user/DSSP/dssp    # dssp binary path
+temporary_pdb  = temporary_gbsa.pdb      # temporary pdb for DSSP

@@ -1,0 +1,53 @@
+[INPUT]
+topfile = ../toppar/top_all36_prot.rtf
+parfile = ../toppar/par_all36m_prot.prm
+pdbfile = ../1_build/initial.pdb
+psffile = ../1_build/initial.psf
+rstfile = ../2_minimize/min.rst
+
+[OUTPUT]
+dcdfile = run.dcd          # DCD trajectory file
+rstfile = run.rst          # restart file
+pdbfile = run.pdb
+
+[ENERGY]
+forcefield       = CHARMM  # CHARMM force field
+electrostatic    = CUTOFF  # use cutoff scheme for non-bonded terms
+switchdist       = 18.0    # switch distance
+cutoffdist       = 20.0    # cutoff distance
+pairlistdist     = 22.0    # pair-list distance
+implicit_solvent = GBSA    # use GBSA implicit solvent model
+
+[DYNAMICS]
+integrator       = VVER    # [LEAP,VVER]
+nsteps           =  2500   # number of MD steps
+timestep         = 0.002   # timestep (ps)
+eneout_period    =    50   # energy output period
+crdout_period    =    50   # coordinates output period
+rstout_period    =  2500   # restart output period
+nbupdate_period  =    10   # nonbond update period
+
+[CONSTRAINTS]
+rigid_bond       = YES      # use SHAKE
+
+[ENSEMBLE]
+ensemble         = NVT                # constant temperature
+tpcontrol        = LANGEVIN           # Langevin thermostat
+temperature      = 300                # T = 300 K
+
+[BOUNDARY]
+type             = NOBC               # No periodic boundary condition
+
+[SELECTION]
+group1           = all and not hydrogen
+
+[RESTRAINTS]
+nfunctions       = 1
+function1        = EM                 # apply restraints from EM density map
+constant1        = 30000              # force constant in Ebias = k*(1 - c.c.)
+select_index1    = 1                  # apply restraint force on protein heavy atoms
+
+[EXPERIMENTS]
+emfit            = YES                     # perform EM flexible fitting
+emfit_target     = ../1_build/emd_0477.map # target EM density map
+emfit_sigma      = 1.85                    # half of the map resolution (5 A)

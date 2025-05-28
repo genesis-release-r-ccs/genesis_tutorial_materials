@@ -1,0 +1,18 @@
+[INPUT]
+cvfile       = ../5_q_val/parameter_ID{}.qval        # input cv file
+weightfile   = ./weight{}.dat
+
+[OUTPUT]
+pmffile      = qval.pmf
+
+
+[OPTION]
+nreplica     = 16             # number of replicas
+dimension    = 1              # dimension of cv space
+temperature  = 400 
+grids1       = 0.0 1.0 51     # (min max num_of_bins)
+band_width1  = 0.01           # sigma of gaussian kernel
+                              # should be comparable or smaller than the grid size
+                              # (pmf_analysis creates histogram by accumulating gaussians)
+is_periodic1 = NO             # periodicity of cv1
+

@@ -1,0 +1,23 @@
+[INPUT]
+psffile = ../1_charmm-gui/step5_assembly.psf
+reffile = ../1_charmm-gui/step5_assembly.pdb
+
+[OUTPUT]
+outfile = thickness.log
+
+[TRAJECTORY]
+trjfile1      = ../3_production/step7_production.dcd
+md_step1      = 400000
+mdout_period1 = 800
+ana_period1   = 800
+
+trj_format    = DCD
+trj_type      = COOR+BOX
+
+[SELECTION]
+group1        = resname:POPC and an:P
+
+[OPTION]
+check_only    = NO
+membrane_atom = 1     # atom group representing lipid bilayer
+

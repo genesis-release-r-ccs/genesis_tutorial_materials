@@ -1,0 +1,4 @@
+package require cispeptide
+cispeptide check -mol top
+exit
+exit

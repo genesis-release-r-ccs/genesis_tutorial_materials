@@ -1,0 +1,16 @@
+set terminal jpeg size 600,400
+set output 'equil_temp.jpg'
+
+set xlabel 'Time (ps)'
+set ylabel 'Temperature (K)'
+
+set xrange [0:375]
+set yrange [285:325]
+
+plot 'energy6.1.log' using 3:16 w l t 'equil6.1', \
+     'energy6.2.log' using ($3+25):16 w l t 'equil6.2', \
+     'energy6.3.log' using ($3+50):16 w l t 'equil6.3', \
+     'energy6.4.log' using ($3+75):16 w l t 'equil6.4', \
+     'energy6.5.log' using ($3+175):16 w l t 'equil6.5', \
+     'energy6.6.log' using ($3+275):16 w l t 'equil6.6'
+

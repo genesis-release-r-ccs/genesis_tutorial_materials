@@ -1,0 +1,17 @@
+[INPUT]
+cvfile             = ../4_plot_potential/potential_energy_rep{}.pot # input cv file
+
+[OUTPUT]
+fenefile           = fene.dat  
+weightfile         = weight{}.dat     
+
+[MBAR]
+num_replicas       = 16
+input_type         = REMD
+dimension          = 1
+nblocks            = 1
+temperature        = 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470
+target_temperature = 400
+self_iteration     = 100
+newton_iteration   = 100
+tolerance          = 1.0E-08

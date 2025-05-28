@@ -1,0 +1,31 @@
+[INPUT]
+grotopfile = ../../02_REMD/1PGB_cg.top
+grocrdfile = ../../02_REMD/1PGB_cg.gro
+dcdfile = ../../02_REMD/gb1_remd_run_rep{}.dcd
+remfile = ../../02_REMD/gb1_remd_run_rep{}.rem
+
+[OUTPUT]
+pdbfile = gb1_cg_remd.pdb
+trjfile = remd_paramID{}.dcd
+
+[SELECTION]
+group1 = atomno:1-56
+
+[FITTING]
+fitting_method = TR+ROT
+fitting_atom   = 1
+mass_weight    = YES
+
+[OPTION]
+check_only    = NO
+convert_type  = PARAMETER
+exchange_period = 5000
+crdout_period   = 1000
+eneout_period   = 1000
+num_replicas  = 16
+convert_ids   = # (empty = all)
+nsteps        = 100000000
+trjout_format = DCD
+trjout_type   = COOR+BOX
+trjout_atom   = 1
+pbc_correct   = NO

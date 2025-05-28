@@ -1,0 +1,66 @@
+[INPUT]
+topfile = ../toppar/top_all36_prot.rtf     # topology file
+parfile = ../toppar/par_all36m_prot.prm    # parameter file
+strfile = ../toppar/toppar_water_ions.str  # stream file
+psffile = ../1_setup/wbox.psf              # protein structure file
+pdbfile = ../1_setup/wbox.pdb              # PDB file
+rstfile = ../2_minimize_pre-equi/eq3.rst   # restart file
+
+[OUTPUT]
+logfile = eq_rep{}.log                     # log file of each replica
+dcdfile = eq_rep{}.dcd                     # DCD trajectory file
+remfile = eq_rep{}.rem                     # parameter index file
+rstfile = eq_rep{}.rst                     # restart file
+
+[REMD]
+dimension         = 1
+exchange_period   = 0
+type1             = RESTRAINT
+nreplica1         = 14
+cyclic_params1    = NO
+rest_function1    = 1
+
+[SELECTION]   
+group1            = an:OY  and resno:1     # restraint group 1
+group2            = an:HNT and resno:3     # restraint group 2
+ 
+[RESTRAINTS]  
+nfunctions        = 1
+function1         = DIST
+constant1         =  1.2  1.2  1.2  1.2  1.2  1.2  1.2  1.2  1.2   1.2   1.2   1.2   1.2   1.2
+reference1        = 1.80 2.72 3.64 4.56 5.48 6.40 7.32 8.24 9.16 10.08 11.00 11.92 12.84 13.76
+select_index1     = 1 2
+
+[ENERGY]
+forcefield        = CHARMM  # CHARMM force field
+electrostatic     = PME     # Particle mesh Ewald
+switchdist        = 10.0    # switch distance
+cutoffdist        = 12.0    # cutoff distance
+pairlistdist      = 13.5    # pair-list distance
+vdw_force_switch  = YES     # force switch option for van der Waals
+pme_nspline       = 4       # order of the spline interpol
+pme_max_spacing   = 1.2     # Max grid spacing allowed 
+ 
+[DYNAMICS]
+integrator        =   VRES  # RESPA integrator
+nsteps            =  80000  # number of MD steps (200ps)
+timestep          = 0.0025  # timestep (2.5fs)
+eneout_period     =    400  # energy output period (1ps)
+crdout_period     =    400  # coordinates output period (1ps)
+rstout_period     =  80000  # restart output period
+nbupdate_period   =     10  # nonbond update period
+elec_long_period  =      2  # period of reciprocal space calculation
+thermostat_period =     10  # period of thermostat update
+barostat_period   =     10  # period of barostat update
+ 
+[CONSTRAINTS]
+rigid_bond        = YES     # constraints all bonds involving hydrogen
+ 
+[ENSEMBLE]
+ensemble          = NVT     # Canonical ensemble
+tpcontrol         = BUSSI   # Bussi thermostat
+temperature       = 300     # initial and target temperature (K)
+group_tp          = YES     # group temperature and pressure evaluation
+ 
+[BOUNDARY]
+type              = PBC     # Periodic boundary condition

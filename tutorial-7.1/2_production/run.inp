@@ -1,0 +1,40 @@
+[INPUT]
+topfile = ../1_construction/GO_1pgb.top       # topology file
+parfile = ../1_construction/GO_1pgb.param     # parameter file
+psffile = ../1_construction/go.psf            # protein structure file
+pdbfile = ../1_construction/go.pdb            # PDB file
+
+[OUTPUT]
+dcdfile = run.dcd                             # DCD trajectory file
+rstfile = run.rst                             # restart file
+
+[ENERGY]
+forcefield      = KBGO
+electrostatic   = CUTOFF
+cutoffdist      = 20.0                        # cutoff distance
+pairlistdist    = 50.0                        # pair-list cutoff distance
+
+[DYNAMICS]
+integrator      = LEAP                        # [LEAP,VVER]
+nsteps          = 100000000                   # number of MD steps
+timestep        = 0.020                       # timestep (ps)
+eneout_period   = 10000                       # energy output period
+rstout_period   = 10000                       # restart output period
+crdout_period   = 10000                       # coordinates output period
+nbupdate_period = 100                         # nonbond update period
+
+[CONSTRAINTS]
+rigid_bond      = YES                         # constraints all bonds
+                                              # involving hydrogen
+fast_water      = NO                          # settle constraint
+shake_tolerance = 1.0e-6                      # tolerance (Angstrom)
+
+[ENSEMBLE]
+ensemble        = NVT                         # [NVE,NVT,NPT]
+tpcontrol       = LANGEVIN                    # thermostat
+temperature     = 325                         # initial and target
+                                              # temperature (K)
+gamma_t         = 0.01                        # thermostat friction (ps-1)
+                                              # in [LANGEVIN]
+[BOUNDARY]
+type            = NOBC                        # [PBC, NOBC]

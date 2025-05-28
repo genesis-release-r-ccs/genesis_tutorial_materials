@@ -1,0 +1,6 @@
+source leaprc.protein.ff14SB 
+mol = loadpdb tmp.pdb 
+set default PBradii mbondi2
+saveamberparm mol proa.prmtop proa.crd 
+savepdb mol proa.pdb
+quit

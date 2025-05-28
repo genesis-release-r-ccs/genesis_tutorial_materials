@@ -1,0 +1,14 @@
+[INPUT]
+cvfile         = ../data/drms{}.out
+weightfile     = ../mbar/run_weight_{}.weight
+ 
+[OUTPUT]
+pmffile        = pmf.out
+ 
+[OPTION]
+nreplica       = 4
+dimension      = 1
+temperature    = 260
+grids1         = 0 16 100
+band_width1    = 0.1 
+is_periodic1   = NO

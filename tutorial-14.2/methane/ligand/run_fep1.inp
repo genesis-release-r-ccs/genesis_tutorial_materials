@@ -1,0 +1,89 @@
+[INPUT]
+topfile = ../../toppar/top_all36_prot.rtf, ../../toppar/top_all36_cgenff.rtf
+parfile = ../../toppar/par_all36m_prot.prm, ../../toppar/par_all36_cgenff.prm
+strfile = ../../toppar/toppar_water_ions.str
+psffile = ligand.psf
+pdbfile = ligand.pdb
+rstfile = output/run_eq3.rst
+
+[OUTPUT]
+dcdfile = output/run1_rep{}.dcd
+rstfile = output/run1_rep{}.rst
+logfile = output/run1_rep{}.log
+remfile = output/run1_rep{}.rem
+fepfile = output/run1_rep{}.fepout
+
+[REMD]
+dimension       = 1
+exchange_period = 800
+type1           = alchemy
+nreplica1       = 24
+
+[ALCHEMY]
+fep_direction = BothSides
+fep_topology  = Dual
+singleA       = NONE
+singleB       = NONE
+dualA         = 1
+dualB         = NONE
+fepout_period = 400
+equilsteps    = 0
+sc_alpha      = 5.0
+sc_beta       = 0.5
+lambljA       = 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 \
+                1.000 0.900 0.800 0.700 0.600 0.500 0.400 0.300 0.200 0.150 \
+                0.100 0.050 0.025 0.000
+lambljB       = 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000
+lambelA       = 1.000 0.900 0.800 0.700 0.600 0.500 0.400 0.300 0.200 0.100 \
+                0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000
+lambelB       = 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000
+lambbondA     = 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 \
+                1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 \
+                1.000 1.000 1.000 1.000
+lambbondB     = 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 \
+                0.000 0.000 0.000 0.000
+lambrest      = 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 \
+                1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 \
+                1.000 1.000 1.000 1.000
+
+[ENERGY]
+forcefield       = CHARMM
+electrostatic    = PME 
+switchdist       = 10.0 
+cutoffdist       = 12.0 
+pairlistdist     = 13.5 
+pme_alpha        = auto
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator        = VRES 
+nsteps            = 400000
+timestep          = 0.0025  
+eneout_period     = 400
+crdout_period     = 4000
+rstout_period     = 4000
+nbupdate_period   = 10
+elec_long_period  = 2
+thermostat_period = 10
+barostat_period   = 10
+
+[CONSTRAINTS]
+rigid_bond = YES
+
+[ENSEMBLE]
+ensemble    = NPT 
+temperature = 300
+tpcontrol   = BUSSI
+pressure    = 1.0
+
+[BOUNDARY]
+type = PBC
+
+[SELECTION]
+group1 = segid:LIG

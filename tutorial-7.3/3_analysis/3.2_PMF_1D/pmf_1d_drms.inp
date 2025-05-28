@@ -1,0 +1,17 @@
+# control parameters in pmf_analysis
+ 
+[INPUT]
+cvfile         = drms_{}.out
+weightfile     = pmf_weight_2500_{}.weight
+ 
+[OUTPUT]
+pmffile        = pmf_1d_drms.out
+ 
+[OPTION]
+nreplica       = 1
+dimension      = 1
+temperature    = 260
+grids1         = 0 16 100  # (min max num_of_bins)
+band_width1    = 0.1 # sigma of Gaussian kernel
+is_periodic1   = NO
+

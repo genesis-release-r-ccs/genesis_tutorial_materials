@@ -1,0 +1,42 @@
+[INPUT]
+prmtopfile       = ../1_setup/md.prm # AMBER parameter topology file
+pdbfile          = ../1_setup/md.pdb # AMBER coordinate file
+reffile          = ../1_setup/md.pdb # reference PDB file for positional restraints
+
+[OUTPUT]
+dcdfile          = min.dcd # DCD trajectory file
+rstfile          = min.rst # restart file
+
+[ENERGY]
+forcefield       = AMBER  # [CHARMM,AAGO,CAGO,KBGO,AMBER,GROAMBER,GROMARTINI]
+electrostatic    = PME    # [CUTOFF,PME]
+switchdist       = 12.0   # switch distance 
+cutoffdist       = 12.0   # cutoff distance
+pairlistdist     = 13.5   # pair-list distance
+pme_ngrid_x      = 80     # grid size_x in [PME]
+pme_ngrid_y      = 80     # grid size_y in [PME] 
+pme_ngrid_z      = 72     # grid size_z in [PME]
+water_model      = NONE
+
+[MINIMIZE]
+method           = SD
+nsteps           = 5000     # number of steps1
+eneout_period    = 5000     # energy output period
+crdout_period    = 5000     # coordinates output period
+rstout_period    = 5000
+nbupdate_period  =   10     # update nonbond period
+
+[BOUNDARY]
+type            = PBC       # [NOBC,PBC]
+box_size_x      = 79.661    # box size (x) in [PBC]
+box_size_y      = 87.183    # box size (y) in [PBC]
+box_size_z      = 73.748    # box size (z) in [PBC]
+
+[SELECTION]
+group1          = heavy and resno:1-27
+
+[RESTRAINTS]
+nfunctions      = 1         # number of functions
+function1       = POSI      # restraint function type
+constant1       = 10.0      # force constant
+select_index1   = 1         # restraint group

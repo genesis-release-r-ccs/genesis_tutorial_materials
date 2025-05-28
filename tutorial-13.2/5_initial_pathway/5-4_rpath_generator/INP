@@ -1,0 +1,27 @@
+# control parameters in rpath_generator
+ 
+[INPUT]
+dcdfile        = ../5-3_wrap_solvent/tmd_wrap.1.dcd
+psffile        = ../../1_setup/rbp_closed.psf
+pdbfile        = ../5-1_fitting/rbp_open_ref.pdb
+fitfile        = ../5-1_fitting/rbp_open_ref.pdb
+ 
+[OUTPUT]
+pdbfile        = {}.pdb      # PDB file
+rstfile        = {}.rst      # restart file
+ 
+[SELECTION]
+group1         = an:CA and segid:PROA
+group2         = an:CA and (resno:108-231 or resno:269-271)
+ 
+[FITTING]
+fitting_method = TR+ROT              # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+fitting_atom   = 2               # atom group
+mass_weight    = NO              # mass-weight is not applied
+ 
+[RPATH]
+nreplica       = 16
+cv_atom        = 1
+iseed          = 777
+iter_reparam   = 10
+ 
