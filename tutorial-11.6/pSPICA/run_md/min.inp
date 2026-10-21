@@ -1,0 +1,41 @@
+[INPUT]
+topfile = toppar/top_spica_charmm.rtf
+parfile = toppar/par_spica_charmm.prm, toppar/enm_bond_index.ndx, toppar/enm_bond_parm.prm, toppar/enm_angle_index.ndx, toppar/enm_angle_parm.prm
+psffile = gns_spica.psf
+pdbfile = gns_spica.pdb
+reffile = gns_spica.pdb
+ 
+[OUTPUT]
+rstfile = min.rst
+dcdfile = min.dcd
+
+[ENERGY]
+forcefield      = SPICA        # [CHARMM]
+electrostatic   = PME          # [CUTOFF,PME]
+switchdist      = 12.0         # switch distance
+cutoffdist      = 15.0         # cutoff distance
+pairlistdist    = 18.0         # pair-list distance
+pme_nspline     = 4
+pme_max_spacing = 2.0
+contact_check   = YES          # avoid atomic crash
+                               # minimization or early equilibration
+nonb_limiter    = YES          # minimization or early equilibration
+                               # for large ENM system
+minimum_contact = 0.5          # in the case of nonb_limiter = YES
+
+[MINIMIZE]
+nsteps          = 10000
+crdout_period   = 1000 
+eneout_period   = 100           # energy output period
+rstout_period   = 10000      
+nbupdate_period = 10 
+ 
+[CONSTRAINTS]
+rigid_bond      = NO           # constraints all bonds involving hydrogen
+fast_water      = YES
+
+[BOUNDARY]
+type            = PBC           # [PBC]
+box_size_x      = 160.054
+box_size_y      = 160.054
+box_size_z      = 261.704

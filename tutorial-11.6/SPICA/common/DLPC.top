@@ -1,0 +1,40 @@
+atom     1  DLPC    NC    NC   87.1634    0.1118  U
+atom     2  DLPC    PH    PH   94.9714   -0.1118  U
+atom     3  DLPC    GL    GL   41.0718    0.0000  U
+atom     4  DLPC  EST1  EST1   58.0361    0.0000  U
+atom     5  DLPC   C11    CM   42.0797    0.0000  U
+atom     6  DLPC   C12    CM   42.0797    0.0000  U
+atom     7  DLPC   C13   CM2   28.0540    0.0000  U
+atom     8  DLPC   C14   CT2   29.0620    0.0000  U
+atom     9  DLPC  EST2  EST2   58.0361    0.0000  U
+atom    10  DLPC   C21    CM   42.0797    0.0000  U
+atom    11  DLPC   C22    CM   42.0797    0.0000  U
+atom    12  DLPC   C23   CM2   28.0540    0.0000  U
+atom    13  DLPC   C24   CT2   29.0620    0.0000  U
+
+bond     1     2 # NC PH
+bond     2     3 # PH GL
+bond     3     4 # GL EST1
+bond     4     5 # EST1 C11
+bond     5     6 # C11 C12
+bond     6     7 # C12 C13
+bond     7     8 # C13 C14
+bond     3     9 # GL EST2
+bond     9    10 # EST2 C21
+bond    10    11 # C21 C22
+bond    11    12 # C22 C23
+bond    12    13 # C23 C24
+
+angle     1     2     3 # NC PH GL
+angle     2     3     4 # PH GL EST1
+angle     2     3     9 # PH GL EST2
+angle     3     4     5 # GL EST1 C11
+angle     4     3     9 # EST1 GL EST2
+angle     4     5     6 # EST1 C11 C12
+angle     5     6     7 # C11 C12 C13
+angle     6     7     8 # C12 C13 C14
+angle     3     9    10 # GL EST2 C21
+angle     9    10    11 # EST2 C21 C22
+angle    10    11    12 # C21 C22 C23
+angle    11    12    13 # C22 C23 C24
+

@@ -1,0 +1,56 @@
+atom     1  POPI   OI1   OI1   60.0528    0.0000  U
+atom     2  POPI   OI2   OI2   60.0528    0.0000  U
+atom     3  POPI   OI3   OI3   43.0454    0.0000  U
+atom     4  POPI    PH   PHE   94.9716   -0.1118  U
+atom     5  POPI    GL    GL   41.0725    0.0000  U
+atom     6  POPI  EST1  EST1   58.0358    0.0000  U
+atom     7  POPI   C11    CM   42.0804    0.0000  U
+atom     8  POPI   C12    CM   42.0804    0.0000  U
+atom     9  POPI   C13  CMD2   26.0378    0.0000  U
+atom    10  POPI   C14    CM   42.0804    0.0000  U
+atom    11  POPI   C15    CM   42.0804    0.0000  U
+atom    12  POPI   C16   CT2   29.0615    0.0000  U
+atom    13  POPI  EST2  EST2   58.0358    0.0000  U
+atom    14  POPI   C21    CM   42.0804    0.0000  U
+atom    15  POPI   C22    CM   42.0804    0.0000  U
+atom    16  POPI   C23    CM   42.0804    0.0000  U
+atom    17  POPI   C24    CM   42.0804    0.0000  U
+atom    18  POPI   C25   CT2   29.0615    0.0000  U
+
+bond     1     2 # OI1 OI2
+bond     2     3 # OI2 OI3
+bond     3     1 # OI3 OI1
+bond     3     4 # OI3 PH
+bond     4     5 # PH GL
+bond     5     6 # GL EST1
+bond     6     7 # EST1 C11
+bond     7     8 # C11 C12
+bond     8     9 # C12 C13
+bond     9    10 # C13 C14
+bond    10    11 # C14 C15
+bond    11    12 # C15 C16
+bond     5    13 # GL EST2
+bond    13    14 # EST2 C21
+bond    14    15 # C21 C22
+bond    15    16 # C22 C23
+bond    16    17 # C23 C24
+bond    17    18 # C24 C25
+
+angle     2     3     4 # OI2 OI3 PH
+angle     1     3     4 # OI1 OI3 PH
+angle     3     4     5 # OI3 PH GL
+angle     4     5     6 # PH GL EST1
+angle     4     5    13 # PH GL EST2
+angle     5     6     7 # GL EST1 C11
+angle     6     5    13 # EST1 GL EST2
+angle     6     7     8 # EST1 C11 C12
+angle     7     8     9 # C11 C12 C13
+angle     8     9    10 # C12 C13 C14
+angle     9    10    11 # C13 C14 C15
+angle    10    11    12 # C14 C15 C16
+angle     5    13    14 # GL EST2 C21
+angle    13    14    15 # EST2 C21 C22
+angle    14    15    16 # C21 C22 C23
+angle    15    16    17 # C22 C23 C24
+angle    16    17    18 # C23 C24 C25
+

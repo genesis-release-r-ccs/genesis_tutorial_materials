@@ -1,0 +1,54 @@
+atom  1   DOPS CO   CO   44.0087  -0.1118033989 U
+atom  2   DOPS NH   NH   44.0773  +0.1118033989 U
+atom  3   DOPS PH   PHE  94.9716  -0.1118033989 U
+atom  4   DOPS GL   GL   41.0725  0.0  U
+atom  5   DOPS EST1 EST1 58.0358  0.0  U
+atom  6   DOPS C11  CM   42.0804  0.0  U
+atom  7   DOPS C12  CM   42.0804  0.0  U
+atom  8   DOPS C13  CMD2 26.0378  0.0  U
+atom  9   DOPS C14  CM   42.0804  0.0  U
+atom  10  DOPS C15  CM   42.0804  0.0  U
+atom  11  DOPS C16  CT2  29.0615  0.0  U
+atom  12  DOPS EST2 EST2 58.0358  0.0  U
+atom  13  DOPS C21  CM   42.0804  0.0  U
+atom  14  DOPS C22  CM   42.0804  0.0  U
+atom  15  DOPS C23  CMD2 26.0378  0.0  U
+atom  16  DOPS C24  CM   42.0804  0.0  U
+atom  17  DOPS C25  CM   42.0804  0.0  U
+atom  18  DOPS C26  CT2  29.0615  0.0  U
+
+bond  1   2
+bond  2   3
+bond  3   4
+bond  4   5
+bond  5   6
+bond  6   7
+bond  7   8
+bond  8   9
+bond  9  10
+bond 10  11
+bond  4  12
+bond 12  13
+bond 13  14
+bond 14  15
+bond 15  16
+bond 16  17
+bond 17  18
+
+angle  1   2   3
+angle  2   3   4
+angle  3   4   5
+angle  4   5   6
+angle  5   6   7
+angle  6   7   8
+angle  7   8   9
+angle  8   9  10
+angle  9  10  11
+angle  3   4  12
+angle  5   4  12
+angle  4  12  13
+angle 12  13  14
+angle 13  14  15
+angle 14  15  16
+angle 15  16  17
+angle 16  17  18

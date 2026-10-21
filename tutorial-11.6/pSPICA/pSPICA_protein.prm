@@ -1,0 +1,1667 @@
+bond  WH  WO    100.0  1.1
+bond  SOD1 SOD2 100.0  1.1
+bond  CLA1 CLA2 100.0  1.1
+
+bond ASP ASP   50.0  2.575  
+bond AR1  AR1  10.0  3.47
+bond ASN  ASN  50.0  3.72
+bond CYS  CYS  50.0  3.27
+bond GLU  GLU  10.0  4.90
+bond GLN  GLN  10.0  4.70
+bond HI1  HI1  10.0  2.35
+bond ILE  ILE  10.0  3.02
+bond LEU  LEU  10.0  3.87
+bond LY1  LY1  10.0  3.48
+bond MET  MET  10.0  5.01
+bond XYR  XYR  50.0  2.34
+bond SER  SER  50.0  2.56
+bond THR  THR  50.0  2.45
+bond TR1  TR1  10.0  3.31
+bond VAL  VAL  50.0  2.38
+
+
+bond  OAG   PH     5.6000    3.800
+bond  NC   PH     4.6000    3.850 
+bond  PH   CM    12.0000    3.690
+bond  PH   GL     8.9000    3.520
+bond  GL   EST1  30.0000    2.880
+bond  GL   EST2   8.4000    3.480
+bond  EST1 CM     4.7000    3.550
+bond  EST2 CM     5.1000    3.610
+bond  EST1 CT     4.7000    3.550
+bond  EST2 CT     5.1000    3.610
+bond  EST1 CT2    6.5000    3.130
+bond  EST2 CT2    6.5000    3.130
+bond  NH   PHE    9.4000    3.600
+bond  PHE  GL     8.9000    3.520
+bond  CM   CM     6.1600    3.640
+bond  CM   CT     6.1600    3.650
+bond  CT2  CM     9.0000    3.130
+bond  CT   CT     6.9550    3.710
+bond  CMD2 CM     8.0000    3.030
+bond  CT   CMD2   8.0000    3.090
+bond  CT2  CMD2  60.0000    2.540
+bond  EST  CT     4.3000    3.620
+bond  EST  CT2    6.5000    3.130
+bond  EST  CM     4.3000    3.620
+bond  NC  CM    13.0000    3.800
+
+
+#### BONDS
+
+# from pdb database TOP500H
+bond	GB*	GB*	50.0	3.80
+bond	GB*	AB*	50.0	3.81
+bond	AB*	AB*	50.0	3.81
+bond	GB*	MET	 5.9	3.20
+bond	GB*	ASN	50.0	2.53
+bond	GB*	ILE	34.1	2.33
+bond    GB*     XYR     50.0	2.59  
+bond    BER     BER     40.0	2.00  
+bond    XYR     BER     40.0	2.60  
+bond    PHR     BER     40.0	2.60   
+bond	GB*	GLU	 6.3	3.25
+bond	GB*	LEU	50.0	2.62
+bond	GB*	AR1	32.2	2.53
+bond	AR1	AR2	12.5	3.37
+bond	GB*	ASP	50.0	2.56
+bond	GB*	LY1	26.6	2.51
+bond	LY1	LY2	14.8	2.98
+bond	GB*	THR	50.0	1.96
+bond	GB*	HI1	50.0	1.96
+bond	HI1	HI2	50.0	2.42
+bond	HI1	HI3	50.0	2.32
+bond	HI2	HI3	50.0	1.76
+bond	GB*	SER	50.0	1.97
+bond	GB*	PRO	50.0	1.87
+bond	GB*	VAL	50.0	1.96
+bond	GB*	GLN  5.6	3.19
+bond	GB*	TR1	50.0	2.37
+bond    TR1 TR2 50.0	2.50 
+bond    TR1 TR3 50.0	2.50 
+bond    TR2 TR3 50.0	2.50 
+bond	GB*	CYS	50.0	2.39
+
+
+bond NH   PH       9.40   3.60
+bond CH   PH       4.8    4.25
+
+#### ANGLES
+angle NC   PH   CM     3.9000  119.000 
+angle OAG   PH  GL     3.5000  104.000
+angle PH   OAG   PH     0.6   135.0
+angle PH   CM   CM     1.1000  178.000
+angle NC   PH   GL     3.1000  112.000
+angle PH   GL   EST1   1.4000  124.000
+angle PH   GL   EST2   2.0000  138.000
+angle GL   EST1 CM     0.8000  168.000
+angle GL   EST2 CM     0.8000  172.000
+angle EST1 GL   EST2   1.0000   95.000
+angle EST1 CM   CM     1.0000  178.000
+angle EST2 CM   CM     1.0000  178.000
+angle GL   EST1 CT     0.8000  168.000
+angle GL   EST2 CT     0.8000  172.000
+angle GL   EST1 CT2    0.8000  168.000
+angle GL   EST2 CT2    0.8000  172.000
+angle NH   PHE  GL     4.0000  106.000
+angle PHE  GL   EST1   0.8000  124.000
+angle PHE  GL   EST2   2.0000  145.000
+angle CM   CM   CM     1.1900  173.000
+angle CM   CM   CT     1.1900  175.000
+angle CT2  CM   CM     1.6000  172.000
+angle CT2  CM   CT     1.6000  172.000
+angle CT2  CM   CT2    1.7000  173.000
+angle CT   CM   CT     1.0930  175.500
+angle CT   CMD2 CT     7.7000  116.000
+angle CT2  CMD2 CT2   12.0000  110.000
+angle CMD2 CM   CM     1.9000  161.000
+angle CM   CMD2 CM     6.0000  110.000
+angle CT2  EST  CT2    1.1000  169.000
+angle CT   CM   EST    1.3000  170.000
+angle NC  CM   CM     1.0000  174.000
+
+
+angle GB* GB* GB*   10.0  -1  harmonic 
+angle GB* GB* AB*   10.0  -1  harmonic 
+angle GB* AB* GB*   10.0  -1  harmonic 
+angle GB* AB* AB*   10.0  -1  harmonic 
+angle AB* AB* AB*   10.0  -1  harmonic 
+angle AB* GB* AB*   10.0  -1  harmonic 
+angle GB* GB* AR1   20.0  -1  harmonic 
+angle GB* GB* ASN   20.0  -1  harmonic 
+angle GB* GB* ASP   20.0  -1  harmonic 
+angle GB* GB* CYS   20.0  -1  harmonic 
+angle GB* GB* GLN   20.0  -1  harmonic 
+angle GB* GB* GLU   20.0  -1  harmonic 
+angle GB* GB* HI1   20.0  -1  harmonic 
+angle GB* GB* ILE   20.0  -1  harmonic 
+angle GB* GB* LEU   20.0  -1  harmonic 
+angle GB* GB* LY1   20.0  -1  harmonic 
+angle GB* GB* MET   20.0  -1  harmonic 
+angle GB* GB* PRO   20.0  -1  harmonic 
+angle GB* GB* SER   20.0  -1  harmonic 
+angle GB* GB* THR   20.0  -1  harmonic 
+angle GB* GB* TR1   20.0  -1  harmonic 
+angle GB* GB* VAL   20.0  -1  harmonic 
+angle GB* GB* XYR   20.0  -1  harmonic 
+angle AB* GB* AR1   20.0  -1  harmonic 
+angle AB* GB* ASN   20.0  -1  harmonic 
+angle AB* GB* ASP   20.0  -1  harmonic 
+angle AB* GB* CYS   20.0  -1  harmonic 
+angle AB* GB* GLN   20.0  -1  harmonic 
+angle AB* GB* GLU   20.0  -1  harmonic 
+angle AB* GB* HI1   20.0  -1  harmonic 
+angle AB* GB* ILE   20.0  -1  harmonic 
+angle AB* GB* LEU   20.0  -1  harmonic 
+angle AB* GB* LY1   20.0  -1  harmonic 
+angle AB* GB* MET   20.0  -1  harmonic 
+angle AB* GB* PRO   20.0  -1  harmonic 
+angle AB* GB* SER   20.0  -1  harmonic 
+angle AB* GB* THR   20.0  -1  harmonic 
+angle AB* GB* TR1   20.0  -1  harmonic 
+angle AB* GB* VAL   20.0  -1  harmonic 
+angle AB* GB* XYR   20.0  -1  harmonic 
+angle GB* XYR BER   16.9  -1  harmonic 
+angle GB* TR1 TR2    7.1  -1  harmonic 
+angle GB* TR1 TR3    7.5  -1  harmonic 
+angle GB* LY1 LY2    7.3  -1  harmonic 
+angle GB* AR1 AR2    6.8  -1  harmonic 
+angle GB* HI1 HI2   27.4  -1  harmonic 
+angle GB* HI1 HI3   12.0  -1  harmonic 
+angle BER BER BER  30.0   90.0  harmonic     
+angle BER XYR BER  30.0   58.0  harmonic 
+angle BER PHR BER  30.0   58.0  harmonic     
+angle XYR BER BER  30.0  106.0  harmonic  
+angle PHR BER BER  30.0  106.0  harmonic  
+angle XYR BER PHR  30.0  122.0  harmonic     
+angle XYR BER XYR  30.0  122.0  harmonic     
+
+
+angle NH   PH   GL      4.00  102.0
+angle CH   PH   CM      3.3   112.0
+
+
+pair  WO NH  lj9_6  0.7000  4.00
+pair  WH NH  lj9_6  0.0000  0.00
+pair  WO  PHE  lj9_6  0.9000  4.03
+pair  WH  PHE  lj9_6  0.0000  0.00
+pair  NC  NC  lj9_6  0.7800  5.45
+pair  NC  NH  lj9_6  0.9800  4.48 
+pair  NC  PH  lj9_6  0.8700  4.44
+pair  NC  PHE  lj9_6  0.7800  4.44
+pair  NC  GL  lj9_6  0.5550  4.62
+pair  NC  EST1  lj9_6  0.7500  4.475
+pair  NC  EST2  lj9_6  0.7500  4.475
+pair  NC  CM  lj9_6  0.4000  5.128
+pair  NC  CMD2  lj9_6  0.3500  4.8775
+pair  NC  CT  lj9_6  0.4200  5.1675
+pair  NC  CT2  lj9_6  0.3200  4.9855
+pair  NH  NH  lj9_6  0.8000  4.15
+pair  NH  PH  lj9_6  1.0400  4.18
+pair  NH  PHE  lj9_6  0.7250  4.1
+pair  NH  GL  lj9_6  0.7000  4.19
+pair  NH  EST1  lj9_6  0.8500  4.11
+pair  NH  EST2  lj9_6  0.8500  4.11
+pair  NH  CM  lj9_6  0.3300  4.553
+pair  NH  CMD2  lj9_6  0.3000  4.3025
+pair  NH  CT  lj9_6  0.3400  4.5925
+pair  NH  CT2  lj9_6  0.3200  4.4105
+pair  OAG  WO    lj12_4  0.6800  4.25
+pair  OAG  WH    lj12_4 0.0000  0.0
+pair  OAG  SOD1  lj12_4  0.6800  4.25
+pair  OAG  SOD2  lj12_4  0.0000  0.0
+pair  OAG  CLA1  lj12_4  0.6800  4.25
+pair  OAG  CLA2  lj12_4  0.0000  0.0
+pair  OAG  OAG   lj9_6  0.7000  4.5
+pair  OAG  PH    lj9_6  0.9000  4.3
+pair  OAG  GL    lj9_6  0.7500  4.4 
+pair  OAG  EST1  lj9_6  0.5850  4.4 
+pair  OAG  EST2  lj9_6  0.5850  4.4 
+pair  OAG  CM    lj9_6  0.4300  4.503
+pair  OAG  CMD2  lj9_6  0.3250  4.2525
+pair  OAG  CT2   lj9_6  0.4150  4.3605
+pair  OAG  NH    lj9_6  0.7850  4.425
+pair  OAG  PHE   lj9_6  0.9000  4.3  
+pair  PH  PH  lj9_6  1.7200  5.18
+pair  PH  PHE  lj9_6  1.7800  4.6
+pair  PH  GL  lj9_6  0.3200  4.75
+pair  PH  EST1  lj9_6  0.6000  4.55
+pair  PH  EST2  lj9_6  0.6000  4.55
+pair  PH  CM  lj9_6  0.3000  4.953
+pair  PH  CMD2  lj9_6  0.3000  4.7025
+pair  PH  CT  lj9_6  0.3200  4.9925
+pair  PH  CT2  lj9_6  0.2800  4.8105
+pair  PHE  PHE  lj9_6  1.7200  4.45
+pair  PHE  GL  lj9_6  0.3000  4.75
+pair  PHE  EST1  lj9_6  0.5000  4.70
+pair  PHE  EST2  lj9_6  0.5000  4.70
+pair  PHE  CM  lj9_6  0.3000  4.953
+pair  PHE  CMD2  lj9_6  0.3000  4.7025
+pair  PHE  CT  lj9_6  0.3200  4.9925
+pair  PHE  CT2  lj9_6  0.2800  4.8105
+pair  GL  GL  lj9_6  0.4200  4.506
+pair  GL  EST1  lj9_6  0.4900  4.403
+pair  GL  EST2  lj9_6  0.4900  4.403
+pair  GL  CM  lj9_6  0.4200  4.506
+pair  GL  CMD2  lj9_6  0.3120  4.2555
+pair  GL  CT  lj9_6  0.4440  4.5455
+pair  GL  CT2  lj9_6  0.3620  4.3635
+pair  EST1  EST1  lj9_6  0.4950  4.3
+pair  EST1  EST2  lj9_6  0.4950  4.3
+pair  EST   EST   lj9_6  0.4950  4.3
+pair  EST1  CM  lj9_6  0.4700  4.403
+pair  EST   CM  lj9_6  0.4700  4.403
+pair  EST1  CMD2  lj9_6  0.4400  4.005
+pair  EST1  CT  lj9_6  0.4700  4.4425
+pair  EST1  CT2  lj9_6  0.3900  4.2605
+pair  EST   CT2  lj9_6  0.3900  4.2605
+pair  EST2  EST2  lj9_6  0.4950  4.3
+pair  EST2  CM  lj9_6  0.4700  4.403
+pair  EST2  CMD2  lj9_6  0.4400  4.005
+pair  EST2  CT  lj9_6  0.4700  4.4425
+pair  EST2  CT2  lj9_6  0.3900  4.2605
+pair  CM  CM  lj9_6  0.4200  4.506
+pair  CM  CMD2  lj9_6  0.3120  4.2555
+pair  CM  CT  lj9_6  0.4440  4.5455
+pair  CM  CT2  lj9_6  0.3620  4.3635
+pair  CMD2  CMD2  lj9_6  0.2320  4.005
+pair  CMD2  CT  lj9_6  0.3300  4.295
+pair  CMD2  CT2  lj9_6  0.2690  4.113
+pair  CT  CT  lj9_6  0.4690  4.585
+pair  CT  CT2  lj9_6  0.3830  4.403
+pair  CT2  CT2  lj9_6  0.3120  4.221
+pair  ASN  ASN  lj9_6  0.8700  4.15
+pair  ASN  CYS  lj9_6  0.7555  4.155
+pair  ASN  GLN  lj9_6  1.0184  4.445
+pair  ASN  HI1  lj9_6  0.9000  4.12
+pair  ASN  HI2  lj9_6  0.9200  4.08
+pair  ASN  HI3  lj9_6  0.9200  3.83
+pair  ASN  ILE  lj9_6  0.6509  4.6625
+pair  ASN  LEU  lj9_6  0.6829  4.605
+pair  ASN  MET  lj9_6  0.8523  4.5875
+pair  ASN  XYR  lj9_6  0.5276  4.075
+pair  ASN  BER  lj9_6  0.3902  3.975
+pair  ASN  PRO  lj9_6  0.6388  4.3675
+pair  ASN  SER  lj9_6  0.7104  3.915
+pair  ASN  THR  lj9_6  0.7612  4.195
+pair  ASN  TR1  lj9_6  0.6415  4.28
+pair  ASN  TR2  lj9_6  0.5994  4.24
+pair  ASN  TR3  lj9_6  0.8094  4.405
+pair  ASN  PHR  lj9_6  0.6917  3.825
+pair  ASN  VAL  lj9_6  0.6388  4.3675
+pair  CYS  CYS  lj9_6  0.6560  2.4
+pair  CYS  GLN  lj9_6  0.8843  4.45
+pair  CYS  HI1  lj9_6  0.5547  4.1225
+pair  CYS  HI2  lj9_6  0.7300  4.08
+pair  CYS  HI3  lj9_6  0.7300  3.83
+pair  CYS  ILE  lj9_6  0.5652  4.6675
+pair  CYS  LEU  lj9_6  0.5930  4.61
+pair  CYS  MET  lj9_6  0.7401  4.5925
+pair  CYS  XYR  lj9_6  0.4582  4.08
+pair  CYS  BER  lj9_6  0.3388  3.98
+pair  CYS  PRO  lj9_6  0.5547  4.3725
+pair  CYS  SER  lj9_6  0.6168  3.92
+pair  CYS  THR  lj9_6  0.6610  4.2
+pair  CYS  TR1  lj9_6  0.5570  4.285
+pair  CYS  TR2  lj9_6  0.5205  4.245
+pair  CYS  TR3  lj9_6  0.7028  4.41
+pair  CYS  PHR  lj9_6  0.6007  3.83
+pair  CYS  VAL  lj9_6  0.5547  4.3725
+pair  GLN  GLN  lj9_6  1.1920  4.74
+pair  GLN  HI1  lj9_6  0.7477  4.4125
+pair  GLN  HI2  lj9_6  1.0400  4.37
+pair  GLN  HI3  lj9_6  1.0400  4.12
+pair  GLN  ILE  lj9_6  0.7619  4.9575
+pair  GLN  LEU  lj9_6  0.7993  4.9
+pair  GLN  MET  lj9_6  0.9977  4.8825
+pair  GLN  XYR  lj9_6  0.6176  4.37
+pair  GLN  BER  lj9_6  0.4567  4.27
+pair  GLN  PRO  lj9_6  0.7477  4.6625
+pair  GLN  SER  lj9_6  0.8315  4.21
+pair  GLN  THR  lj9_6  0.8910  4.49
+pair  GLN  TR1  lj9_6  0.7509  4.575
+pair  GLN  TR2  lj9_6  0.7016  4.535
+pair  GLN  TR3  lj9_6  0.9474  4.7
+pair  GLN  PHR  lj9_6  0.8097  4.12
+pair  GLN  VAL  lj9_6  0.7477  4.6625
+pair  HI1  HI1  lj9_6  0.4690  4.085
+pair  HI1  HI2  lj9_6  0.5000  4.04
+pair  HI1  HI3  lj9_6  0.5000  3.79
+pair  HI1  ILE  lj9_6  0.4779  4.63
+pair  HI1  LEU  lj9_6  0.5014  4.5725
+pair  HI1  MET  lj9_6  0.6258  4.555
+pair  HI1  XYR  lj9_6  0.3874  4.0425
+pair  HI1  BER  lj9_6  0.2865  3.9425
+pair  HI1  PRO  lj9_6  0.4690  4.335
+pair  HI1  SER  lj9_6  0.5216  3.8825
+pair  HI1  THR  lj9_6  0.5589  4.1625
+pair  HI1  TR1  lj9_6  0.4710  4.2475
+pair  HI1  TR2  lj9_6  0.4401  4.2075
+pair  HI1  TR3  lj9_6  0.5943  4.3725
+pair  HI1  PHR  lj9_6  0.5079  3.7925
+pair  HI1  VAL  lj9_6  0.4690  4.335
+pair  HI2  HI2  lj9_6  0.5200  4
+pair  HI2  HI3  lj9_6  0.5200  3.75
+pair  HI2  ILE  lj9_6  0.7600  4.59
+pair  HI2  LEU  lj9_6  0.7700  4.53
+pair  HI2  MET  lj9_6  0.9500  4.51
+pair  HI2  XYR  lj9_6  0.5700  4
+pair  HI2  BER  lj9_6  0.4100  3.9
+pair  HI2  PRO  lj9_6  0.4828  4.2925
+pair  HI2  SER  lj9_6  0.8400  3.84
+pair  HI2  THR  lj9_6  0.8000  4.12
+pair  HI2  TR1  lj9_6  0.5000  4.21
+pair  HI2  TR2  lj9_6  0.4700  4.17
+pair  HI2  TR3  lj9_6  0.6400  4.33
+pair  HI2  PHR  lj9_6  0.7300  3.75
+pair  HI2  VAL  lj9_6  0.6100  4.29
+pair  HI3  HI3  lj9_6  0.5200  3.5
+pair  HI3  ILE  lj9_6  0.7600  4.34
+pair  HI3  LEU  lj9_6  0.7700  4.28
+pair  HI3  MET  lj9_6  0.9500  4.26
+pair  HI3  XYR  lj9_6  0.5700  3.75
+pair  HI3  BER  lj9_6  0.4100  3.65
+pair  HI3  PRO  lj9_6  0.4828  4.0425
+pair  HI3  SER  lj9_6  0.8400  3.59
+pair  HI3  THR  lj9_6  0.8000  3.87
+pair  HI3  TR1  lj9_6  0.5000  3.96
+pair  HI3  TR2  lj9_6  0.4700  3.92
+pair  HI3  TR3  lj9_6  0.6400  4.08
+pair  HI3  PHR  lj9_6  0.7300  3.5
+pair  HI3  VAL  lj9_6  0.6100  4.04
+pair  ILE  ILE  lj9_6  0.4870  5.175
+pair  ILE  LEU  lj9_6  0.5109  5.1175
+pair  ILE  MET  lj9_6  0.6377  5.1
+pair  ILE  XYR  lj9_6  0.3948  4.5875
+pair  ILE  BER  lj9_6  0.2919  4.4875
+pair  ILE  PRO  lj9_6  0.4779  4.88
+pair  ILE  SER  lj9_6  0.5315  4.4275
+pair  ILE  THR  lj9_6  0.5695  4.7075
+pair  ILE  TR1  lj9_6  0.4799  4.7925
+pair  ILE  TR2  lj9_6  0.4485  4.7525
+pair  ILE  TR3  lj9_6  0.6056  4.9175
+pair  ILE  PHR  lj9_6  0.5175  4.3375
+pair  ILE  VAL  lj9_6  0.4779  4.88
+pair  LEU  LEU  lj9_6  0.5360  5.06
+pair  LEU  MET  lj9_6  0.6690  5.0425
+pair  LEU  XYR  lj9_6  0.4141  4.53
+pair  LEU  BER  lj9_6  0.3063  4.43
+pair  LEU  PRO  lj9_6  0.5014  4.8225
+pair  LEU  SER  lj9_6  0.5576  4.37
+pair  LEU  THR  lj9_6  0.5975  4.65
+pair  LEU  TR1  lj9_6  0.5035  4.735
+pair  LEU  TR2  lj9_6  0.4705  4.695
+pair  LEU  TR3  lj9_6  0.6353  4.86
+pair  LEU  PHR  lj9_6  0.5430  4.28
+pair  LEU  VAL  lj9_6  0.5014  4.8225
+pair  MET  MET  lj9_6  0.8350  5.025
+pair  MET  XYR  lj9_6  0.5169  4.5125
+pair  MET  BER  lj9_6  0.3823  4.4125
+pair  MET  PRO  lj9_6  0.6258  4.805
+pair  MET  SER  lj9_6  0.6959  4.3525
+pair  MET  THR  lj9_6  0.7457  4.6325
+pair  MET  TR1  lj9_6  0.6285  4.7175
+pair  MET  TR2  lj9_6  0.5872  4.6775
+pair  MET  TR3  lj9_6  0.7929  4.8425
+pair  MET  PHR  lj9_6  0.6777  4.2625
+pair  MET  VAL  lj9_6  0.6258  4.805
+pair  XYR  XYR  lj9_6  0.3200  4
+pair  XYR  BER  lj9_6  0.2366  3.9
+pair  XYR  PRO  lj9_6  0.3874  4.2925
+pair  XYR  SER  lj9_6  0.4308  3.84
+pair  XYR  THR  lj9_6  0.4616  4.12
+pair  XYR  TR1  lj9_6  0.3891  4.205
+pair  XYR  TR2  lj9_6  0.3635  4.165
+pair  XYR  TR3  lj9_6  0.4909  4.33
+pair  XYR  PHR  lj9_6  0.4195  3.75
+pair  XYR  VAL  lj9_6  0.3874  4.2925
+pair  BER  BER  lj9_6  0.1750  3.8
+pair  BER  PRO  lj9_6  0.2865  4.1925
+pair  BER  SER  lj9_6  0.3186  3.74
+pair  BER  THR  lj9_6  0.3414  4.02
+pair  BER  TR1  lj9_6  0.2877  4.105
+pair  BER  TR2  lj9_6  0.2688  4.065
+pair  BER  TR3  lj9_6  0.3630  4.23
+pair  BER  PHR  lj9_6  0.3102  3.65
+pair  BER  VAL  lj9_6  0.2865  4.1925
+pair  PRO  PRO  lj9_6  0.4690  4.585
+pair  PRO  SER  lj9_6  0.5216  4.1325
+pair  PRO  THR  lj9_6  0.5589  4.4125
+pair  PRO  TR1  lj9_6  0.4710  4.4975
+pair  PRO  TR2  lj9_6  0.4401  4.4575
+pair  PRO  TR3  lj9_6  0.5943  4.6225
+pair  PRO  PHR  lj9_6  0.5079  4.0425
+pair  PRO  VAL  lj9_6  0.4690  4.585
+pair  SER  SER  lj9_6  0.5800  3.68
+pair  SER  THR  lj9_6  0.6215  3.96
+pair  SER  TR1  lj9_6  0.5238  4.045
+pair  SER  TR2  lj9_6  0.4894  4.005
+pair  SER  TR3  lj9_6  0.6609  4.17
+pair  SER  PHR  lj9_6  0.5648  3.59
+pair  SER  VAL  lj9_6  0.5216  4.1325
+pair  THR  THR  lj9_6  0.6660  4.24
+pair  THR  TR1  lj9_6  0.5613  4.325
+pair  THR  TR2  lj9_6  0.5245  4.285
+pair  THR  TR3  lj9_6  0.7082  4.45
+pair  THR  PHR  lj9_6  0.6052  3.87
+pair  THR  VAL  lj9_6  0.5589  4.4125
+pair  TR1  TR1  lj9_6  0.4730  4.41
+pair  TR1  TR2  lj9_6  0.4420  4.37
+pair  TR1  TR3  lj9_6  0.5968  4.535
+pair  TR1  PHR  lj9_6  0.5100  3.955
+pair  TR1  VAL  lj9_6  0.4710  4.4975
+pair  TR2  TR2  lj9_6  0.4130  4.33
+pair  TR2  TR3  lj9_6  0.5577  4.495
+pair  TR2  PHR  lj9_6  0.4766  3.915
+pair  TR2  VAL  lj9_6  0.4401  4.4575
+pair  TR3  TR3  lj9_6  0.7530  4.66
+pair  TR3  PHR  lj9_6  0.6435  4.08
+pair  TR3  VAL  lj9_6  0.5943  4.6225
+pair  PHR  PHR  lj9_6  0.5500  3.5
+pair  PHR  VAL  lj9_6  0.5079  4.0425
+pair  VAL  VAL  lj9_6  0.4690  4.585
+###PEG-PC
+
+
+pair  WO GBTN lj9_6   1.0500  4.26
+pair  WH GBTP lj9_6   0.0000  0.00
+pair  WH GBTN lj9_6   0.0000  0.00
+
+pair  SOD1 GBTN lj9_6   0.6500  4.26
+pair  SOD2 GBTP lj9_6   0.0000  0.00
+pair  SOD2 GBTN lj9_6   0.0000  0.00
+pair  CLA1 GBTN lj9_6   1.0500  4.26
+pair  CLA2 GBTP lj9_6   0.0000  0.00
+pair  CLA2 GBTN lj9_6   0.0000  0.00
+
+pair  WO ASN  lj12_4  1.1338  4.26
+pair  WO CYS  lj12_4  0.6120  4.266
+pair  WO GLN  lj12_4  1.1100  4.555
+pair  WO SER  lj12_4  0.8440  4.025
+pair  WO THR  lj12_4  0.8475  4.305
+pair  WO MET  lj12_4  0.7280  4.698
+pair  WO LY1  lj9_6  0.4500  4.325
+pair  WO LY2  lj9_6  1.1900  4.275
+pair  WO GLU  lj9_6  1.5500  4.125
+pair  WO ASP  lj9_6  1.6500  4.050
+pair  WO AR1  lj9_6  0.5250  4.488
+pair  WO AR2  lj9_6  0.9850  4.228
+pair  WO BER  lj12_4  0.2371  4.085
+pair  WO LEU  lj12_4  0.3700  4.8655
+pair  WO ILE  lj12_4  0.3500  4.9244
+pair  WO VAL  lj12_4  0.3490  4.620
+pair  WO XYR  lj12_4  0.3300  4.185
+pair  WO PHR  lj12_4  0.6720  3.935
+pair  WO HI1  lj12_4  0.2800  4.478
+pair  WO HI2  lj12_4  0.6850  4.186
+pair  WO HI3  lj12_4  0.6850  4.186
+pair  WO TR1  lj12_4  0.3550  4.391
+pair  WO TR2  lj12_4  0.3150  4.349
+pair  WO TR3  lj12_4  0.7250  4.516
+pair  WO PRO  lj12_4  0.3490  4.620  #same as VAL
+
+
+pair  WH GBM  lj9_6  0.0000  0.0
+pair  WH GBB  lj9_6  0.0000  0.0
+pair  WH GBT  lj9_6  0.0000  0.0
+pair  WH ABB  lj9_6  0.0000  0.0
+pair  WH AR1  lj9_6  0.0000  0.000
+pair  WH AR2  lj9_6  0.0000  0.00
+pair  WH ASN  lj9_6  0.0000  0.00
+pair  WH ASP  lj9_6  0.0000  0.000
+pair  WH CYS  lj9_6  0.0000  0.000
+pair  WH GLN  lj9_6  0.0000  0.000
+pair  WH GLU  lj9_6  0.0000  0.000
+pair  WH HI1  lj9_6  0.0000  0.000
+pair  WH HI2  lj9_6  0.0000  0.000
+pair  WH HI3  lj9_6  0.0000  0.000
+pair  WH ILE  lj9_6  0.0000  0.000
+pair  WH LEU  lj9_6  0.0000  0.000
+pair  WH LY1  lj9_6  0.0000  0.000
+pair  WH LY2  lj9_6  0.0000  0.0
+pair  WH MET  lj9_6  0.0000  0.000
+pair  WH XYR  lj9_6  0.0000  0.000
+pair  WH BER  lj9_6  0.0000  0.000
+pair  WH PRO  lj9_6  0.0000  0.000
+pair  WH SER  lj9_6  0.0000  0.000
+pair  WH THR  lj9_6  0.0000  0.000
+pair  WH TR1  lj9_6  0.0000  0.000
+pair  WH TR2  lj9_6  0.0000  0.000
+pair  WH TR3  lj9_6  0.0000  0.000
+pair  WH PHR  lj9_6  0.0000  0.000
+pair  WH VAL  lj9_6  0.0000  0.000
+
+pair  WO  WO   lj12_5  1.0500  4.400
+pair SOD1 SOD1 lj12_5  1.0500  4.400
+pair CLA1 CLA1 lj12_5  1.0500  4.400
+pair  WO  SOD1 lj12_5  0.8000  4.475
+pair  WO  CLA1 lj12_5  0.8000  4.475
+pair SOD1 CLA1 lj12_5  0.6500  4.700
+
+pair  WO  WH  lj12_4  0.0000  0.000
+pair  WH  WH  lj12_4  0.0000  0.000
+pair  WH  SOD1  lj12_6  0.0000  0.000
+pair  WH  CLA1  lj12_6  0.0000  0.000
+pair  WO  SOD2  lj12_6  0.0000  0.000
+pair  WO  CLA2  lj12_6  0.0000  0.000
+pair  WH  SOD2  lj12_6  0.0000  0.000
+pair  WH  CLA2  lj12_6  0.0000  0.000
+pair SOD1 SOD2 lj12_6  0.0000  0.000
+pair SOD2 SOD2 lj12_6  0.0000  0.000
+pair CLA1 CLA2 lj12_6  0.0000  0.000
+pair CLA2 CLA2 lj12_6  0.0000  0.000
+pair SOD1 CLA2 lj12_6  0.0000  0.000
+pair SOD2 CLA1 lj12_6  0.0000  0.000
+pair SOD2 CLA2 lj12_6  0.0000  0.000
+pair  WO  NC    lj9_6  1.0000  4.61
+pair  WO  PH    lj9_6  1.0000  4.03
+pair  WO  GL    lj12_4  0.6400  4.4385
+pair  WO  EST   lj12_4  0.8880  4.29
+pair  WO  EST1  lj12_4  0.8880  4.29
+pair  WO  EST2  lj12_4  0.8880  4.29
+pair  WO  CM    lj12_4  0.3296  4.5794
+pair  WO  CMD2  lj12_4  0.2618  4.3208
+pair  WO  CT    lj12_4  0.3490  4.620
+pair  WO  CT2   lj12_4  0.2811  4.432 
+pair  WH  NC    lj9_6  0.0000  0.000
+pair  WH  PH    lj9_6  0.0000  0.000
+pair  WH  GL    lj12_4  0.0000  0.000
+pair  WH  EST   lj12_4  0.0000  0.000
+pair  WH  EST1  lj12_4  0.0000  0.000
+pair  WH  EST2  lj12_4  0.0000  0.000
+pair  WH  CM    lj12_4  0.0000  0.000
+pair  WH  CMD2  lj12_4  0.0000  0.000
+pair  WH  CT    lj12_4  0.0000  0.000
+pair  WH  CT2   lj12_4  0.0000  0.000
+pair  SOD1  NC    lj9_6  1.6000  4.41
+pair  SOD1  PH    lj9_6  0.6400  4.50
+pair  SOD1  PHE    lj9_6  0.6400  4.50
+pair  SOD1  GL    lj12_4  0.6400  4.4385
+pair  SOD1  EST   lj12_4  0.8880  4.29
+pair  SOD1  EST1  lj12_4  0.8880  4.29
+pair  SOD1  EST2  lj12_4  0.8880  4.29
+pair  SOD1  CM    lj12_4  0.3296  4.5794
+pair  SOD1  CMD2  lj12_4  0.2618  4.3208
+pair  SOD1  CT    lj12_4  0.3490  4.620
+pair  SOD1  CT2   lj12_4  0.2811  4.432 
+pair  SOD2  NC    lj12_4  0.0000  0.000
+pair  SOD2  PH    lj12_4  0.0000  0.000
+pair  SOD2  PHE    lj12_4  0.0000  0.000
+pair  SOD2  GL    lj12_4  0.0000  0.000
+pair  SOD2  EST   lj12_4  0.0000  0.000
+pair  SOD2  EST1  lj12_4  0.0000  0.000
+pair  SOD2  EST2  lj12_4  0.0000  0.000
+pair  SOD2  CM    lj12_4  0.0000  0.000
+pair  SOD2  CMD2  lj12_4  0.0000  0.000
+pair  SOD2  CT    lj12_4  0.0000  0.000
+pair  SOD2  CT2   lj12_4  0.0000  0.000
+pair  CLA1  NC    lj9_6  0.5050  5.11
+pair  CLA1  PH    lj9_6  1.1500  4.03
+pair  CLA1  GL    lj12_4  0.6400  4.4385
+pair  CLA1  EST   lj12_4  0.8880  4.29
+pair  CLA1  EST1  lj12_4  0.8880  4.29
+pair  CLA1  EST2  lj12_4  0.8880  4.29
+pair  CLA1  CM    lj12_4  0.3296  4.5794
+pair  CLA1  CMD2  lj12_4  0.2618  4.3208
+pair  CLA1  CT    lj12_4  0.3490  4.620
+pair  CLA1  CT2   lj12_4  0.2811  4.432 #should mod
+pair  SOD1 GBT  lj12_4  0.9500  4.26
+pair  SOD1 GLU  lj9_6  1.4000  4.170
+pair  SOD1 ASP  lj9_6  1.7000  4.140
+pair  SOD1 ASN  lj12_4  1.1338  4.26
+pair  SOD1 CYS  lj12_4  0.6120  4.266
+pair  SOD1 GLN  lj12_4  1.1100  4.555
+pair  SOD1 SER  lj12_4  0.8440  4.025
+pair  SOD1 THR  lj12_4  0.8475  4.305
+pair  SOD1 MET  lj12_4  0.7280  4.698
+pair  SOD1 BER  lj12_4  0.2371  4.085
+pair  SOD1 LEU  lj12_4  0.3700  4.8655
+pair  SOD1 ILE  lj12_4  0.3500  4.9244
+pair  SOD1 VAL  lj12_4  0.3490  4.620
+pair  SOD1 XYR  lj12_4  0.3300  4.185
+pair  SOD1 PHR  lj12_4  0.6720  3.935
+pair  SOD1 PRO  lj12_4  0.3490  4.620
+pair  SOD1 TR1  lj12_4  0.3550  4.391
+pair  SOD1 TR2  lj12_4  0.3150  4.349
+pair  SOD1 TR3  lj12_4  0.7250  4.516
+pair  SOD1 HI1  lj12_4  0.2800  4.478
+pair  SOD1 HI2  lj12_4  0.6850  4.186
+pair  SOD1 HI3  lj12_4  0.6850  4.186
+pair  SOD1 LY1  lj9_6  0.4500  4.478
+pair  SOD1 LY2  lj9_6  1.1900  4.6
+pair  SOD1 AR1  lj9_6  0.4500  4.478
+pair  SOD1 AR2  lj9_6  1.5100  5.09
+pair  CLA1 GBT  lj12_4  0.9500  4.26
+pair  CLA1 AR1  lj9_6  0.6000  4.478
+pair  CLA1 AR2  lj9_6  1.3500  4.625
+pair  CLA1 LY1  lj9_6  0.4500  4.478
+pair  CLA1 LY2  lj9_6  1.1900  4.6
+
+pair  CLA1 ASN  lj12_4  1.1338  4.26
+pair  CLA1 CYS  lj12_4  0.6120  4.266
+pair  CLA1 GLN  lj12_4  1.1100  4.555
+pair  CLA1 SER  lj12_4  0.8440  4.025
+pair  CLA1 THR  lj12_4  0.8475  4.305
+pair  CLA1 MET  lj12_4  0.7280  4.698
+pair  CLA1 BER  lj12_4  0.2371  4.085
+pair  CLA1 LEU  lj12_4  0.3700  4.8655
+pair  CLA1 ILE  lj12_4  0.3500  4.9244
+pair  CLA1 VAL  lj12_4  0.3490  4.620
+pair  CLA1 XYR  lj12_4  0.3300  4.185
+pair  CLA1 PHR  lj12_4  0.6720  3.935
+pair  CLA1 PRO  lj12_4  0.3490  4.620
+pair  CLA1 HI1  lj12_4  0.2800  4.478
+pair  CLA1 HI2  lj12_4  0.6850  4.186
+pair  CLA1 HI3  lj12_4  0.6850  4.186
+pair  CLA1 TR1  lj12_4  0.3350  4.391
+pair  CLA1 TR2  lj12_4  0.3150  4.349
+pair  CLA1 TR3  lj12_4  0.7250  4.516
+pair  CLA1 GLU  lj9_6  1.4500  4.186
+pair  CLA1 ASP  lj9_6  1.5000  4.186
+pair  SOD2 GBM  lj9_6  0.0000  0.0
+pair  SOD2 GBB  lj9_6  0.0000  0.0
+pair  SOD2 GBT  lj9_6  0.0000  0.0
+pair  SOD2 ABB  lj9_6  0.0000  0.0
+pair  SOD2 AR1  lj9_6  0.0000  0.000
+pair  SOD2 AR2  lj9_6  0.0000  0.00
+pair  SOD2 ASN  lj9_6  0.0000  0.00
+pair  SOD2 ASP  lj9_6  0.0000  0.000
+pair  SOD2 CYS  lj9_6  0.0000  0.000
+pair  SOD2 GLN  lj9_6  0.0000  0.000
+pair  SOD2 GLU  lj9_6  0.0000  0.000
+pair  SOD2 HI1  lj9_6  0.0000  0.000
+pair  SOD2 HI2  lj9_6  0.0000  0.000
+pair  SOD2 HI3  lj9_6  0.0000  0.000
+pair  SOD2 ILE  lj9_6  0.0000  0.000
+pair  SOD2 LEU  lj9_6  0.0000  0.000
+pair  SOD2 LY1  lj9_6  0.0000  0.000
+pair  SOD2 LY2  lj9_6  0.0000  0.0
+pair  SOD2 MET  lj9_6  0.0000  0.000
+pair  SOD2 XYR  lj9_6  0.0000  0.000
+pair  SOD2 BER  lj9_6  0.0000  0.000
+pair  SOD2 PRO  lj9_6  0.0000  0.000
+pair  SOD2 SER  lj9_6  0.0000  0.000
+pair  SOD2 THR  lj9_6  0.0000  0.000
+pair  SOD2 TR1  lj9_6  0.0000  0.000
+pair  SOD2 TR2  lj9_6  0.0000  0.000
+pair  SOD2 TR3  lj9_6  0.0000  0.000
+pair  SOD2 PHR  lj9_6  0.0000  0.000
+pair  SOD2 VAL  lj9_6  0.0000  0.000
+pair  CLA2 GBM  lj9_6  0.0000  0.0
+pair  CLA2 GBB  lj9_6  0.0000  0.0
+pair  CLA2 GBT  lj9_6  0.0000  0.0
+pair  CLA2 ABB  lj9_6  0.0000  0.0
+pair  CLA2 AR1  lj9_6  0.0000  0.000
+pair  CLA2 AR2  lj9_6  0.0000  0.00
+pair  CLA2 ASN  lj9_6  0.0000  0.00
+pair  CLA2 ASP  lj9_6  0.0000  0.000
+pair  CLA2 CYS  lj9_6  0.0000  0.000
+pair  CLA2 GLN  lj9_6  0.0000  0.000
+pair  CLA2 GLU  lj9_6  0.0000  0.000
+pair  CLA2 HI1  lj9_6  0.0000  0.000
+pair  CLA2 HI2  lj9_6  0.0000  0.000
+pair  CLA2 HI3  lj9_6  0.0000  0.000
+pair  CLA2 ILE  lj9_6  0.0000  0.000
+pair  CLA2 LEU  lj9_6  0.0000  0.000
+pair  CLA2 LY1  lj9_6  0.0000  0.000
+pair  CLA2 LY2  lj9_6  0.0000  0.0
+pair  CLA2 MET  lj9_6  0.0000  0.000
+pair  CLA2 XYR  lj9_6  0.0000  0.000
+pair  CLA2 BER  lj9_6  0.0000  0.000
+pair  CLA2 PRO  lj9_6  0.0000  0.000
+pair  CLA2 SER  lj9_6  0.0000  0.000
+pair  CLA2 THR  lj9_6  0.0000  0.000
+pair  CLA2 TR1  lj9_6  0.0000  0.000
+pair  CLA2 TR2  lj9_6  0.0000  0.000
+pair  CLA2 TR3  lj9_6  0.0000  0.000
+pair  CLA2 PHR  lj9_6  0.0000  0.000
+pair  CLA2 VAL  lj9_6  0.0000  0.000
+pair  CLA2  NC    lj12_4  0.0000  0.000
+pair  CLA2  PH    lj12_4  0.0000  0.000
+pair  CLA2  GL    lj12_4  0.0000  0.000
+pair  CLA2  EST   lj12_4  0.0000  0.000
+pair  CLA2  EST1  lj12_4  0.0000  0.000
+pair  CLA2  EST2  lj12_4  0.0000  0.000
+pair  CLA2  CM    lj12_4  0.0000  0.000
+pair  CLA2  CMD2  lj12_4  0.0000  0.000
+pair  CLA2  CT    lj12_4  0.0000  0.000
+pair  CLA2  CT2   lj12_4  0.0000  0.000
+pair  AR1  AR1  lj9_6  0.5400  4.3500
+pair  AR1  AR2  lj9_6  0.6900  3.750
+pair  AR2  AR2  lj9_6  1.5000  3.6
+pair  AR1  ASP  lj9_6  1.2500  4.29
+pair  AR2  ASP  lj9_6  1.3000  3.875
+pair  AR1  GLU  lj9_6  1.3500  4.29
+pair  AR2  GLU  lj9_6  1.4800  4
+pair  AR1  LY1  lj9_6  0.6100  4.575
+pair  AR1  LY2  lj9_6  0.7400  4.25
+pair  AR2  LY1  lj9_6  0.8400  3.80
+pair  AR2  LY2  lj9_6  1.0500  4
+pair  ASP  ASP  lj9_6  1.5250  3.9500
+pair  ASP  GLU  lj9_6  0.6000  4
+pair  GLU  GLU  lj9_6  1.0500  4.0000
+pair  GLU  LY1  lj9_6  1.1000  4.29
+pair  GLU  LY2  lj9_6  1.1500  4
+pair  ASP  LY1  lj9_6  0.7000  4.25
+pair  ASP  LY2  lj9_6  1.0500  3.81
+pair  LY1  LY1  lj9_6  0.5000  4.225
+pair  LY1  LY2  lj9_6  0.7700  4.29
+pair  LY2  LY2  lj9_6  1.4000  4.000
+pair  AR1  ASN  lj9_6  0.7388  4.3675
+pair  AR2  ASN  lj9_6  1.1800  4.08
+pair  AR1  CYS  lj9_6  0.5272  4.3725
+pair  AR2  CYS  lj9_6  0.8500  4.08
+pair  AR1  GLN  lj9_6  0.7877  4.6625
+pair  AR2  GLN  lj9_6  1.2500  4.37
+pair  AR1  HI1  lj9_6  0.4000  4.335
+pair  AR1  HI2  lj9_6  0.4850  4.29
+pair  AR1  HI3  lj9_6  0.4850  4.04
+pair  AR2  HI1  lj9_6  0.7050  4.04
+pair  AR2  HI2  lj9_6  0.7450  4
+pair  AR2  HI3  lj9_6  0.7450  3.75
+pair  AR1  ILE  lj9_6  0.2500  4.88
+pair  AR2  ILE  lj9_6  0.6800  4.59
+pair  AR1  LEU  lj9_6  0.2614  4.8225
+pair  AR2  LEU  lj9_6  0.8800  4.53
+pair  AR1  MET  lj9_6  0.5758  4.555
+pair  AR2  MET  lj9_6  1.1000  4.26
+pair  AR1  SER  lj9_6  0.5616  4.1325
+pair  AR2  SER  lj9_6  0.7400  3.84
+pair  AR1  THR  lj9_6  0.6589  4.4125
+pair  AR2  THR  lj9_6  0.7800  4.12
+pair  AR1  VAL  lj9_6  0.2750  4.585
+pair  AR2  VAL  lj9_6  0.6800  4.29
+pair  AR1  PRO  lj9_6  0.2750  4.585
+pair  AR2  PRO  lj9_6  0.6800  4.29
+pair  AR1  TR1  lj9_6  0.4310  4.4975
+pair  AR1  TR2  lj9_6  0.4001  4.4575
+pair  AR1  TR3  lj9_6  0.4993  4.6225
+pair  AR2  TR1  lj9_6  0.7200  4.21
+pair  AR2  TR2  lj9_6  0.6900  4.17
+pair  AR2  TR3  lj9_6  0.8400  4.33
+pair  AR1  BER  lj9_6  0.2865  4.1925
+pair  AR2  BER  lj9_6  0.5200  3.9
+pair  AR1  XYR  lj9_6  0.3874  4.2925
+pair  AR2  XYR  lj9_6  0.6700  4
+pair  AR1  PHR  lj9_6  0.4879  4.0425
+pair  AR2  PHR  lj9_6  0.8000  3.75
+pair  ASN  ASP  lj9_6  1.0700  4.08
+pair  ASP  CYS  lj9_6  0.9300  4.08
+pair  ASP  GLN  lj9_6  1.3000  4.20
+pair  ASP  HI1  lj9_6  0.9150  4.04
+pair  ASP  HI2  lj9_6  0.9450  4
+pair  ASP  HI3  lj9_6  0.9450  3.75
+pair  ASP  ILE  lj9_6  0.8600  4.59
+pair  ASP  LEU  lj9_6  0.6800  4.53
+pair  ASP  MET  lj9_6  0.5900  4.51
+pair  ASP  SER  lj9_6  0.9600  3.84
+pair  ASP  THR  lj9_6  1.1300  4.12
+pair  ASP  VAL  lj9_6  0.4600  4.29
+pair  ASP  PRO  lj9_6  0.4600  4.29
+pair  ASP  TR1  lj9_6  0.8600  4.21
+pair  ASP  TR2  lj9_6  0.8100  4.17
+pair  ASP  TR3  lj9_6  1.0900  4.33
+pair  ASP  XYR  lj9_6  0.7600  4
+pair  ASP  BER  lj9_6  0.5500  3.9
+pair  ASP  PHR  lj9_6  0.9550  3.75
+
+
+pair  ASN  GLU  lj9_6  1.2500  4.08
+pair  CYS  GLU  lj9_6  0.9850  4.08
+pair  GLN  GLU  lj9_6  1.1900  4.35
+pair  GLU  HI1  lj9_6  0.8800  4.04
+pair  GLU  HI2  lj9_6  0.9400  4
+pair  GLU  HI3  lj9_6  0.9400  3.75
+pair  GLU  ILE  lj9_6  0.9500  4.59
+pair  GLU  LEU  lj9_6  1.1000  4.53
+pair  GLU  MET  lj9_6  0.7400  4.51
+pair  GLU  VAL  lj9_6  0.9800  4.29
+pair  GLU  PRO  lj9_6  0.9800  4.2925
+pair  GLU  SER  lj9_6  0.9000  3.84
+pair  GLU  TR1  lj9_6  0.8300  4.21
+pair  GLU  TR2  lj9_6  0.7700  4.17
+pair  GLU  TR3  lj9_6  1.0500  4.33
+pair  GLU  THR  lj9_6  1.0000  4.12
+pair  GLU  XYR  lj9_6  0.7800  4
+pair  GLU  BER  lj9_6  0.5700  3.9
+pair  GLU  PHR  lj9_6  1.0000  3.75
+
+
+pair  ASN  LY1  lj9_6  0.8388  4.3675
+pair  ASN  LY2  lj9_6  1.1100  4.08
+pair  GLN  LY1  lj9_6  0.8277  4.6625
+pair  GLN  LY2  lj9_6  1.1000  4.37
+pair  HI1  LY1  lj9_6  0.4290  4.335
+pair  HI2  LY1  lj9_6  0.5700  4.29
+pair  HI3  LY1  lj9_6  0.5700  4.04
+pair  HI1  LY2  lj9_6  0.5600  4.04
+pair  HI2  LY2  lj9_6  0.6300  4
+pair  HI3  LY2  lj9_6  0.6300  3.75
+pair  ILE  LY1  lj9_6  0.4179  4.88
+pair  ILE  LY2  lj9_6  0.8100  4.59
+pair  LEU  LY1  lj9_6  0.4814  4.8225
+pair  LEU  LY2  lj9_6  0.8000  4.53
+pair  LY1  MET  lj9_6  0.7785  4.805
+pair  LY2  MET  lj9_6  1.1300  4.51
+pair  LY1  VAL  lj9_6  0.4490  4.585
+pair  LY2  VAL  lj9_6  0.7300  4.29
+pair  LY1  PRO  lj9_6  0.4490  4.585
+pair  LY2  PRO  lj9_6  0.7300  4.29  
+pair  LY1  SER  lj9_6  0.6316  4.1325
+pair  LY2  SER  lj9_6  0.8300  3.84
+pair  LY1  THR  lj9_6  0.5589  4.4125
+pair  LY2  THR  lj9_6  0.9900  4.12
+pair  LY1  TR1  lj9_6  0.5010  4.4975
+pair  LY1  TR2  lj9_6  0.4701  4.4575
+pair  LY1  TR3  lj9_6  0.6243  4.6225
+pair  LY2  TR1  lj9_6  0.6700  4.21
+pair  LY2  TR2  lj9_6  0.6300  4.17
+pair  LY2  TR3  lj9_6  0.8300  4.33
+pair  CYS  LY1  lj9_6  0.6100  4.3725
+pair  CYS  LY2  lj9_6  0.6775  4.08
+pair  LY1  XYR  lj9_6  0.4174  4.2925
+pair  LY1  BER  lj9_6  0.3165  4.1925
+pair  LY1  PHR  lj9_6  0.4279  4.0425
+pair  LY2  XYR  lj9_6  0.6200  4
+pair  LY2  BER  lj9_6  0.4900  3.9
+pair  LY2  PHR  lj9_6  0.6400  3.75
+
+pair  NC  GBTN lj9_6  0.9150  4.95
+pair  NC  AR1  lj9_6  0.5730  5.168
+pair  NC  AR2  lj9_6  0.8900  4.875
+pair  NC  LY1  lj9_6  0.5730  5.168
+pair  NC  LY2  lj9_6  0.9200  4.875
+pair  NC  ASP  lj9_6  1.0400  4.875
+pair  NC  GLU  lj9_6  0.8200  4.875
+pair  NC  ASN  lj9_6  0.8100  4.95
+pair  NC  CYS  lj9_6  0.6980  4.955
+pair  NC  GLN  lj9_6  1.0030  5.245
+pair  NC  ILE  lj9_6  0.5040  5.463
+pair  NC  LEU  lj9_6  0.3730  5.405
+pair  NC  SER  lj9_6  0.5562  4.715
+pair  NC  THR  lj9_6  0.6730  4.995
+pair  NC  TR1  lj9_6  0.4450  5.08
+pair  NC  TR2  lj9_6  0.4180  5.04
+pair  NC  TR3  lj9_6  0.7060  5.205
+pair  NC  VAL  lj9_6  0.5030  5.168
+pair  NC  PRO  lj9_6  0.5030  5.168
+pair  NC  HI1  lj9_6  0.5730  4.918
+pair  NC  HI2  lj9_6  0.6370  4.875
+pair  NC  HI3  lj9_6  0.6370  4.625
+pair  NC  XYR  lj9_6  0.4730  4.875
+pair  NC  BER  lj9_6  0.3300  4.775
+pair  NC  PHR  lj9_6  0.7200  4.625
+pair  NC  MET  lj9_6  0.6900  5.388
+
+##################################################
+#################################################
+pair  PH  GBTN lj9_6  1.5000  4.775
+pair  PH  AR1  lj9_6  0.5400  4.992
+pair  PH  AR2  lj9_6  2.4000  4.7
+pair  PH  LY1  lj9_6  0.5400  4.992
+pair  PH  LY2  lj9_6  1.6000  4.7
+pair  PH  ASP  lj9_6  1.4000  4.7
+pair  PH  GLU  lj9_6  1.2500  4.7
+pair  PH  ASN  lj9_6  1.3700  4.775
+pair  PH  CYS  lj9_6  0.8900  4.78
+pair  PH  GLN  lj9_6  1.3000  5.07
+pair  PH  ILE  lj9_6  0.6940  5.287
+pair  PH  LEU  lj9_6  0.7000  5.227
+pair  PH  SER  lj9_6  1.3025  4.54
+pair  PH  THR  lj9_6  1.3070  4.82
+pair  PH  TR1  lj9_6  0.7870  4.88
+pair  PH  TR2  lj9_6  0.7660  4.835
+pair  PH  TR3  lj9_6  0.8200  5.016
+pair  PH  VAL  lj9_6  0.4700  4.992
+pair  PH  PRO  lj9_6  0.4700  4.992
+pair  PH  HI1  lj9_6  0.7800  4.743
+pair  PH  HI2  lj9_6  0.9080  4.7
+pair  PH  HI3  lj9_6  0.9080  4.45
+pair  PH  XYR  lj9_6  0.6000  4.7
+pair  PH  BER  lj9_6  0.4150  4.6
+pair  PH  PHR  lj9_6  1.0250  4.45
+pair  PH  MET  lj9_6  1.0750  5.213
+
+#################################################
+#################################################
+pair  GL  GBTN lj9_6  0.7500  4.328
+pair  GL  AR1  lj9_6  0.4590  4.545
+pair  GL  AR2  lj9_6  0.7000  4.253
+pair  GL  LY1  lj9_6  0.4590  4.545
+pair  GL  LY2  lj9_6  0.8000  4.253
+pair  GL  ASP  lj9_6  1.4000  4.253
+pair  GL  GLU  lj9_6  1.6500  4.253
+pair  GL  ASN  lj9_6  1.0800  4.328
+pair  GL  CYS  lj9_6  0.5250  4.333
+pair  GL  GLN  lj9_6  1.0700  4.623
+pair  GL  ILE  lj9_6  0.3000  4.84
+pair  GL  LEU  lj9_6  0.2500  4.775
+pair  GL  SER  lj9_6  0.7394  4.093
+pair  GL  THR  lj9_6  0.7050  4.373
+pair  GL  TR1  lj9_6  0.3900  4.458
+pair  GL  TR2  lj9_6  0.3600  4.417
+pair  GL  TR3  lj9_6  0.4300  4.582
+pair  GL  VAL  lj9_6  0.2992  4.545
+pair  GL  PRO  lj9_6  0.2992  4.545
+pair  GL  HI1  lj9_6  0.3790  4.296
+pair  GL  HI2  lj9_6  0.4800  4.253
+pair  GL  HI3  lj9_6  0.4800  4.003
+pair  GL  XYR  lj9_6  0.3000  4.253
+pair  GL  BER  lj9_6  0.1610  4.153
+pair  GL  PHR  lj9_6  0.4810  4.003
+pair  GL  MET  lj9_6  0.5040  4.766
+
+################################################
+#############################################
+pair  CM  GBTN lj9_6  0.4500  4.328
+pair  CM  AR1  lj9_6  0.6300  4.545
+pair  CM  AR2  lj9_6  0.4039  4.253
+pair  CM  LY1  lj9_6  0.6800  4.545
+pair  CM  LY2  lj9_6  0.5490  4.253
+pair  CM  ASP  lj9_6  0.8300  4.253
+pair  CM  GLU  lj9_6  0.8150  4.253
+pair  CM  ASN  lj9_6  0.6375  4.328
+pair  CM  CYS  lj9_6  0.6150  4.333
+pair  CM  GLN  lj9_6  0.6500  4.623
+pair  CM  ILE  lj9_6  0.3367  4.84
+pair  CM  LEU  lj9_6  0.3330  4.775
+pair  CM  SER  lj9_6  0.4105  4.093
+pair  CM  THR  lj9_6  0.4170  4.373
+pair  CM  TR1  lj9_6  0.4010  4.458
+pair  CM  TR2  lj9_6  0.3550  4.417
+pair  CM  TR3  lj9_6  0.4970  4.582
+pair  CM  VAL  lj9_6  0.3003  4.545
+pair  CM  PRO  lj9_6  0.3003  4.545
+pair  CM  HI1  lj9_6  0.3300  4.296
+pair  CM  HI2  lj9_6  0.3050  4.253
+pair  CM  HI3  lj9_6  0.3050  4.003
+pair  CM  XYR  lj9_6  0.2820  4.253
+pair  CM  BER  lj9_6  0.2500  4.153
+pair  CM  PHR  lj9_6  0.5530  4.003
+pair  CM  MET  lj9_6  0.7730  4.766
+#################################################
+#pair  CM  GBM  lj9_6  0.3800  4.328
+#pair  CM  GBB  lj9_6  0.3800  4.328
+#pair  CM  GBT  lj9_6  0.3800  4.328
+#pair  CM  ABB  lj9_6  0.5079  4.623
+#pair  CM  AR1  lj9_6  0.5600  4.545
+#pair  CM  AR2  lj9_6  0.2839  4.253
+#pair  CM  ASP  lj9_6  0.1000  4.253
+#pair  CM  GLU  lj9_6  0.2650  4.253
+#pair  CM  HI1  lj9_6  0.5600  4.296
+#pair  CM  HI2  lj9_6  0.5000  4.253
+#pair  CM  HI3  lj9_6  0.5000  4.003
+#pair  CM  LY1  lj9_6  0.5600  4.545
+#pair  CM  LY2  lj9_6  0.1990  4.253
+#pair  CM  MET  lj9_6  0.5580  4.766
+#pair  CM  XYR  lj9_6  0.2820  4.253
+#pair  CM  BER  lj9_6  0.3080  4.153
+#pair  CM  PHR  lj9_6  0.4230  4.003
+##############################################
+#pair  CM  ASN  lj9_6  0.8000  4.328
+#pair  CM  CYS  lj9_6  0.4900  4.333
+#pair  CM  GLN  lj9_6  0.7400  4.623
+#pair  CM  ILE  lj9_6  0.5450  4.84
+#pair  CM  LEU  lj9_6  0.4920  4.775
+#pair  CM  SER  lj9_6  0.5610  4.093
+#pair  CM  THR  lj9_6  0.4740  4.373
+#pair  CM  TR1  lj9_6  0.3710  4.458
+#pair  CM  TR2  lj9_6  0.3290  4.417
+#pair  CM  TR3  lj9_6  0.4650  4.582
+#pair  CM  VAL  lj9_6  0.4720  4.545
+#pair  CM  PRO  lj9_6  0.4720  4.5455
+#############################################
+##########################################
+pair  CMD2  GBTN lj9_6  0.4700  4.0775
+pair  CMD2  AR1  lj9_6  0.3770  4.295
+pair  CMD2  AR2  lj9_6  0.2910  4.003
+pair  CMD2  LY1  lj9_6  0.4870  4.295
+pair  CMD2  LY2  lj9_6  0.3180  4.003
+pair  CMD2  ASP  lj9_6  0.4650  4.003
+pair  CMD2  GLU  lj9_6  0.4170  4.003
+pair  CMD2  ASN  lj9_6  0.4020  4.077
+pair  CMD2  CYS  lj9_6  0.3640  4.082
+pair  CMD2  GLN  lj9_6  0.3290  4.372
+pair  CMD2  ILE  lj9_6  0.2800  4.59
+pair  CMD2  LEU  lj9_6  0.2530  4.532
+pair  CMD2  SER  lj9_6  0.2350  3.842
+pair  CMD2  THR  lj9_6  0.3190  4.122
+pair  CMD2  TR1  lj9_6  0.2760  4.207
+pair  CMD2  TR2  lj9_6  0.2440  4.168
+pair  CMD2  TR3  lj9_6  0.3450  4.332
+pair  CMD2  VAL  lj9_6  0.2420  4.295
+pair  CMD2  PRO  lj9_6  0.2420  4.295
+pair  CMD2  HI1  lj9_6  0.2770  4.045
+pair  CMD2  HI2  lj9_6  0.2562  4.0025
+pair  CMD2  HI3  lj9_6  0.2562  3.7525
+pair  CMD2  XYR  lj9_6  0.2100  4.003
+pair  CMD2  BER  lj9_6  0.1400  3.902
+pair  CMD2  PHR  lj9_6  0.3250  3.752
+pair  CMD2  MET  lj9_6  0.5150  4.515
+########################################
+##########################################
+pair  CT2  GBTN lj9_6  0.4040  4.1855
+pair  CT2  AR1  lj9_6  0.4900  4.403
+pair  CT2  AR2  lj9_6  0.3447  4.111
+pair  CT2  LY1  lj9_6  0.5800  4.403
+pair  CT2  LY2  lj9_6  0.3810  4.111
+pair  CT2  ASP  lj9_6  0.6640  4.111
+pair  CT2  GLU  lj9_6  0.6180  4.111
+pair  CT2  ASN  lj9_6  0.5020  4.185
+pair  CT2  CYS  lj9_6  0.4650  4.191
+pair  CT2  GLN  lj9_6  0.4650  4.481
+pair  CT2  ILE  lj9_6  0.3037  4.698
+pair  CT2  LEU  lj9_6  0.2740  4.621
+pair  CT2  SER  lj9_6  0.3171  3.95
+pair  CT2  THR  lj9_6  0.3705  4.231
+pair  CT2  TR1  lj9_6  0.3200  4.314
+pair  CT2  TR2  lj9_6  0.2830  4.275
+pair  CT2  TR3  lj9_6  0.4010  4.435
+pair  CT2  VAL  lj9_6  0.2624  4.403
+pair  CT2  PRO  lj9_6  0.2624  4.403
+pair  CT2  HI1  lj9_6  0.3150  4.153
+pair  CT2  HI2  lj9_6  0.2704  4.1105
+pair  CT2  HI3  lj9_6  0.2704  3.8605
+pair  CT2  XYR  lj9_6  0.2430  4.111
+pair  CT2  BER  lj9_6  0.1630  4.011
+pair  CT2  PHR  lj9_6  0.4250  3.861
+pair  CT2  MET  lj9_6  0.6360  4.623
+#########################################
+
+pair  CT  GBM  lj9_6  0.4020  4.3675
+pair  CT  GBB  lj9_6  0.4020  4.3675
+pair  CT  HI1  lj9_6  0.5021  4.335
+pair  CT  HI2  lj9_6  0.4535  4.293
+pair  CT  HI3  lj9_6  0.4535  4.043
+pair  CT  MET  lj9_6  0.5915  4.805
+pair  CT  XYR  lj9_6  0.2633  4.2925
+pair  CT  BER  lj9_6  0.2902  4.1925
+pair  CT  PHR  lj9_6  0.5073  4.0425
+pair  CT  AR1  lj9_6  0.5900  4.585
+pair  CT  AR2  lj9_6  0.3000  4.2925
+pair  CT  ASP  lj9_6  0.0906  4.2925
+pair  CT  GLU  lj9_6  0.2800  4.2925
+pair  CT  LY1  lj9_6  0.5021  4.585
+pair  CT  LY2  lj9_6  0.2100  4.2925
+###########################################
+pair  CT  ASN  lj9_6  0.8700  4.3675
+pair  CT  CYS  lj9_6  0.4874  4.3725
+pair  CT  GLN  lj9_6  0.6674  4.6625
+pair  CT  ILE  lj9_6  0.6061  4.88
+pair  CT  LEU  lj9_6  0.5204  4.8225
+pair  CT  SER  lj9_6  0.5088  4.1325
+pair  CT  THR  lj9_6  0.4308  4.4125
+pair  CT  TR1  lj9_6  0.4626  4.4975
+pair  CT  TR2  lj9_6  0.4172  4.4575
+pair  CT  TR3  lj9_6  0.5712  4.6225
+pair  CT  VAL  lj9_6  0.4984  4.585
+pair  CT  PRO  lj9_6  0.4984  4.585
+
+#############################################
+##############################################
+pair  EST1  GBTN lj9_6  1.0500  4.225
+pair  EST1  AR1  lj9_6  0.5315  4.442
+pair  EST1  AR2  lj9_6  0.9200  4.15
+pair  EST1  LY1  lj9_6  0.4350  4.442
+pair  EST1  LY2  lj9_6  1.0000  4.15
+pair  EST1  ASP  lj9_6  1.9000  4.15
+pair  EST1  GLU  lj9_6  1.9500  4.15
+pair  EST1  ASN  lj9_6  1.3150  4.225
+pair  EST1  CYS  lj9_6  0.5850  4.23
+pair  EST1  GLN  lj9_6  1.1800  4.52
+pair  EST1  ILE  lj9_6  0.3022  4.737
+pair  EST1  LEU  lj9_6  0.3100  4.665
+pair  EST1  SER  lj9_6  0.8857  3.99
+pair  EST1  THR  lj9_6  0.9750  4.27
+pair  EST1  TR1  lj9_6  0.5050  4.355
+pair  EST1  TR2  lj9_6  0.5650  4.315
+pair  EST1  TR3  lj9_6  0.8050  4.476
+pair  EST1  VAL  lj9_6  0.3276  4.442
+pair  EST1  PRO  lj9_6  0.3276  4.442
+pair  EST1  HI1  lj9_6  0.4950  4.193
+pair  EST1  HI2  lj9_6  0.5900  4.15
+pair  EST1  HI3  lj9_6  0.5900  3.9
+pair  EST1  XYR  lj9_6  0.3740  4.15
+pair  EST1  BER  lj9_6  0.1500  4.05
+pair  EST1  PHR  lj9_6  1.3200  3.9
+pair  EST1  MET  lj9_6  0.6190  4.662
+############################################
+############################################
+pair  EST2  GBTN lj9_6  1.0500  4.225
+pair  EST2  AR1  lj9_6  0.5315  4.442
+pair  EST2  AR2  lj9_6  0.9200  4.15
+pair  EST2  LY1  lj9_6  0.4350  4.442
+pair  EST2  LY2  lj9_6  1.0000  4.15
+pair  EST2  ASP  lj9_6  1.9000  4.15
+pair  EST2  GLU  lj9_6  1.9500  4.15
+pair  EST2  ASN  lj9_6  1.3150  4.225
+pair  EST2  CYS  lj9_6  0.5850  4.23
+pair  EST2  GLN  lj9_6  1.1800  4.52
+pair  EST2  ILE  lj9_6  0.3022  4.737
+pair  EST2  LEU  lj9_6  0.3100  4.665
+pair  EST2  SER  lj9_6  0.8857  3.99
+pair  EST2  THR  lj9_6  0.9750  4.27
+pair  EST2  TR1  lj9_6  0.5050  4.355
+pair  EST2  TR2  lj9_6  0.5650  4.315
+pair  EST2  TR3  lj9_6  0.8050  4.476
+pair  EST2  VAL  lj9_6  0.3276  4.442
+pair  EST2  PRO  lj9_6  0.3276  4.442
+pair  EST2  HI1  lj9_6  0.4950  4.193
+pair  EST2  HI2  lj9_6  0.5900  4.15
+pair  EST2  HI3  lj9_6  0.5900  3.9
+pair  EST2  XYR  lj9_6  0.3740  4.15
+pair  EST2  BER  lj9_6  0.1500  4.05
+pair  EST2  PHR  lj9_6  1.3200  3.9
+pair  EST2  MET  lj9_6  0.6190  4.662
+
+pair  WO   GBTP lj9_6  0.7000  4.26
+pair  SOD1 GBTP lj9_6  0.9000  4.26
+pair  CLA1 GBTP lj9_6  0.6500  4.26
+pair  NC   GBTP lj9_6  1.5250  4.95
+pair  PH   GBTP lj9_6  1.5000  4.775
+pair  GL   GBTP lj9_6  0.8500  4.328
+pair  CM   GBTP lj9_6  0.7500  4.328
+pair  CMD2 GBTP lj9_6  0.4550  4.0775
+pair  CT2  GBTP lj9_6  0.5240  4.1855
+pair  EST1 GBTP lj9_6  1.8500  4.225
+pair  EST2 GBTP lj9_6  1.8500  4.225
+
+pair  WO   GBM  lj12_4 0.2796  4.26
+pair  SOD1 GBM  lj12_4 0.2796  4.26
+pair  CLA1 GBM  lj12_4 0.2796  4.26
+pair  NC   GBM  lj9_6  0.4000  4.95
+pair  PH   GBM  lj9_6  0.4500  4.775
+pair  GL   GBM  lj9_6  0.4200  4.328
+pair  CM   GBM  lj9_6  0.4200  4.328
+pair  CMD2 GBM  lj9_6  0.3120  4.0775
+pair  CT2  GBM  lj9_6  0.3620  4.1855
+pair  EST1 GBM  lj9_6  0.4700  4.225
+pair  EST2 GBM  lj9_6  0.4700  4.225
+
+
+pair  WH ABT  lj9_6  0.0000  0.0
+pair  SOD2 ABT  lj9_6  0.0000  0.0
+pair  CLA2 ABT  lj9_6  0.0000  0.0
+
+pair  WH ABTP  lj9_6  0.0000  0.0
+pair  SOD2 ABTP  lj9_6  0.0000  0.0
+pair  CLA2 ABTP  lj9_6  0.0000  0.0
+
+pair  WO ABTP  lj9_6  0.8147  4.555
+pair  SOD1 ABTP  lj9_6  0.8147  4.555
+pair  CLA1 ABTP  lj9_6  0.8147  4.555
+pair  NC  ABTP  lj9_6  1.2851  5.245
+pair  PH  ABTP  lj9_6  1.6250  5.07
+pair  GL  ABTP  lj9_6  0.9024  4.623
+pair  EST1  ABTP  lj9_6  2.0210  4.52
+pair  EST2  ABTP  lj9_6  2.0210  4.52
+pair  CM  ABTP  lj9_6  0.5542  4.623
+pair  CMD2  ABTP  lj9_6  0.2829  4.3725
+pair  CT2  ABTP  lj9_6  0.4094  4.4805
+pair  CT  ABTP  lj9_6  0.5372  4.6625
+
+pair  WH ABTN  lj9_6  0.0000  0.0
+pair  SOD2 ABTN  lj9_6  0.0000  0.0
+pair  CLA2 ABTN  lj9_6  0.0000  0.0
+
+pair  WO ABTN  lj9_6  0.9505  4.555
+pair  SOD1 ABTN  lj9_6  0.9505  4.555
+pair  CLA1 ABTN  lj9_6  0.9505  4.555
+pair  NC  ABTN  lj9_6  1.1472  5.245
+pair  PH  ABTN  lj9_6  1.3176  5.07
+pair  GL  ABTN  lj9_6  0.9669  4.623
+pair  EST1  ABTN  lj9_6  1.3691  4.52
+pair  EST2  ABTN  lj9_6  1.3691  4.52
+pair  CM  ABTN  lj9_6  0.5179  4.623
+pair  CMD2  ABTN  lj9_6  0.3124  4.3725
+pair  CT2  ABTN  lj9_6  0.3901  4.4805
+pair  CT  ABTN  lj9_6  0.5372  4.6625
+
+pair  GBM  AR1  lj9_6  0.4227  4.3675
+pair  GBM  AR2  lj9_6  0.7507  4.075
+pair  GBM  ASN  lj9_6  0.9040  4.15
+pair  GBM  ASP  lj9_6  0.6696  4.075
+pair  GBM  CYS  lj9_6  0.5139  4.155
+pair  GBM  GLN  lj9_6  0.8537  4.445
+pair  GBM  GLU  lj9_6  0.7177  4.075
+pair  GBM  HI1  lj9_6  0.4227  4.1175
+pair  GBM  HI2  lj9_6  0.6069  4.075
+pair  GBM  HI3  lj9_6  0.6069  3.825
+pair  GBM  ILE  lj9_6  0.4918  4.6625
+pair  GBM  LEU  lj9_6  0.4566  4.605
+pair  GBM  LY1  lj9_6  0.4227  4.3675
+pair  GBM  LY2  lj9_6  0.5813  4.075
+pair  GBM  MET  lj9_6  0.5917  4.5875
+pair  GBM  XYR  lj9_6  0.3294  4.075
+pair  GBM  BER  lj9_6  0.2732  3.975
+pair  GBM  PRO  lj9_6  0.4277  4.3675
+pair  GBM  SER  lj9_6  0.6759  3.915
+pair  GBM  THR  lj9_6  0.6156  4.195
+pair  GBM  TR1  lj9_6  0.3645  4.28
+pair  GBM  TR2  lj9_6  0.3260  4.24
+pair  GBM  TR3  lj9_6  0.5336  4.405
+pair  GBM  PHR  lj9_6  0.5955  3.825
+pair  GBM  VAL  lj9_6  0.4277  4.3675
+
+pair  GBB  GBB  lj9_6  0.5148  4.15
+pair  GBB  GBT  lj9_6  0.5567  4.15
+pair  GBB  GBTP  lj9_6  0.5567  4.15
+pair  GBB  GBTN  lj9_6  0.5567  4.15
+pair  GBB  ABB  lj9_6  0.4714  4.445
+pair  GBB  ABT  lj9_6  0.5584  4.445
+pair  GBB  ABTP  lj9_6  0.5584  4.445
+pair  GBB  ABTN  lj9_6  0.5584  4.445
+
+pair  GBB  AR1  lj9_6  0.4227  4.3675
+pair  GBB  AR2  lj9_6  0.7507  4.075
+pair  GBB  ASN  lj9_6  0.9040  4.15
+pair  GBB  ASP  lj9_6  0.6696  4.075
+pair  GBB  CYS  lj9_6  0.5139  4.155
+pair  GBB  GLN  lj9_6  0.8537  4.445
+pair  GBB  GLU  lj9_6  0.7177  4.075
+pair  GBB  HI1  lj9_6  0.4227  4.1175
+pair  GBB  HI2  lj9_6  0.6069  4.075
+pair  GBB  HI3  lj9_6  0.6069  3.825
+pair  GBB  ILE  lj9_6  0.4918  4.6625
+pair  GBB  LEU  lj9_6  0.4566  4.605
+pair  GBB  LY1  lj9_6  0.4227  4.3675
+pair  GBB  LY2  lj9_6  0.5813  4.075
+pair  GBB  MET  lj9_6  0.5917  4.5875
+pair  GBB  XYR  lj9_6  0.3294  4.075
+pair  GBB  BER  lj9_6  0.2732  3.975
+pair  GBB  PRO  lj9_6  0.4277  4.3675
+pair  GBB  SER  lj9_6  0.6759  3.915
+pair  GBB  THR  lj9_6  0.6156  4.195
+pair  GBB  TR1  lj9_6  0.3645  4.28
+pair  GBB  TR2  lj9_6  0.3260  4.24
+pair  GBB  TR3  lj9_6  0.5336  4.405
+pair  GBB  PHR  lj9_6  0.5955  3.825
+pair  GBB  VAL  lj9_6  0.4277  4.3675
+
+pair  GBT  GBT  lj9_6  0.5567  4.15
+pair  GBT  GBTP  lj9_6  0.5567  4.15
+pair  GBT  GBTN  lj9_6  0.5567  4.15
+pair  GBT  ABB  lj9_6  0.4714  4.445
+pair  GBT  ABT  lj9_6  0.5584  4.445
+pair  GBT  ABTP  lj9_6  0.5584  4.445
+pair  GBT  ABTN  lj9_6  0.5584  4.445
+
+pair  GBT  AR1  lj9_6  0.4227  4.3675
+pair  GBT  AR2  lj9_6  0.7507  4.075
+pair  GBT  ASN  lj9_6  0.9040  4.15
+pair  GBT  ASP  lj9_6  0.6696  4.075
+pair  GBT  CYS  lj9_6  0.5139  4.155
+pair  GBT  GLN  lj9_6  0.8537  4.445
+pair  GBT  GLU  lj9_6  0.7177  4.075
+pair  GBT  HI1  lj9_6  0.4227  4.1175
+pair  GBT  HI2  lj9_6  0.6069  4.075
+pair  GBT  HI3  lj9_6  0.6069  3.825
+pair  GBT  ILE  lj9_6  0.4918  4.6625
+pair  GBT  LEU  lj9_6  0.4566  4.605
+pair  GBT  LY1  lj9_6  0.4227  4.3675
+pair  GBT  LY2  lj9_6  0.5813  4.075
+pair  GBT  MET  lj9_6  0.5917  4.5875
+pair  GBT  XYR  lj9_6  0.3294  4.075
+pair  GBT  BER  lj9_6  0.2732  3.975
+pair  GBT  PRO  lj9_6  0.4277  4.3675
+pair  GBT  SER  lj9_6  0.6759  3.915
+pair  GBT  THR  lj9_6  0.6156  4.195
+pair  GBT  TR1  lj9_6  0.3645  4.28
+pair  GBT  TR2  lj9_6  0.3260  4.24
+pair  GBT  TR3  lj9_6  0.5336  4.405
+pair  GBT  PHR  lj9_6  0.5955  3.825
+pair  GBT  VAL  lj9_6  0.4277  4.3675
+
+pair  GBTP  GBTP  lj9_6  0.5567  4.15
+pair  GBTP  GBTN  lj9_6  0.5567  4.15
+pair  GBTP  ABB  lj9_6  0.4714  4.445
+pair  GBTP  ABT  lj9_6  0.5584  4.445
+pair  GBTP  ABTP  lj9_6  0.5584  4.445
+pair  GBTP  ABTN  lj9_6  0.5584  4.445
+
+pair  GBTP  AR1  lj9_6  0.4227  4.3675
+pair  GBTP  AR2  lj9_6  0.7507  4.075
+pair  GBTP  ASN  lj9_6  0.9040  4.15
+pair  GBTP  ASP  lj9_6  0.6696  4.075
+pair  GBTP  CYS  lj9_6  0.5139  4.155
+pair  GBTP  GLN  lj9_6  0.8537  4.445
+pair  GBTP  GLU  lj9_6  0.7177  4.075
+pair  GBTP  HI1  lj9_6  0.4227  4.1175
+pair  GBTP  HI2  lj9_6  0.6069  4.075
+pair  GBTP  HI3  lj9_6  0.6069  3.825
+pair  GBTP  ILE  lj9_6  0.4918  4.6625
+pair  GBTP  LEU  lj9_6  0.4566  4.605
+pair  GBTP  LY1  lj9_6  0.4227  4.3675
+pair  GBTP  LY2  lj9_6  0.5813  4.075
+pair  GBTP  MET  lj9_6  0.5917  4.5875
+pair  GBTP  XYR  lj9_6  0.3294  4.075
+pair  GBTP  BER  lj9_6  0.2732  3.975
+pair  GBTP  PRO  lj9_6  0.4277  4.3675
+pair  GBTP  SER  lj9_6  0.6759  3.915
+pair  GBTP  THR  lj9_6  0.6156  4.195
+pair  GBTP  TR1  lj9_6  0.3645  4.28
+pair  GBTP  TR2  lj9_6  0.3260  4.24
+pair  GBTP  TR3  lj9_6  0.5336  4.405
+pair  GBTP  PHR  lj9_6  0.5955  3.825
+pair  GBTP  VAL  lj9_6  0.4277  4.3675
+
+pair  GBTN  GBTN  lj9_6  0.5567  4.15
+pair  GBTN  ABB  lj9_6  0.4714  4.445
+pair  GBTN  ABT  lj9_6  0.5584  4.445
+pair  GBTN  ABTP  lj9_6  0.5584  4.445
+pair  GBTN  ABTN  lj9_6  0.5584  4.445
+
+pair  GBTN  AR1  lj9_6  0.4227  4.3675
+pair  GBTN  AR2  lj9_6  0.7507  4.075
+pair  GBTN  ASN  lj9_6  0.9040  4.15
+pair  GBTN  ASP  lj9_6  0.6696  4.075
+pair  GBTN  CYS  lj9_6  0.5139  4.155
+pair  GBTN  GLN  lj9_6  0.8537  4.445
+pair  GBTN  GLU  lj9_6  0.7177  4.075
+pair  GBTN  HI1  lj9_6  0.4227  4.1175
+pair  GBTN  HI2  lj9_6  0.6069  4.075
+pair  GBTN  HI3  lj9_6  0.6069  3.825
+pair  GBTN  ILE  lj9_6  0.4918  4.6625
+pair  GBTN  LEU  lj9_6  0.4566  4.605
+pair  GBTN  LY1  lj9_6  0.4227  4.3675
+pair  GBTN  LY2  lj9_6  0.5813  4.075
+pair  GBTN  MET  lj9_6  0.5917  4.5875
+pair  GBTN  XYR  lj9_6  0.3294  4.075
+pair  GBTN  BER  lj9_6  0.2732  3.975
+pair  GBTN  PRO  lj9_6  0.4277  4.3675
+pair  GBTN  SER  lj9_6  0.6759  3.915
+pair  GBTN  THR  lj9_6  0.6156  4.195
+pair  GBTN  TR1  lj9_6  0.3645  4.28
+pair  GBTN  TR2  lj9_6  0.3260  4.24
+pair  GBTN  TR3  lj9_6  0.5336  4.405
+pair  GBTN  PHR  lj9_6  0.5955  3.825
+pair  GBTN  VAL  lj9_6  0.4277  4.3675
+
+pair  ABB  ABB  lj9_6  0.8035  4.74
+pair  ABB  ABT  lj9_6  0.8035  4.74
+pair  ABB  ABTP  lj9_6  0.8035  4.74
+pair  ABB  ABTN  lj9_6  0.8035  4.74
+pair  ABB  AR1  lj9_6  0.5257  4.6625
+pair  ABB  AR2  lj9_6  0.6957  4.37
+pair  ABB  ASN  lj9_6  0.9910  4.445
+pair  ABB  ASP  lj9_6  0.5692  4.37
+pair  ABB  CYS  lj9_6  0.5752  4.45
+pair  ABB  GLN  lj9_6  0.9307  4.74
+pair  ABB  GLU  lj9_6  0.6629  4.37
+pair  ABB  HI1  lj9_6  0.5257  4.4125
+pair  ABB  HI2  lj9_6  0.6529  4.37
+pair  ABB  HI3  lj9_6  0.6529  4.12
+pair  ABB  ILE  lj9_6  0.5758  4.9575
+pair  ABB  LEU  lj9_6  0.5300  4.9
+pair  ABB  LY1  lj9_6  0.5257  4.6625
+pair  ABB  LY2  lj9_6  0.5317  4.37
+pair  ABB  MET  lj9_6  0.6602  4.8825
+pair  ABB  XYR  lj9_6  0.3579  4.37
+pair  ABB  BER  lj9_6  0.3218  4.27
+pair  ABB  PRO  lj9_6  0.5002  4.6625
+pair  ABB  SER  lj9_6  0.7285  4.21
+pair  ABB  THR  lj9_6  0.6512  4.49
+pair  ABB  TR1  lj9_6  0.4158  4.575
+pair  ABB  TR2  lj9_6  0.3710  4.535
+pair  ABB  TR3  lj9_6  0.5826  4.7
+pair  ABB  PHR  lj9_6  0.6181  4.12
+pair  ABB  VAL  lj9_6  0.5002  4.6625
+
+pair  ABT  ABT  lj9_6  0.8035  4.74
+pair  ABT  ABTP  lj9_6  0.8035  4.74
+pair  ABT  ABTN  lj9_6  0.8035  4.74
+pair  ABT  AR1  lj9_6  0.5257  4.6625
+pair  ABT  AR2  lj9_6  0.6957  4.37
+pair  ABT  ASN  lj9_6  0.9910  4.445
+pair  ABT  ASP  lj9_6  0.5692  4.37
+pair  ABT  CYS  lj9_6  0.5752  4.45
+pair  ABT  GLN  lj9_6  0.9307  4.74
+pair  ABT  GLU  lj9_6  0.6629  4.37
+pair  ABT  HI1  lj9_6  0.5257  4.4125
+pair  ABT  HI2  lj9_6  0.6529  4.37
+pair  ABT  HI3  lj9_6  0.6529  4.12
+pair  ABT  ILE  lj9_6  0.5758  4.9575
+pair  ABT  LEU  lj9_6  0.5300  4.9
+pair  ABT  LY1  lj9_6  0.5257  4.6625
+pair  ABT  LY2  lj9_6  0.5317  4.37
+pair  ABT  MET  lj9_6  0.6602  4.8825
+pair  ABT  XYR  lj9_6  0.3579  4.37
+pair  ABT  BER  lj9_6  0.3218  4.27
+pair  ABT  PRO  lj9_6  0.5002  4.6625
+pair  ABT  SER  lj9_6  0.7285  4.21
+pair  ABT  THR  lj9_6  0.6512  4.49
+pair  ABT  TR1  lj9_6  0.4158  4.575
+pair  ABT  TR2  lj9_6  0.3710  4.535
+pair  ABT  TR3  lj9_6  0.5826  4.7
+pair  ABT  PHR  lj9_6  0.6181  4.12
+pair  ABT  VAL  lj9_6  0.5002  4.6625
+
+pair  ABTP  ABTP  lj9_6  0.8035  4.74
+pair  ABTP  ABTN  lj9_6  0.8035  4.74
+pair  ABTP  AR1  lj9_6  0.5257  4.6625
+pair  ABTP  AR2  lj9_6  0.6957  4.37
+pair  ABTP  ASN  lj9_6  0.9910  4.445
+pair  ABTP  ASP  lj9_6  0.5692  4.37
+pair  ABTP  CYS  lj9_6  0.5752  4.45
+pair  ABTP  GLN  lj9_6  0.9307  4.74
+pair  ABTP  GLU  lj9_6  0.6629  4.37
+pair  ABTP  HI1  lj9_6  0.5257  4.4125
+pair  ABTP  HI2  lj9_6  0.6529  4.37
+pair  ABTP  HI3  lj9_6  0.6529  4.12
+pair  ABTP  ILE  lj9_6  0.5758  4.9575
+pair  ABTP  LEU  lj9_6  0.5300  4.9
+pair  ABTP  LY1  lj9_6  0.5257  4.6625
+pair  ABTP  LY2  lj9_6  0.5317  4.37
+pair  ABTP  MET  lj9_6  0.6602  4.8825
+pair  ABTP  XYR  lj9_6  0.3579  4.37
+pair  ABTP  BER  lj9_6  0.3218  4.27
+pair  ABTP  PRO  lj9_6  0.5002  4.6625
+pair  ABTP  SER  lj9_6  0.7285  4.21
+pair  ABTP  THR  lj9_6  0.6512  4.49
+pair  ABTP  TR1  lj9_6  0.4158  4.575
+pair  ABTP  TR2  lj9_6  0.3710  4.535
+pair  ABTP  TR3  lj9_6  0.5826  4.7
+pair  ABTP  PHR  lj9_6  0.6181  4.12
+pair  ABTP  VAL  lj9_6  0.5002  4.6625
+
+pair  ABTN  ABTN  lj9_6  0.8035  4.74
+pair  ABTN  AR1  lj9_6  0.5257  4.6625
+pair  ABTN  AR2  lj9_6  0.6957  4.37
+pair  ABTN  ASN  lj9_6  0.9910  4.445
+pair  ABTN  ASP  lj9_6  0.5692  4.37
+pair  ABTN  CYS  lj9_6  0.5752  4.45
+pair  ABTN  GLN  lj9_6  0.9307  4.74
+pair  ABTN  GLU  lj9_6  0.6629  4.37
+pair  ABTN  HI1  lj9_6  0.5257  4.4125
+pair  ABTN  HI2  lj9_6  0.6529  4.37
+pair  ABTN  HI3  lj9_6  0.6529  4.12
+pair  ABTN  ILE  lj9_6  0.5758  4.9575
+pair  ABTN  LEU  lj9_6  0.5300  4.9
+pair  ABTN  LY1  lj9_6  0.5257  4.6625
+pair  ABTN  LY2  lj9_6  0.5317  4.37
+pair  ABTN  MET  lj9_6  0.6602  4.8825
+pair  ABTN  XYR  lj9_6  0.3579  4.37
+pair  ABTN  BER  lj9_6  0.3218  4.27
+pair  ABTN  PRO  lj9_6  0.5002  4.6625
+pair  ABTN  SER  lj9_6  0.7285  4.21
+pair  ABTN  THR  lj9_6  0.6512  4.49
+pair  ABTN  TR1  lj9_6  0.4158  4.575
+pair  ABTN  TR2  lj9_6  0.3710  4.535
+pair  ABTN  TR3  lj9_6  0.5826  4.7
+pair  ABTN  PHR  lj9_6  0.6181  4.12
+pair  ABTN  VAL  lj9_6  0.5002  4.6625
+
+
+pair  WO   ABB lj12_4  0.9100  5.055
+pair  SOD1 ABB lj12_4  0.9100  5.055
+pair  CLA1 ABB lj12_4  0.9100  5.055
+pair  NC   ABB  lj9_6  0.7030  5.245
+pair  PH   ABB  lj9_6  0.9500  5.07
+pair  GL   ABB  lj9_6  0.6700  4.623
+pair  CM   ABB  lj9_6  0.6500  4.623
+pair  CMD2 ABB  lj9_6  0.3290  4.3725
+pair  CT2  ABB  lj9_6  0.4650  4.4805
+pair  CT  ABB  lj9_6  0.5372  4.6625
+pair  EST1 ABB  lj9_6  0.8500  4.52
+pair  EST2 ABB  lj9_6  0.8500  4.52
+
+pair  WO   GBB  lj12_4 0.8000  4.26
+pair  SOD1 GBB  lj12_4 0.8000  4.26
+pair  CLA1 GBB  lj12_4 0.8000  4.26
+pair  NC   GBB  lj9_6  0.8000  4.95
+pair  PH   GBB  lj9_6  1.4800  4.775
+pair  GL   GBB  lj9_6  0.8300  4.328
+pair  CM   GBB  lj9_6  0.5648  4.328
+pair  CMD2 GBB  lj9_6  0.3869  4.0775
+pair  CT2  GBB  lj9_6  0.4816  4.1855
+pair  EST1 GBB  lj9_6  0.9050  4.225
+pair  EST2 GBB  lj9_6  0.9050  4.225
+
+
+pair  WO  GBT   lj12_4 1.1500  5.00
+pair  NC  GBT   lj9_6  0.9000  4.95
+pair  PH  GBT   lj9_6  1.1500  4.775
+pair  GL  GBT   lj9_6  0.4000  4.328
+pair  EST1 GBT  lj9_6  0.5550  4.225
+pair  EST2 GBT  lj9_6  0.5550  4.225
+pair  CM  GBT   lj9_6  0.3248  4.328
+pair  CMD2  GBT lj9_6  0.2069  4.0775
+pair  CT2  GBT  lj9_6  0.2816  4.1855
+pair  CT  GBT   lj9_6  0.3320  4.3675
+
+pair  WO ABT    lj12_4 1.1750  5.300
+pair  SOD1 ABT  lj12_4 1.1750  5.300
+pair  CLA1 ABT  lj12_4 1.1750  5.300
+pair  NC  ABT   lj9_6  0.953   5.245
+pair  PH  ABT   lj9_6  1.2000  5.07
+pair  GL  ABT   lj9_6  0.5007  4.623
+pair  EST1  ABT lj9_6  0.6000  4.52
+pair  EST2  ABT lj9_6  0.6000  4.52
+pair  CM  ABT   lj9_6  0.370   4.623
+pair  CMD2  ABT lj9_6  0.2290  4.3725
+pair  CT2  ABT  lj9_6  0.3050  4.4805
+pair  CT  ABT   lj9_6  0.3772  4.6625
+
+pair  GBM  GBM  lj9_6  0.4175  4.15
+pair  GBM  GBB  lj9_6  0.5148  4.15
+pair  GBM  GBT  lj9_6  0.5567  4.15
+pair  GBM  GBTP  lj9_6  0.5567  4.15
+pair  GBM  GBTN  lj9_6  0.5567  4.15
+pair  GBM  ABB  lj9_6  0.4714  4.445
+pair  GBM  ABT  lj9_6  0.5584  4.445
+pair  GBM  ABTP  lj9_6  0.5584  4.445
+pair  GBM  ABTN  lj9_6  0.5584  4.445
+
+
+pair SOD1  NH    lj9_6  1.6500  3.8  
+pair SOD2  NH    lj12_4  0.0000  3.8 
+pair CLA1  NH    lj9_6  0.5500  5.0  
+pair CLA2  NH    lj12_4  0.0000  5.0 
+pair  NH  GBM  lj9_6  0.3300  4.15
+pair  NH  GBB  lj9_6  0.7094  4.15
+pair  NH  GBT  lj9_6  0.7446  4.15
+pair  NH  GBTP lj9_6  1.2190  4.15
+pair  NH  GBTN lj9_6  0.7903  4.15
+pair  NH  ABT  lj9_6  0.8706  4.445
+pair  NH  ABTP lj9_6  1.1091  4.445
+pair  NH  ABTN lj9_6  1.0101  4.445
+pair  NH  ABB  lj9_6  0.6910  4.445
+pair  NH  AR1  lj9_6  0.4573  4.25  
+pair  NH  AR2  lj9_6  0.8954  3.875
+pair  NH  ASN  lj9_6  0.7164  4.15 
+pair  NH  ASP  lj9_6  0.9500  4.05
+pair  NH  CYS  lj9_6  0.8044  4.00
+pair  NH  GLN  lj9_6  0.9065  4.445
+pair  NH  GLU  lj9_6  0.7165  4.075
+pair  NH  HI1  lj9_6  0.5125  4.1175
+pair  NH  HI2  lj9_6  0.5450  4.075
+pair  NH  HI3  lj9_6  0.5450  3.825
+pair  NH  ILE  lj9_6  0.6713  4.6625
+pair  NH  LEU  lj9_6  0.6548  4.605
+pair  NH  LY1  lj9_6  0.6325  4.1875
+pair  NH  LY2  lj9_6  1.0583  4.075
+pair  NH  MET  lj9_6  0.8473  4.5875
+pair  NH  XYR  lj9_6  0.2560  4.05
+pair  NH  BER  lj9_6  0.2042  3.975
+pair  NH  PRO  lj9_6  0.5890  4.3675
+pair  NH  SER  lj9_6  0.4927  3.915
+pair  NH  THR  lj9_6  0.6099  4.195
+pair  NH  TR1  lj9_6  0.4151  4.28 
+pair  NH  TR2  lj9_6  0.3748  4.24 
+pair  NH  TR3  lj9_6  0.5761  4.405
+pair  NH  PHR  lj9_6  0.5533  3.825
+pair  NH  VAL  lj9_6  0.5890  4.3675
+
+
+pair CLA1  PHE   lj9_6  1.1500  4.03  
+pair CLA2  PHE   lj12_4  0.0000  4.03 
+pair  PHE  GBT  lj9_6  1.1741  4.3
+pair  PHE  GBTP lj9_6  1.4580  4.3
+pair  PHE  GBTN lj9_6  1.4580  4.3
+pair  PHE  GBB  lj9_6  1.3769  4.3
+pair  PHE  GBM  lj9_6  0.3018  4.3
+pair  PHE  ABT  lj9_6  1.2179  4.595
+pair  PHE  ABTP lj9_6  1.5670  4.595
+pair  PHE  ABTN lj9_6  1.3145  4.595
+pair  PHE  ABB  lj9_6  1.0125  4.595
+pair  PHE  AR1  lj9_6  0.5400  4.992 
+pair  PHE  AR2  lj9_6  1.5000  4.7
+pair  PHE  LY1  lj9_6  0.5400  4.992 
+pair  PHE  LY2  lj9_6  1.6000  4.7
+pair  PHE  ASP  lj9_6  1.3000  4.7
+pair  PHE  GLU  lj9_6  0.9500  4.7
+pair  PHE  ASN  lj9_6  1.3526  4.3  
+pair  PHE  GLN  lj9_6  1.3000  4.595
+pair  PHE  CYS  lj9_6  0.9800  4.05
+pair  PHE  MET  lj9_6  1.4750  4.7375
+pair  PHE  LEU  lj9_6  0.7600  4.755
+pair  PHE  VAL  lj9_6  0.6860  4.5175
+pair  PHE  PRO  lj9_6  0.6860  4.5175
+pair  PHE  ILE  lj9_6  0.7785  4.8125
+pair  PHE  SER  lj9_6  1.1867  4.065
+pair  PHE  THR  lj9_6  1.2070  4.345
+pair  PHE  TR1  lj9_6  0.6870  4.88 
+pair  PHE  TR2  lj9_6  0.6660  4.835
+pair  PHE  TR3  lj9_6  0.7200  5.016
+pair  PHE  HI1  lj9_6  0.6800  4.743 
+pair  PHE  HI2  lj9_6  0.8080  4.7 
+pair  PHE  HI3  lj9_6  0.8080  4.45
+pair  PHE  BER  lj9_6  0.6850  4.125
+pair  PHE  XYR  lj9_6  0.8250  4.225
+pair  PHE  PHR  lj9_6  0.8850  4.45
+
+
+pair  OAG  GBT  lj9_6  0.6293  4.325
+pair  OAG  GBTP lj9_6  1.1446  4.325
+pair  OAG  GBTN lj9_6  0.6789  4.325
+pair  OAG  GBB  lj9_6  0.5911  4.325
+pair  OAG  GBM  lj9_6  0.4300  4.325
+pair  OAG  ABT  lj9_6  0.7147  4.62
+pair  OAG  ABTP lj9_6  0.9724  4.62
+pair  OAG  ABTN lj9_6  0.8654  4.62
+pair  OAG  ABB  lj9_6  0.5207  4.62
+pair  OAG  AR1  lj9_6  0.3648  4.425 
+pair  OAG  AR2  lj9_6  0.5000  4.05
+pair  OAG  LY1  lj9_6  0.5916  4.3625
+pair  OAG  LY2  lj9_6  0.9899  4.25
+pair  OAG  ASP  lj9_6  0.1532  4.225
+pair  OAG  GLU  lj9_6  0.1200  4.25
+pair  OAG  ASN  lj9_6  0.5987  4.325
+pair  OAG  GLN  lj9_6  0.7535  4.62 
+pair  OAG  CYS  lj9_6  0.4076  4.2 
+pair  OAG  MET  lj9_6  0.6045  4.7625
+pair  OAG  LEU  lj9_6  0.3225  4.78 
+pair  OAG  VAL  lj9_6  0.2912  4.5425
+pair  OAG  PRO  lj9_6  0.2912  4.5425
+pair  OAG  ILE  lj9_6  0.3303  4.8375
+pair  OAG  SER  lj9_6  0.2145  4.09 
+pair  OAG  THR  lj9_6  0.2800  4.5  
+pair  OAG  TR1  lj9_6  0.1500  4.485
+pair  OAG  TR2  lj9_6  0.1200  4.455
+pair  OAG  TR3  lj9_6  0.1700  4.58 
+pair  OAG  HI1  lj9_6  0.4230  4.2925
+pair  OAG  HI2  lj9_6  0.4733  4.25
+pair  OAG  HI3  lj9_6  0.4733  4.  
+pair  OAG  BER  lj9_6  0.2700  4.35 
+pair  OAG  XYR  lj9_6  0.3233  4.45 
+pair  OAG  PHR  lj9_6  0.3055  4.3 
