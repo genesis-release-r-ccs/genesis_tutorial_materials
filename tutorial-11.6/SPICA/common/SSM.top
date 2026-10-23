@@ -1,0 +1,49 @@
+atom     1   SSM    NC    NC   87.1634    0.1118  U
+atom     2   SSM    PH   PHS   94.9714   -0.1118  U
+atom     3   SSM   GL2   GL2   27.0452    0.0000  U
+atom     4   SSM   OAD   OAD   30.0260    0.0000  U
+atom     5   SSM   C11   CMO   40.0639    0.0000  U
+atom     6   SSM   C12    CM   42.0797    0.0000  U
+atom     7   SSM   C13    CM   42.0797    0.0000  U
+atom     8   SSM   C14    CM   42.0797    0.0000  U
+atom     9   SSM   C15    CT   43.0880    0.0000  U
+atom    10   SSM   PEP   PEP   43.0247    0.0000  U
+atom    11   SSM   C21    CM   42.0797    0.0000  U
+atom    12   SSM   C22    CM   42.0797    0.0000  U
+atom    13   SSM   C23    CM   42.0797    0.0000  U
+atom    14   SSM   C24    CM   42.0797    0.0000  U
+atom    15   SSM   C25    CM   42.0797    0.0000  U
+atom    16   SSM   C26   CT2   29.0620    0.0000  U
+
+bond     1     2 # NC PH
+bond     2     3 # PH GL2
+bond     3     4 # GL2 OAD
+bond     4     5 # OAD C11
+bond     5     6 # C11 C12
+bond     6     7 # C12 C13
+bond     7     8 # C13 C14
+bond     8     9 # C14 C15
+bond     3    10 # GL2 PEP
+bond    10    11 # PEP C21
+bond    11    12 # C21 C22
+bond    12    13 # C22 C23
+bond    13    14 # C23 C24
+bond    14    15 # C24 C25
+bond    15    16 # C25 C26
+
+angle     1     2     3 # NC PH GL2
+angle     2     3     4 # PH GL2 OAD
+angle     2     3    10 # PH GL2 PEP
+angle     3     4     5 # GL2 OAD C11
+angle     4     3    10 # OAD GL2 PEP
+angle     4     5     6 # OAD C11 C12
+angle     5     6     7 # C11 C12 C13
+angle     6     7     8 # C12 C13 C14
+angle     7     8     9 # C13 C14 C15
+angle     3    10    11 # GL2 PEP C21
+angle    10    11    12 # PEP C21 C22
+angle    11    12    13 # C21 C22 C23
+angle    12    13    14 # C22 C23 C24
+angle    13    14    15 # C23 C24 C25
+angle    14    15    16 # C24 C25 C26
+

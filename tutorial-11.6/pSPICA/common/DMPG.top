@@ -1,0 +1,39 @@
+atom  1  DMPG OAG  OAG  75.0863  0.0  U
+atom  2  DMPG PH   PH   94.9716  -0.5590  U
+atom  3  DMPG GL   GL   41.0725  0.0  U
+atom  4  DMPG EST1 EST1 58.0358  0.0  U
+atom  5  DMPG C11  CM   42.0804  0.0  U
+atom  6  DMPG C12  CM   42.0804  0.0  U
+atom  7  DMPG C13  CM   42.0804  0.0  U
+atom  8  DMPG C14  CT   43.0883  0.0  U
+atom  9  DMPG EST2 EST2 58.0358  0.0  U
+atom  10 DMPG C21  CM   42.0804  0.0  U
+atom  11 DMPG C22  CM   42.0804  0.0  U
+atom  12 DMPG C23  CM   42.0804  0.0  U
+atom  13 DMPG C24  CT   43.0883  0.0  U
+
+bond  1   2
+bond  2   3
+bond  3   4
+bond  4   5
+bond  5   6
+bond  6   7
+bond  7   8
+bond  3   9
+bond  9  10
+bond 10  11
+bond 11  12
+bond 12  13
+
+angle  1   2   3
+angle  2   3   4
+angle  3   4   5
+angle  4   5   6
+angle  5   6   7
+angle  6   7   8
+angle  2   3   9
+angle  4   3   9
+angle  3   9  10
+angle  9  10  11
+angle 10  11  12
+angle 11  12  13
