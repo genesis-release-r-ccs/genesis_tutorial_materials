@@ -1,0 +1,42 @@
+[INPUT]
+grotopfile            = PRO1.top           # CG topology file
+grocrdfile            = PRO1.gro           # CG initial coordinates file
+
+[OUTPUT]
+dcdfile               = PRO1_MD1.dcd       # DCD trajectory file
+rstfile               = PRO1_MD1.rst       # restart file for continuing simulation
+
+[ENERGY]
+forcefield            = RESIDCG            # residue-level CG force field
+electrostatic         = CUTOFF             # cutoff scheme for Debye-Huckel electrostatics
+cg_cutoffdist_ele     = 35.0               # electrostatic cutoff distance (Angstrom)
+cg_cutoffdist_126     = 20.0               # 12-6 Lennard-Jones cutoff distance (Angstrom)
+cg_pairlistdist_ele   = 37.0               # electrostatic pairlist distance (Angstrom)
+cg_pairlistdist_126   = 25.0               # 12-6 Lennard-Jones pairlist distance (Angstrom)
+cg_pairlistdist_WF    = 25.0               # Wang-Frenkel pairlist distance for Mpipi (Angstrom)
+cg_sol_ionic_strength = 0.15               # monovalent salt concentration (M)
+
+[DYNAMICS]
+integrator            = VVER_CG            # velocity Verlet integrator (use "VVER" in CGDYN)
+nsteps                = 10000000           # number of MD simulation steps
+timestep              = 0.010              # timestep (ps, here 10 fs)
+rstout_period         = 1000000            # restart output period (steps)
+crdout_period         = 10000              # trajectory coordinate output period (steps)
+eneout_period         = 10000              # energy and temperature output period (steps)
+nbupdate_period       = 20                 # nonbonded pairlist update period (steps)
+
+[CONSTRAINTS]
+rigid_bond            = NO                 # do not constrain bonds
+
+[ENSEMBLE]
+ensemble              = NVT                # canonical (NVT) ensemble
+tpcontrol             = LANGEVIN           # Langevin thermostat
+temperature           = 300                # target simulation temperature (K)
+gamma_t               = 0.01               # friction coefficient for Langevin thermostat (ps^-1)
+
+[BOUNDARY]
+type                  = PBC                # periodic boundary condition
+box_size_x            = 1000               # box size along the X-axis (Angstrom)
+box_size_y            = 1000               # box size along the Y-axis (Angstrom)
+box_size_z            = 1000               # box size along the Z-axis (Angstrom)
+
