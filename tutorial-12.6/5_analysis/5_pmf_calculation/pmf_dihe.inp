@@ -1,0 +1,18 @@
+[INPUT]
+cvfile       = ../2_dihedral_angle/md{}.tor
+weightfile   = ../4_reweighting/global_weights/weight{}_global.dat
+
+[OUTPUT]
+pmffile      = dihe.pmf
+
+
+[OPTION]
+nreplica           = 1
+dimension          = 2
+temperature        = 300
+grids1             = -180 180 37
+band_width1        = 9.0
+is_periodic1       = yes
+grids2             = -180 180 37
+band_width2        = 9.0
+is_periodic2       = yes

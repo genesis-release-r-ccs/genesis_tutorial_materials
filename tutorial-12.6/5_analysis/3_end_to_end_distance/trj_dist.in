@@ -1,0 +1,20 @@
+[INPUT]
+psffile         = ../../1_setup/3_solvate/wbox.psf
+reffile         = ../../1_setup/3_solvate/wbox.pdb
+
+[OUTPUT]
+disfile         = md1.dis
+
+[TRAJECTORY]
+trjfile1        = ../../4_production/md.dcd
+md_step1        = 4000000
+mdout_period1   = 2000
+ana_period1     = 2000
+repeat1         = 1
+trj_format      = DCD             # (PDB/DCD)
+trj_type        = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom       = 0               # (0:uses reference PDB atom count)
+
+[OPTION]
+check_only      = NO
+distance1       = PROA:1:ALA:OY PROA:3:ALA:HNT

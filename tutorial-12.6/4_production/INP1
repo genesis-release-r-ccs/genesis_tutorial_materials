@@ -1,0 +1,69 @@
+[INPUT]
+topfile           = ../toppar/top_all36_prot.rtf     # topology file
+parfile           = ../toppar/par_all36m_prot.prm    # parameter file
+strfile           = ../toppar/toppar_water_ions.str  # stream file
+psffile           = ../1_setup/3_solvate/wbox.psf    # protein structure file
+pdbfile           = ../1_setup/3_solvate/wbox.pdb    # PDB file
+reffile           = ../1_setup/3_solvate/wbox.pdb    # reference PDB file for restraint
+rstfile           = ../3_equilibrate/eq3.rst         # restart file
+
+[OUTPUT]
+dcdfile           = md.dcd  # DCD trajectory file
+rstfile           = md.rst  # restart file
+abmdfile          = md.bp   # bias potential file
+reacfile          = md.rc
+
+[ENERGY]
+forcefield        = CHARMM   # CHARMM force field
+electrostatic     = PME      # use Particle mesh Ewald method
+switchdist        = 10.0     # switch distance
+cutoffdist        = 12.0     # cutoff distance
+pairlistdist      = 13.5     # pair-list distance
+pme_nspline       = 4        # order of the spline interpolation
+vdw_force_switch  = YES      # turn on vdw force switch
+pme_max_spacing   = 1.2      # Max grid spacing allowed
+
+[DYNAMICS]
+integrator        = VRES     # [LEAP,VVER,VRES]
+nsteps            = 4000000  # number of MD steps
+timestep          = 0.0025   # timestep (ps)
+eneout_period     = 2000     # energy output period
+crdout_period     = 2000     # coordinates output period
+rstout_period     = 20000    # restart output period
+nbupdate_period   = 10       # pairlist update period
+elec_long_period  = 2        # period of reciprocal space calculation
+thermostat_period = 10       # period of thermostat update
+barostat_period   = 10       # period of barostat update
+
+[CONSTRAINTS]
+rigid_bond        = YES      # use SHAKE/RATTLE
+fast_water        = YES      # use SETTLE
+
+[ENSEMBLE]
+ensemble          = NVT      # [NVE,NVT,NPT]
+tpcontrol         = BUSSI    # thermostat and barostat
+temperature       = 300      # K
+group_tp          = YES      # group temperature/pressure evaluation
+
+[BOUNDARY]
+type              = PBC      # periodic boundary condition
+
+[SELECTION]
+group1            = an:OY  and resno:1     # restraint group 1
+group2            = an:HNT and resno:3     # restraint group 2
+
+[ABMD]
+tau               = 10.0     # flooding time (ps)
+wt_temperature    = 3000.0   # well-tempered temperature
+monitor_period    = 2000     # bias potential output period
+
+[ReacCoord]
+nreac_coord       = 1        # number of CVs
+monitor_period    = 2000     # CV output period
+
+# End-to-end distance
+function1         = DIST
+select_index1     = 1 2
+nxi1              = 25       # total number of bins alon CV
+ximin1            = 1.0      # minimal value of CV
+ximax1            = 15.0     # maximum value of CV
