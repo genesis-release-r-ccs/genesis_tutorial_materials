@@ -1,0 +1,38 @@
+[INPUT]
+psffile  = ../../1_setup/3_solvate/wbox.psf
+reffile  = ../../1_setup/3_solvate/wbox.pdb
+dcdfile  = ../../4_production/md{}.dcd
+remfile  = ../../4_production/md{}.rem
+abmdfile = ../../4_production/md{}.bp
+logfile  = ../../4_production/md{}.log
+
+[OUTPUT]
+pdbfile         = conv.pdb    # pdbfile
+trjfile         = conv{}.dcd  # sorted dcdfile
+abmdfile        = conv{}.bp
+logfile         = conv{}.log
+
+[SELECTION]
+group1          = ai:1-42   # only tri-alanine
+group2          = resno:2 and (an:N or an:CA or an:C or an:O) # backbone of 2nd ALA
+
+[FITTING]
+fitting_method  = TR+ROT    # center-of-mass translation + rotation fitting
+fitting_atom    = 2         # fitting to backbone of central alanine
+mass_weight     = YES       # mass-weighted fitting
+
+[OPTION]
+check_only      = NO
+convert_type    = PARAMETER
+convert_ids     =           # only lowest T replicas
+num_replicas    = 4 
+nsteps          = 4000000
+exchange_period = 4000
+abmdout_period  = 2000
+crdout_period   = 2000      # trjectory output frequency in REMD
+eneout_period   = 2000      # energy output frequency in REMD
+trjout_format   = DCD
+trjout_type     = COOR+BOX
+trjout_atom     = 1         # output only tri-alanine moiety
+pbc_correct     = NO        # nothing will happen when water mols excluded
+

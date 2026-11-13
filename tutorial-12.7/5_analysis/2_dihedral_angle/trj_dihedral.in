@@ -1,0 +1,20 @@
+[INPUT]
+reffile         = ../1_data_sorting/conv.pdb
+
+[OUTPUT]
+torfile         = conv1.tor
+
+[TRAJECTORY]
+trjfile1        = ../1_data_sorting/conv1.dcd
+md_step1        = 4000000
+mdout_period1   = 2000
+ana_period1     = 2000
+repeat1         = 1
+trj_format      = DCD             # (PDB/DCD)
+trj_type        = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom       = 0               # (0:uses reference PDB atom count)
+
+[OPTION]
+check_only      = NO
+torsion1        = PROA:1:ALA:C   PROA:2:ALA:N    PROA:2:ALA:CA   PROA:2:ALA:C
+torsion2        = PROA:2:ALA:N   PROA:2:ALA:CA   PROA:2:ALA:C    PROA:3:ALA:N
